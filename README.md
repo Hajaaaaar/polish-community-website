@@ -1,4 +1,4 @@
-# Polish Community Website - Group 14
+# Team 14- Polish Community Group 
 
 
 
@@ -15,14 +15,14 @@ Already a pro? Just edit this README.md and make it your own. Want to make it ea
 
 ```
 cd existing_repo
-git remote add origin https://git.cardiff.ac.uk/c21075094/polish-community-website-group-14.git
+git remote add origin https://git.cardiff.ac.uk/c2059728/team-14-polish-community-group.git
 git branch -M main
 git push -uf origin main
 ```
 
 ## Integrate with your tools
 
-- [ ] [Set up project integrations](https://git.cardiff.ac.uk/c21075094/polish-community-website-group-14/-/settings/integrations)
+- [ ] [Set up project integrations](https://git.cardiff.ac.uk/c2059728/team-14-polish-community-group/-/settings/integrations)
 
 ## Collaborate with your team
 
