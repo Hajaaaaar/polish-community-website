@@ -1,0 +1,19 @@
+package com.example.polishCommunity.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+
+@Controller
+public class PagesController {
+    @GetMapping("/home")
+    public String home(Model model) {
+      return "Pages/home";
+    }
+//    @GetMapping("/home")
+//    public String home(Model model) {
+//        model.addAttribute("lang", "en"); // Default language (or retrieve it dynamically)
+//        return "Pages/home";
+//    }
+
+}

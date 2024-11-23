@@ -9,15 +9,19 @@
     <style>
         /* Navbar Background and Font */
         nav {
-            background-color: #d3003f;
-            font-family: "Times New Roman", serif;
+            background-color: #ce033f;
+            font-family: fantasy;
+            border-radius: 1%;
+            background: linear-gradient(to bottom, #ce033f, #a0022e);
+            border: none;
         }
+
 
         /* Logo */
         .navbar-brand img {
-            height: 50px;
-            width: 50px;
-            border-radius: 50%;
+            height: 40px;
+            width: 55px;
+            border-radius: 45%;
             object-fit: cover;
         }
 
@@ -65,7 +69,8 @@
 
         /* Language Dropdown Styling */
         .language-dropdown {
-            margin-left: auto; /* Align to the right */
+            margin-left: auto;
+            font-family: "Times New Roman";
         }
 
         .language-dropdown select {
@@ -73,15 +78,16 @@
             font-size: 14px;
             font-weight: bold;
             border-radius: 4px;
-            border: 1px solid #FFFFFF; /* White border for the dropdown */
-            background-color: #F2DAE1; /* Beige background for the dropdown */
-            color: #A90011; /* Deep red text color */
+            border: 1px solid #FFFFFF;
+            background-color: #F2DAE1;
+            color: #A90011;
             transition: background-color 0.3s ease;
         }
 
         .language-dropdown select:hover {
             background-color: #d3003f;
             color: white;
+
         }
         /* Center Content on Small Screens */
         @media (max-width: 768px) {
@@ -102,7 +108,7 @@
     <div class="container-fluid">
         <!-- Logo -->
         <a class="navbar-brand" th:href="@{/}">
-            <img src="/static/images/logo.jpg" alt="Community Logo">
+            <img src="/images/logo.jpg" alt="Community Logo">
         </a>
 
         <!-- Navbar links -->
@@ -181,8 +187,8 @@
             <!-- Language Dropdown -->
             <div class="language-dropdown">
                 <select onchange="window.location.href=this.value">
-                    <option value="?lang=en" th:selected="${#request.parameter.lang == 'en'}">English</option>
-                    <option value="?lang=pl" th:selected="${#request.parameter.lang == 'pl'}">Polish</option>
+                    <option value="?lang=en" th:selected="${lang == 'en'}">English</option>
+                    <option value="?lang=pl" th:selected="${lang == 'pl'}">Polish</option>
                 </select>
             </div>
         </div>

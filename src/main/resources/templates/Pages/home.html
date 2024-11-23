@@ -4,16 +4,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <link th:replace="~{Fragments/header :: bootstrap-css}" />
-<!--    <link rel="stylesheet" href="../../../.css">-->
-<!--    <link rel="stylesheet" href="footer-text.css">-->
+    <link th:replace="~{fragments/header :: bootstrap-css}" />
+    <link rel="stylesheet" th:href="@{/stylesheet/home.css}">
 </head>
 <body>
-    <header th:replace="~{Fragments/header}"></header>
+
+    <header th:replace="~{fragments/header}"></header>
 
     <div class="main-container">
-        <h1>Home</h1>
+        <!-- Background Image -->
+        <div class="background-image"></div>
+
+        <!-- Welcome Section -->
+        <div class="container home-section">
+            <h1 class="welcome-message">Welcome to the Polish Community Platform</h1>
+            <p class="platform-overview">
+                This platform connects Polish community members in South Wales, providing them with valuable resources, the latest news, events, and social connection opportunities.
+            </p>
+        </div>
+
+        <!-- Latest Events Section -->
+        <div class="container home-section">
+            <h2 class="section-heading">Latest Events</h2>
+            <div class="item-row">
+                <div class="item-column">
+                    <div class="item-placeholder">Event Placeholder 1</div>
+                </div>
+                <div class="item-column">
+                    <div class="item-placeholder">Event Placeholder 2</div>
+                </div>
+                <div class="item-column">
+                    <div class="item-placeholder">Event Placeholder 3</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Latest News Section -->
+        <div class="container home-section">
+            <h2 class="section-heading">Latest News</h2>
+            <div class="item-row">
+                <div class="item-column">
+                    <div class="item-placeholder">News Placeholder 1</div>
+                </div>
+                <div class="item-column">
+                    <div class="item-placeholder">News Placeholder 2</div>
+                </div>
+                <div class="item-column">
+                    <div class="item-placeholder">News Placeholder 3</div>
+                </div>
+            </div>
+        </div>
     </div>
+
+
+
+
+
+    <div th:replace="~{fragments/footer :: bootstrap-js}"></div>
+    <footer th:replace="~{fragments/footer}"></footer>
+
 
 </body>
 </html>
