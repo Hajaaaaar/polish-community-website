@@ -15,5 +15,8 @@ public class PagesController {
 //        model.addAttribute("lang", "en"); // Default language (or retrieve it dynamically)
 //        return "Pages/home";
 //    }
-
+    @GetMapping("/home/contact")
+    public String contact(Model model) {
+    return "Pages/contactsPage";
+}
 }
