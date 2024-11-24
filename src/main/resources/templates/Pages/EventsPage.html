@@ -4,15 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ludek Polish Community</title>
-    <link rel="stylesheet" href="stylesheet.css">
+    <link th:replace="~{fragments/header :: bootstrap-css}" />
+    <link rel="stylesheet" th:href="@{/stylesheet/stylesheet.css}">
+
 </head>
 <body>
-<header>
-    <div class="header-content">
-        <h1>Discover Events</h1>
-        <p>Plan your next adventure with our curated list of events.</p>
-    </div>
-</header>
+<header th:replace="~{fragments/header}"></header>
 
 <div class="text-search container">
     <div class="container">
@@ -128,5 +125,8 @@
     </section>
 </main>
 <script src="eventspage.js"></script>
+
+<div th:replace="~{fragments/footer :: bootstrap-js}"></div>
+<footer th:replace="~{fragments/footer}"></footer>
 </body>
 </html>
