@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Page</title>
+    <link rel="stylesheet" th:href="@{/stylesheet/style.css}">
+</head>
+<body>
+<header>
+    <div class="header-container">
+        <h1>Polish Community News</h1>
+        <p class="subheading">Stay updated with the latest news</p>
+    </div>
+</header>
+<section class="news-grid">
+    <div class="news-item" th:each="news : ${newsList}">
+        <h2 th:text="${news.title}"></h2>
+        <p th:text="${news.content}"></p>
+        <p th:text="${news.date}"></p>
+    </div>
+</section>
+</body>
+</html>

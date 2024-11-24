@@ -2,8 +2,10 @@ package com.example.polishCommunity;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
+@ComponentScan(basePackages = {"com.example.newsPage", "com.example.polishCommunity"})
 public class PolishCommunityApplication {
 
 	public static void main(String[] args) {
