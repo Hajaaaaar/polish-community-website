@@ -196,8 +196,8 @@ button:hover {
 }
 
 .details-btn {
-    background: red;
-    color: black;
+    background: #A90011;
+    color: #f5dfdc;
     border: none;
     padding: 10px 20px;
     border-radius: 25px;
