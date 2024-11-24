@@ -1,0 +1,197 @@
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Header */
+header {
+    background: url('https://i0.wp.com/www.mappingmegan.com/wp-content/uploads/2020/06/Warsaw-Poland-RF.jpg?resize=1200%2C840&ssl=1') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 15px 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin: 0;
+}
+pb {
+    font-size: 0.8em;
+    color: white;
+    text-transform: capitalize;
+    font-weight: bold;
+    line-height: 1.8;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+}
+/* Main Container for Text and Search */
+.text-search.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Texts */
+h2 {
+    font-size: 0.9em;
+    color: #c20000;
+    text-align: left;
+    margin-bottom: 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+p {
+    font-size: 0.8em;
+    color: white;
+    line-height: 1.8;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+
+}
+.container{
+    width: 60%;
+    text-align: left;
+    margin-left: 5%;
+    margin-right: auto;
+}
+
+
+h3{
+    font-size: 0.9em;
+
+}
+pb{
+    color: black;
+    text-align: left;
+
+}
+/*Search Bars*/
+.search-container {
+    width: 100%;
+    max-width: 600px;
+
+}
+
+.input-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.input-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+select, input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #c20000;
+    color: #fff;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #a50000;
+}
+
+/* Make Location and Category side by side */
+.input-row .input-group {
+    flex: 0 0 48%;
+}
+/* Main Content */
+.events-container {
+    max-width: 1200px;
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 0 15px;
+}
+
+.event-card {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.event-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.event-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.event-info {
+    padding: 15px;
+    text-align: center;
+}
+
+.event-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #3498db;
+}
+
+.event-info .date, .event-info .location {
+    font-size: 1rem;
+    color: #555;
+    margin: 5px 0;
+}
+
+.details-btn {
+    background: red;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.3s;
+}
+
+.details-btn:hover {
+    background: #27ae60;
+}
