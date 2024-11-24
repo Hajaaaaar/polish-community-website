@@ -9,124 +9,127 @@
 
 </head>
 <body>
-<header th:replace="~{fragments/header}"></header>
+    <header th:replace="~{fragments/header}"></header>
 
-<div class="text-search container">
-    <div class="container">
-        <h2>Celebrate Polish Heritage in South Wales</h2>
-        <pb>Join us at our upcoming Polish community events to experience the vibrant culture, rich traditions, and delicious cuisine that Poland has to offer. From lively music festivals and traditional food markets to thought-provoking film screenings and festive folk dance performances, there’s something for everyone. Discover the warmth of Polish hospitality, engage in cultural workshops, and enjoy a truly immersive experience that brings the spirit of Poland to Cardiff. Don’t miss out—mark your calendars and come celebrate with us!</pb>
+    <div class="text-search container">
+        <!-- Background Image -->
+        <div class="background-image"></div>
+
+        <div class="container">
+            <h2>Celebrate Polish Heritage in South Wales</h2>
+            <pb>Join us at our upcoming Polish community events to experience the vibrant culture, rich traditions, and delicious cuisine that Poland has to offer. From lively music festivals and traditional food markets to thought-provoking film screenings and festive folk dance performances, there’s something for everyone. Discover the warmth of Polish hospitality, engage in cultural workshops, and enjoy a truly immersive experience that brings the spirit of Poland to Cardiff. Don’t miss out—mark your calendars and come celebrate with us!</pb>
+        </div>
+
+        <div class="search-container">
+            <h3>Event Search</h3>
+            <div class="input-row">
+                <div class="input-group">
+                    <label for="Location">Choose a Location:</label>
+                    <select id="Location">
+                        <option value="">Select Location</option>
+                        <option value="Cardiff">Cardiff</option>
+                        <option value="Newport">Newport</option>
+                        <option value="Bridgend">Bridgend</option>
+                        <option value="Merthyr">Merthyr</option>
+                        <option value="Swansea">Swansea</option>
+                        <option value="Caerphilly">Caerphilly</option>
+                        <option value="Glamorgan">Glamorgan</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="Category">Choose a Category:</label>
+                    <select id="Category">
+                        <option value="">Select Category</option>
+                        <option value="Art or Cultural">Art or Cultural</option>
+                        <option value="Countryside and Craft">Countryside and Craft</option>
+                        <option value="Music Festival"> Music Festival</option>
+                        <option value="Food or Drink Event">Food or Drink Event</option>
+                        <option value="Polish Independence Day">Polish Independence Day</option>
+                        <option value="Polish Heritage Day">Polish Heritage Day</option>
+                    </select>
+                </div>
+            </div>
+            <div class="input-row">
+                <div class="input-group">
+                    <label for="start-date">Start Date:</label>
+                    <input type="date" id="start-date">
+                </div>
+                <div class="input-group">
+                    <label for="end-date">End Date:</label>
+                    <input type="date" id="end-date">
+                </div>
+            </div>
+            <button id="searchBtn">Search</button>
+        </div>
     </div>
 
-    <div class="search-container">
-        <h3>Event Search</h3>
-        <div class="input-row">
-            <div class="input-group">
-                <label for="Location">Choose a Location:</label>
-                <select id="Location">
-                    <option value="">Select Location</option>
-                    <option value="Cardiff">Cardiff</option>
-                    <option value="Newport">Newport</option>
-                    <option value="Bridgend">Bridgend</option>
-                    <option value="Merthyr">Merthyr</option>
-                    <option value="Swansea">Swansea</option>
-                    <option value="Caerphilly">Caerphilly</option>
-                    <option value="Glamorgan">Glamorgan</option>
-                </select>
+    <main>
+        <section class="events-container">
+            <div class="event-card">
+                <img src="https://cdn.cnn.com/cnnnext/dam/assets/181018143148-krakow-2-super-tease.jpg" alt="Event 1">
+                <div class="event-info">
+                    <h3>Music Festival</h3>
+                    <p class="date">2024-12-01</p>
+                    <p class="location">Cardiff</p>
+                    <p class="category"> Music Festival</p>
+                    <button class="details-btn">View Details</button>
+                </div>
             </div>
-            <div class="input-group">
-                <label for="Category">Choose a Category:</label>
-                <select id="Category">
-                    <option value="">Select Category</option>
-                    <option value="Art or Cultural">Art or Cultural</option>
-                    <option value="Countryside and Craft">Countryside and Craft</option>
-                    <option value="Music Festival"> Music Festival</option>
-                    <option value="Food or Drink Event">Food or Drink Event</option>
-                    <option value="Polish Independence Day">Polish Independence Day</option>
-                    <option value="Polish Heritage Day">Polish Heritage Day</option>
-                </select>
+            <div class="event-card">
+                <img src="https://api.culture.pl/sites/default/files/images/imported/HISTORIA/EN/Polish_independence/zaslubiny_polski_z_morzem.jpg" alt="Event 2">
+                <div class="event-info">
+                    <h3>Art Exhibition</h3>
+                    <p class="date">2024-12-05</p>
+                    <p class="location">Swansea</p>
+                    <p class="category">Art or Cultural</p>
+                    <button class="details-btn">View Details</button>
+                </div>
             </div>
-        </div>
-        <div class="input-row">
-            <div class="input-group">
-                <label for="start-date">Start Date:</label>
-                <input type="date" id="start-date">
+            <div class="event-card">
+                <img src="https://1.bp.blogspot.com/-SMfBCbqIRVw/WQeJ84XsJ6I/AAAAAAACJ-U/vrT-1o3hwMcTzQIzUuVkwbZqtV6Req00gCLcB/s1600/ca423901817b8b8187c9e9316481b30e.jpg" alt="Event 3">
+                <div class="event-info">
+                    <h3>Food Festival</h3>
+                    <p class="date">2024-12-10</p>
+                    <p class="location">Newport</p>
+                    <p class="category">Food or Drink Event</p>
+                    <button class="details-btn">View Details</button>
+                </div>
             </div>
-            <div class="input-group">
-                <label for="end-date">End Date:</label>
-                <input type="date" id="end-date">
+            <div class="event-card">
+                <img src="https://i.pinimg.com/originals/c6/2a/04/c62a04aa1be3e976994c41b9156acec4.jpg" alt="Event 4">
+                <div class="event-info">
+                    <h3>Countryside and Craft</h3>
+                    <p class="date">2025-07-19</p>
+                    <p class="location">Merthyr</p>
+                    <p class="category">Countryside and Craft</p>
+                    <button class="details-btn">View Details</button>
+                </div>
             </div>
-        </div>
-        <button id="searchBtn">Search</button>
-    </div>
-</div>
+            <div class="event-card">
+                <img src="https://th.bing.com/th/id/R.aacb19bdb4c2d60e19f3ced81d72fdf9?rik=cjOaPk8ek9d3IQ&riu=http%3a%2f%2fi.dailymail.co.uk%2fi%2fpix%2f2013%2f10%2f15%2farticle-2461911-18C20F1300000578-419_964x640.jpg&ehk=CKGaeqsbBLui7jZGegM%2flOCGQGJ8al3rXVbXLdhtvxo%3d&risl=&pid=ImgRaw&r=0" alt="Event 5">
+                <div class="event-info">
+                    <h3>Polish Independence Day</h3>
+                    <p class="date">2024-11-11</p>
+                    <p class="location">Caerphilly</p>
+                    <p class="category">Polish Independence Day</p>
+                    <button class="details-btn">View Details</button>
+                </div>
+            </div>
+            <div class="event-card">
+                <img src="https://s3-eu-west-1.amazonaws.com/spacehive/b052b5f6-1724-427a-b7b1-06c4db53c5eb_xlarge_dsc-2388.jpg" alt="Event 6">
+                <div class="event-info">
+                    <h3>Polish Heritage Day</h3>
+                    <p class="date">2025-04-03</p>
+                    <p class="location">Glamorgan</p>
+                    <p class="category">Polish Heritage Day</p>
+                    <button class="details-btn">View Details</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="eventspage.js"></script>
 
-<main>
-    <section class="events-container">
-        <div class="event-card">
-            <img src="https://cdn.cnn.com/cnnnext/dam/assets/181018143148-krakow-2-super-tease.jpg" alt="Event 1">
-            <div class="event-info">
-                <h3>Music Festival</h3>
-                <p class="date">2024-12-01</p>
-                <p class="location">Cardiff</p>
-                <p class="category"> Music Festival</p>
-                <button class="details-btn">View Details</button>
-            </div>
-        </div>
-        <div class="event-card">
-            <img src="https://api.culture.pl/sites/default/files/images/imported/HISTORIA/EN/Polish_independence/zaslubiny_polski_z_morzem.jpg" alt="Event 2">
-            <div class="event-info">
-                <h3>Art Exhibition</h3>
-                <p class="date">2024-12-05</p>
-                <p class="location">Swansea</p>
-                <p class="category">Art or Cultural</p>
-                <button class="details-btn">View Details</button>
-            </div>
-        </div>
-        <div class="event-card">
-            <img src="https://1.bp.blogspot.com/-SMfBCbqIRVw/WQeJ84XsJ6I/AAAAAAACJ-U/vrT-1o3hwMcTzQIzUuVkwbZqtV6Req00gCLcB/s1600/ca423901817b8b8187c9e9316481b30e.jpg" alt="Event 3">
-            <div class="event-info">
-                <h3>Food Festival</h3>
-                <p class="date">2024-12-10</p>
-                <p class="location">Newport</p>
-                <p class="category">Food or Drink Event</p>
-                <button class="details-btn">View Details</button>
-            </div>
-        </div>
-        <div class="event-card">
-            <img src="https://i.pinimg.com/originals/c6/2a/04/c62a04aa1be3e976994c41b9156acec4.jpg" alt="Event 4">
-            <div class="event-info">
-                <h3>Countryside and Craft</h3>
-                <p class="date">2025-07-19</p>
-                <p class="location">Merthyr</p>
-                <p class="category">Countryside and Craft</p>
-                <button class="details-btn">View Details</button>
-            </div>
-        </div>
-        <div class="event-card">
-            <img src="https://th.bing.com/th/id/R.aacb19bdb4c2d60e19f3ced81d72fdf9?rik=cjOaPk8ek9d3IQ&riu=http%3a%2f%2fi.dailymail.co.uk%2fi%2fpix%2f2013%2f10%2f15%2farticle-2461911-18C20F1300000578-419_964x640.jpg&ehk=CKGaeqsbBLui7jZGegM%2flOCGQGJ8al3rXVbXLdhtvxo%3d&risl=&pid=ImgRaw&r=0" alt="Event 5">
-            <div class="event-info">
-                <h3>Polish Independence Day</h3>
-                <p class="date">2024-11-11</p>
-                <p class="location">Caerphilly</p>
-                <p class="category">Polish Independence Day</p>
-                <button class="details-btn">View Details</button>
-            </div>
-        </div>
-        <div class="event-card">
-            <img src="https://s3-eu-west-1.amazonaws.com/spacehive/b052b5f6-1724-427a-b7b1-06c4db53c5eb_xlarge_dsc-2388.jpg" alt="Event 6">
-            <div class="event-info">
-                <h3>Polish Heritage Day</h3>
-                <p class="date">2025-04-03</p>
-                <p class="location">Glamorgan</p>
-                <p class="category">Polish Heritage Day</p>
-                <button class="details-btn">View Details</button>
-            </div>
-        </div>
-    </section>
-</main>
-<script src="eventspage.js"></script>
-
-<div th:replace="~{fragments/footer :: bootstrap-js}"></div>
-<footer th:replace="~{fragments/footer}"></footer>
+    <div th:replace="~{fragments/footer :: bootstrap-js}"></div>
+    <footer th:replace="~{fragments/footer}"></footer>
 </body>
 </html>

@@ -1,10 +1,15 @@
 
 body {
-    font-family: 'Arial', sans-serif;
+    /*font-family: 'Arial', sans-serif;*/
+    font-family: "Times New Roman", serif;
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9;
+    /*background-color: #f9f9f9;*/
     color: #333;
+    min-height: 100vh;
+    background: url("/images/poland.jpg") no-repeat center center fixed;
+    background-size: cover;
+    z-index: 0;
 }
 
 /* Header */
@@ -26,14 +31,21 @@ header p {
     margin: 0;
 }
 pb {
-    font-size: 0.8em;
+    font-size: 0.9em;
     color: white;
-    text-transform: capitalize;
-    font-weight: bold;
+    /*text-transform: capitalize;*/
+    /*font-weight: bold;*/
     line-height: 1.8;
-    text-align: center;
-    font-family: 'Arial', sans-serif;
+    text-align: justify;
+    font-family: "Times New Roman";
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
 }
+/*pb{*/
+/*    color: white;*/
+/*    text-align: justify;*/
+/*    text-shadow: 0px 0px 0px rgba(0, 0, 0, 0.1);*/
+/*    font-family: 'Arial', sans-serif;*/
+/*}*/
 /* Main Container for Text and Search */
 .text-search.container {
     display: flex;
@@ -43,7 +55,9 @@ pb {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
+
 }
+
 
 /* Texts */
 h2 {
@@ -51,7 +65,8 @@ h2 {
     color: #c20000;
     text-align: left;
     margin-bottom: 20px;
-    font-family: 'Arial', sans-serif;
+    /*font-family: 'Arial', sans-serif;*/
+    font-family: "Times New Roman", serif;
 }
 
 p {
@@ -59,14 +74,18 @@ p {
     color: white;
     line-height: 1.8;
     text-align: center;
-    font-family: 'Arial', sans-serif;
+    /*font-family: 'Arial', sans-serif;*/
+    font-family: "Times New Roman", serif;
 
 }
 .container{
-    width: 60%;
+    width: 80%;
     text-align: left;
     margin-left: 5%;
     margin-right: auto;
+    padding-top: 15px;
+    color: #fbe6e6;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 }
 
 
@@ -74,16 +93,12 @@ h3{
     font-size: 0.9em;
 
 }
-pb{
-    color: black;
-    text-align: left;
 
-}
 /*Search Bars*/
 .search-container {
     width: 100%;
     max-width: 600px;
-
+    font-family: "Times New Roman";
 }
 
 .input-row {
@@ -136,7 +151,7 @@ button:hover {
 }
 /* Main Content */
 .events-container {
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 30px auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
