@@ -8,12 +8,15 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class PagesController {
     @GetMapping("/home")
     public String home(Model model) {
-      return "Pages/home";
+        return "Pages/home";
+    }
+    @GetMapping("/EventsPage")
+    public String EventsPage(Model model) {
+        return "Pages/EventsPage";
     }
 //    @GetMapping("/home")
 //    public String home(Model model) {
 //        model.addAttribute("lang", "en"); // Default language (or retrieve it dynamically)
 //        return "Pages/home";
 //    }
-
 }
