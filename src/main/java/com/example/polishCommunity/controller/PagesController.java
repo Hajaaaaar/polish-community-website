@@ -10,6 +10,9 @@ public class PagesController {
     public String home(Model model) {
       return "Pages/home";
     }
+
+    @GetMapping("/FAQpage")
+    public String FAQpage(Model model) {return "Pages/FAQpage";}
 //    @GetMapping("/home")
 //    public String home(Model model) {
 //        model.addAttribute("lang", "en"); // Default language (or retrieve it dynamically)
