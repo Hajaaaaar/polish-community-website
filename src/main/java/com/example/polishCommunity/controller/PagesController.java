@@ -18,16 +18,10 @@ public class PagesController {
 
     @GetMapping("/FAQpage")
     public String FAQpage(Model model) {return "Pages/FAQpage";}
-//    @GetMapping("/home")
-//    public String home(Model model) {
-//        model.addAttribute("lang", "en"); // Default language (or retrieve it dynamically)
-//        return "Pages/home";
-//    }
-<<<<<<< HEAD
+
     @GetMapping("/home/contact")
     public String contact(Model model) {
     return "Pages/contactsPage";
 }
-=======
->>>>>>> 0c72edfcd7d2e445a2461a7291cc563bce2751f1
+
 }
