@@ -17,6 +17,9 @@ public class PagesController {
         return "Pages/EventsPage";
     }
 
+    @GetMapping("/FAQpage")
+    public String FAQpage(Model model) {return "Pages/FAQpage";}
+
     @GetMapping("/home/contact")
     public String contact(Model model) {
     return "Pages/contactsPage";
