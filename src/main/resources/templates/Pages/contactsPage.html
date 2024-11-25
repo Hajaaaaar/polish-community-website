@@ -62,7 +62,7 @@
 <section class="container">
     <h1>Contact Details</h1>
 
-    <form action="#" class="form" id="form">
+    <form action="#" onsubmit="submitFunction()" class="form" id="form">
         <div class="input-box">
             <label>Full Name</label>
             <input type="text" placeholder="Enter full name" required id="fullName" />
@@ -83,7 +83,8 @@
             <input type="text" placeholder="Enter subject" required id="subject"/>
             <input type="text" placeholder="Enter your query" required id="query"/>
         </div>
-        <button type="submit" onclick="submitFunction(event)">Submit</button>
+<!--        <button type="submit" onclick="submitFunction(event)">Submit</button>-->
+        <button type="submit" >Submit</button>
     </form>
 </section>
 <div th:replace="~{fragments/footer :: bootstrap-js}"></div>
