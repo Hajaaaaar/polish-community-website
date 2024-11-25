@@ -10,11 +10,13 @@ import java.time.LocalDate;
 public class News {
     private String title;
     private String content;
+    private String link;
     private LocalDate date;
 
-    public News(String title, String content, LocalDate date) {
+    public News(String title, String content, String link, LocalDate date) {
         this.title = title;
         this.content = content;
+        this.link = link;
         this.date = date;
     }
 }

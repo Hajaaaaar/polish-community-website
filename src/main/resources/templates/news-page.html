@@ -15,9 +15,11 @@
 </header>
 <section class="news-grid">
     <div class="news-item" th:each="news : ${newsList}">
-        <h2 th:text="${news.title}"></h2>
-        <p th:text="${news.content}"></p>
-        <p th:text="${news.date}"></p>
+        <a th:href="${news.link}">
+            <h2 th:text="${news.title}"></h2>
+            <p th:text="${news.content}"></p>
+            <p th:text="${news.date}"></p>
+        </a>
     </div>
 </section>
 </body>
