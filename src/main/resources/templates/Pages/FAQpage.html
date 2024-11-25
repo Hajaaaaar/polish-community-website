@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <title>Frequently asked questions</title>
     <link rel="stylesheet" th:href="@{/stylesheet/FAQpage.css}">
+   <link th:replace="~{fragments/header :: bootstrap-css}" />
 </head>
 <body>
+<header th:replace="~{fragments/header}"></header>
 <section id="faq_section" class="faq_section">
     <div class="title-area">
         <h1>Frequently Asked Questions (FAQs)</h1>
-        <img src="../../static/images/Qmark.jpg" alt="red question mark" class="title-img" />
+        <img src="/images/Qmark.jpg" alt="red question mark" class="title-img" >
     </div>
     <div class="filter_faq">
         <label class="filter_topic" for="filter_topic">Filter:</label>
@@ -114,6 +116,8 @@
         </li>
     </ul>
 </section>
+<div th:replace="~{fragments/footer :: bootstrap-js}"></div>
+<footer th:replace="~{fragments/footer}"></footer>
 </body>
 <script th:src="@{/JavaScript/FAQpage.js}"></script>
 
