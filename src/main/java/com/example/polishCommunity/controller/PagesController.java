@@ -15,6 +15,9 @@ public class PagesController {
     public String EventsPage(Model model) {
         return "Pages/EventsPage";
     }
+
+    @GetMapping("/FAQpage")
+    public String FAQpage(Model model) {return "Pages/FAQpage";}
 //    @GetMapping("/home")
 //    public String home(Model model) {
 //        model.addAttribute("lang", "en"); // Default language (or retrieve it dynamically)
