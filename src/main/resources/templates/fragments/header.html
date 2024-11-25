@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link th:fragment="bootstrap-css"
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+          integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+          crossorigin="anonymous">
+    <style>
+        /* Navbar Background and Font */
+        nav {
+            background-color: #ce033f;
+            font-family: fantasy;
+            border-radius: 1%;
+            background: linear-gradient(to bottom, #ce033f, #a0022e);
+            border: none;
+        }
+
+
+        /* Logo */
+        .navbar-brand img {
+            height: 40px;
+            width: 55px;
+            border-radius: 45%;
+            object-fit: cover;
+        }
+
+        /* Remove dropdown arrow */
+        .dropdown-toggle::after {
+            display: none;
+        }
+
+        /* Hover effect for dropdowns */
+        .navbar .nav-item.dropdown:hover .dropdown-menu {
+            display: block;
+            margin-top: 0;
+        }
+
+        /* Dropdown Menu Styling */
+        .dropdown-menu {
+            background-color: #F2DAE1;
+            border: 1px solid #D9A3C5;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 4px;
+        }
+
+        .dropdown-item {
+            padding: 10px 20px;
+            color: #333;
+            font-size: 15px;
+        }
+
+        .dropdown-item:hover {
+            background-color: #D9A3C5;
+            color: #000;
+        }
+
+        /* Navbar Links */
+        .nav-link {
+            color: #FFFFFF;
+            font-size: 16px;
+            padding: 8px 15px;
+        }
+
+        .nav-link:hover {
+            color: black;
+            text-decoration: none;
+        }
+
+        /* Language Dropdown Styling */
+        .language-dropdown {
+            margin-left: auto;
+            font-family: "Times New Roman";
+        }
+
+        .language-dropdown select {
+            padding: 5px;
+            font-size: 14px;
+            font-weight: bold;
+            border-radius: 4px;
+            border: 1px solid #FFFFFF;
+            background-color: #F2DAE1;
+            color: #A90011;
+            transition: background-color 0.3s ease;
+        }
+
+        .language-dropdown select:hover {
+            background-color: #d3003f;
+            color: white;
+
+        }
+        /* Center Content on Small Screens */
+        @media (max-width: 768px) {
+            footer {
+                text-align: center;
+            }
+
+            .footer-column {
+                flex: 100%;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light header" th:fragment="header">
+    <div class="container-fluid">
+        <!-- Logo -->
+        <a class="navbar-brand" th:href="@{/Pages/home}">
+            <img src="/images/logo.jpg" alt="Community Logo">
+        </a>
+
+        <!-- Navbar links -->
+        <div class="navbar-collapse">
+            <ul class="navbar-nav">
+                <!-- Home -->
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/home}">HOME</a>
+                </li>
+
+                <!-- About with dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" aria-expanded="false">
+                        ABOUT
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+                        <li><a class="dropdown-item" th:href="@{/about/officers}">Officers</a></li>
+                        <li><a class="dropdown-item" th:href="@{/about/history}">History</a></li>
+                        <li><a class="dropdown-item" th:href="@{/about/archive}">Archive</a></li>
+                    </ul>
+                </li>
+
+                <!-- Events -->
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/EventsPage}">EVENTS</a>
+                </li>
+
+                <!-- News -->
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/news}">NEWS</a>
+                </li>
+
+                <!-- Communities with dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="communitiesDropdown" role="button" aria-expanded="false">
+                        COMMUNITIES
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="communitiesDropdown">
+                        <li><a class="dropdown-item" th:href="@{/communities/community1}">Community 1</a></li>
+                        <li><a class="dropdown-item" th:href="@{/communities/community2}">Community 2</a></li>
+                    </ul>
+                </li>
+
+                <!-- Resources with dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="resourcesDropdown" role="button" aria-expanded="false">
+                        RESOURCES
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="resourcesDropdown">
+                        <li><a class="dropdown-item" th:href="@{/resources/work}">Work</a></li>
+                        <li><a class="dropdown-item" th:href="@{/resources/housing}">Housing</a></li>
+                        <li><a class="dropdown-item" th:href="@{/resources/health}">Health</a></li>
+                        <li><a class="dropdown-item" th:href="@{/resources/social-connections}">Social Connections</a></li>
+                        <li><a class="dropdown-item" th:href="@{/resources/education}">Education and Skills</a></li>
+                        <li><a class="dropdown-item" th:href="@{/resources/safety}">Safety and Stability</a></li>
+                        <li><a class="dropdown-item" th:href="@{/resources/rights}">Rights and Responsibilities</a></li>
+                    </ul>
+                </li>
+
+                <!-- Contact -->
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/contact}">CONTACT</a>
+                </li>
+
+                <!-- Join Us -->
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/join-us}">JOIN US</a>
+                </li>
+
+                <!-- Login -->
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/login}">LOGIN</a>
+                </li>
+            </ul>
+
+            <!-- Language Dropdown -->
+            <div class="language-dropdown">
+                <select onchange="window.location.href=this.value">
+                    <option value="?lang=en" th:selected="${lang == 'en'}">English</option>
+                    <option value="?lang=pl" th:selected="${lang == 'pl'}">Polish</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-wEmeIV1mKuiNp12zCL1ZwZ8F5eCFbCgIr8AsSH4pMIqjGtjvE3f7CWK5Z2s+XnG" crossorigin="anonymous"></script>
+</body>
+</html>
