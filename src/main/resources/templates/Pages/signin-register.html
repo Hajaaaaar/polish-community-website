@@ -6,24 +6,8 @@
     <title>Log In/Register</title>
     <link th:replace="~{fragments/header :: bootstrap-css}" />
     <link rel="stylesheet" th:href="@{/stylesheet/signregister.css}">
-    <script>
-        // Password Visibility Toggle
-        function togglePasswordVisibility(id) {
-            const passwordField = document.getElementById(id);
-            passwordField.type = passwordField.type === 'password' ? 'text' : 'password';
-        }
+    <script th:src="@{/JavaScript/signRegister.js}" defer></script>
 
-        // Form Validation
-        function validateForm(event) {
-            const password = document.getElementById('password').value;
-            const confirmPassword = document.getElementById('confirmPassword').value;
-
-            if (password !== confirmPassword) {
-                alert('Passwords do not match. Please check and try again.');
-                event.preventDefault(); // Prevent form submission
-            }
-        }
-    </script>
 </head>
 <body>
     <header th:replace="~{fragments/header}"></header>
@@ -43,16 +27,20 @@
                 <input type="email" id="email" name="email" required>
 
                 <label for="password">Password:</label>
+                <small class="helper-text">
+                    Password must be at least 8 characters and include:
+                    1 uppercase letter, 1 number, and 1 special character (e.g., @$!%*?&).
+                </small>
                 <div class="password-container">
                     <input type="password" id="password" name="password" required
                            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}">
-                    <button type="button" onclick="togglePasswordVisibility('password')">Show/Hide</button>
+                    <i id="password-icon" class="bi bi-eye" onclick="togglePasswordVisibility('password', 'password-icon')"></i>
                 </div>
 
                 <label for="confirmPassword">Confirm Password:</label>
                 <div class="password-container">
                     <input type="password" id="confirmPassword" name="confirmPassword" required>
-                    <button type="button" onclick="togglePasswordVisibility('confirmPassword')">Show/Hide</button>
+                    <i id="confirm-password-icon" class="bi bi-eye" onclick="togglePasswordVisibility('confirmPassword', 'confirm-password-icon')"></i>
                 </div>
 
                 <button type="submit">Register</button>
@@ -69,7 +57,7 @@
                 <label for="loginPassword">Password:</label>
                 <div class="password-container">
                     <input type="password" id="loginPassword" name="password" required>
-                    <button type="button" onclick="togglePasswordVisibility('loginPassword')">Show/Hide</button>
+                    <i id="login-password-icon" class="bi bi-eye" onclick="togglePasswordVisibility('loginPassword', 'login-password-icon')"></i>
                 </div>
 
                 <button type="submit">Log In</button>

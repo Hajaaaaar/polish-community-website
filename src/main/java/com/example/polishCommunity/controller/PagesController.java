@@ -3,7 +3,6 @@ package com.example.polishCommunity.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
 public class PagesController {
@@ -25,4 +24,8 @@ public class PagesController {
     return "Pages/contactsPage";
 }
 
+    @GetMapping("/signin-register")
+    public String Signregister(Model model) {
+        return "Pages/signin-register";
+    }
 }
