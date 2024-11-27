@@ -3,19 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>News Page</title>
+    <title>Skills Page</title>
     <link th:replace="~{fragments/header :: bootstrap-css}" />
     <link rel="stylesheet" th:href="@{/stylesheet/skillsPage.css}">
 </head>
 <body>
 <header th:replace="~{fragments/header}"></header>
-<section class="news-grid">
-    <div class="news-item" th:each="skills : ${skillsList}">
+<section class="skills-grid">
+    <div class="skills-item" th:each="skills : ${skillsList}">
         <a th:href="${skills.link}">
             <h2 th:text="${skills.name}"></h2>
             <p th:text="${skills.description}"></p>
-            <p th:text="${skills.duration}"></p>
-            <p th:text="${skills.expiryDate}"></p>
+            <p>
+                Estimated Duration: <span class="duration" th:text="${skills.duration}"></span>
+            </p>
+            <p>
+                Expires On: <span class="date" th:text="${skills.expiryDate}"></span>
+            </p>
         </a>
     </div>
 </section>

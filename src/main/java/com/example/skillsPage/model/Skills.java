@@ -11,10 +11,10 @@ public class Skills {
     private String name;
     private String description;
     private String link;
-    private int duration;
+    private String duration;
     private LocalDate expiryDate;
 
-    public Skills(String name, String description, String link, int duration, LocalDate expiryDate) {
+    public Skills(String name, String description, String link, String duration, LocalDate expiryDate) {
         this.name = name;
         this.description = description;
         this.link = link;

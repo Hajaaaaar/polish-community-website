@@ -17,11 +17,14 @@ public class SkillsRepository {
     private final RowMapper<Skills> skillsRowMapper = new RowMapper<>() {
         @Override
         public Skills mapRow(ResultSet rs, int rowNum) throws SQLException {
+            int duration = rs.getInt("duration");
+            String formattedDuration = formatDuration(duration);
+
             return new Skills(
                     rs.getString("name"),
                     rs.getString("description"),
                     rs.getString("link"),
-                    rs.getInt("duration"),
+                    formattedDuration,
                     rs.getDate("expiryDate").toLocalDate()
             );
         }
@@ -34,5 +37,15 @@ public class SkillsRepository {
     public List<Skills> findAll() {
         String sql = "SELECT name, description, link, duration, expiryDate FROM Skills";
         return jdbcTemplate.query(sql, skillsRowMapper);
+    }
+
+    private String formatDuration(int duration) {
+        int days = duration / 24;
+        int hours = duration % 24;
+        if (days > 0) {
+            return String.format("%dd%dh", days, hours);
+        } else {
+            return String.format("%dh", hours);
+        }
     }
 }
