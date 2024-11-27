@@ -21,7 +21,6 @@ public class NewsController {
     public String getNewsPage(Model model) {
         List<News> newsList = newsService.getAllNews();
         model.addAttribute("newsList", newsList);
-        System.out.println("Navigating to /newsPage with " + newsList.size() + " items.");
-        return "news-page";
+        return "Pages/news-page";
     }
 }
