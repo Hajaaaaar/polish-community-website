@@ -5,16 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>News Page</title>
     <link th:replace="~{fragments/header :: bootstrap-css}" />
-    <link rel="stylesheet" th:href="@{/stylesheet/newsPage.css}">
+    <link rel="stylesheet" th:href="@{/stylesheet/skillsPage.css}">
 </head>
 <body>
 <header th:replace="~{fragments/header}"></header>
 <section class="news-grid">
-    <div class="news-item" th:each="news : ${newsList}">
-        <a th:href="${news.link}">
-            <h2 th:text="${news.title}"></h2>
-            <p th:text="${news.content}"></p>
-            <p th:text="${news.date}"></p>
+    <div class="news-item" th:each="skills : ${skillsList}">
+        <a th:href="${skills.link}">
+            <h2 th:text="${skills.name}"></h2>
+            <p th:text="${skills.description}"></p>
+            <p th:text="${skills.duration}"></p>
+            <p th:text="${skills.expiryDate}"></p>
         </a>
     </div>
 </section>
