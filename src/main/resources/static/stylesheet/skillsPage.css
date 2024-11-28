@@ -1,7 +1,6 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
-    color: #333;
 }
 
 .skills-grid {
@@ -61,4 +60,23 @@ body {
 
 .date {
     font-weight: bold;
+}
+
+h1 {
+    font-size: 2rem;
+    text-align: center;
+    color: #d50032 !important;
+    padding-top: 25px;
+}
+
+#mainText {
+    padding-top: 25px;
+    text-align: justify;
+    margin-left: 10rem;
+    margin-right: 10rem;
+}
+
+#readMore {
+    padding-top: 25px;
+    text-align: center;
 }
