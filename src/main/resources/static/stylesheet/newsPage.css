@@ -38,6 +38,13 @@ header .subheading {
 
 .news-item:hover {
     transform: translateY(-5px);
+    outline: 2px solid #d50032;
+    outline-offset: 4px;
+    background-color: #ffc9c9;
+}
+
+.news-item:active {
+    background-color: #ff5f5f;
 }
 
 .news-image {
@@ -59,6 +66,6 @@ header .subheading {
 }
 
 a {
-    text-decoration: none;
+    text-decoration: none !important;
 }
 
