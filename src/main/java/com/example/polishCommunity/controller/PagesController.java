@@ -19,7 +19,7 @@ public class PagesController {
     @GetMapping("/FAQpage")
     public String FAQpage(Model model) {return "Pages/FAQpage";}
 
-    @GetMapping("/home/contact")
+    @GetMapping("/contact")
     public String contact(Model model) {
     return "Pages/contactsPage";
 }
@@ -28,4 +28,5 @@ public class PagesController {
     public String Signregister(Model model) {
         return "Pages/signin-register";
     }
+
 }
