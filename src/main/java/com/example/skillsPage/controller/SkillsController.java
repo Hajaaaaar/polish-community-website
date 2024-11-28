@@ -17,7 +17,7 @@ public class SkillsController {
         this.skillsService = skillsService;
     }
 
-    @GetMapping("/skills")
+    @GetMapping("/resources/education")
     public String getSkillsPage(Model model) {
         List<Skills> skillsList = skillsService.getAllSkills();
         model.addAttribute("skillsList", skillsList);
