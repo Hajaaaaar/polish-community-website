@@ -29,4 +29,7 @@ public class PagesController {
         return "Pages/signin-register";
     }
 
+    @GetMapping("/healthPage")
+    public String healthPage(Model model) {return "Pages/healthPage";}
+
 }

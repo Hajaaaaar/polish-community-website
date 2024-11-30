@@ -1,4 +1,4 @@
-package com.example.Health.repository;
+package com.example.polishCommunity.repository;
 
 public class HealthInformationRepositoryJDBC {
 }

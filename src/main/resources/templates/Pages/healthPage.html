@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/stylesheet/healthPage.css"/>
+    <link th:replace="~{fragments/header :: bootstrap-css}" />
+    <title>Health Section</title>
+</head>
+<body>
+<header th:replace="~{fragments/header}"></header>
+<h1 class="title">Health & Social Care Information</h1>
+<div class="intro_para">
+    <p>This page is dedicated to providing you with the vital role of health and social care
+        services in supporting the well-being and integration of migrants in wales and the UK.
+    Having this easy access to healthcare can help to feel supported and integrated in new communities.
+    This page covers the crucial and diverse healthcare needs and support mechanisms, including
+    the importance of tailored services and any challenges one may be facing when dealing with the
+    healthcare system. The importance of mental health and the need for compassionate care is also vital,
+    so we hope to provide useful information to make healthcare easy, more accessible and welcoming for all. </p>
+</div>
+<a href="https://www.gov.wales/migrant-integration-framework-html#135678">
+<button class="web_link">Click here for more info from the GOV website</button>
+</a>
+
+<div th:replace="~{fragments/footer :: bootstrap-js}"></div>
+<footer th:replace="~{fragments/footer}"></footer>
+</body>
+</html>
