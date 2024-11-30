@@ -1,6 +1,6 @@
-# CREATE DATABASE IF NOT EXISTS polishsite;
-#
-# USE polishsite;
+CREATE DATABASE IF NOT EXISTS polishsite;
+
+USE polishsite;
 
 CREATE TABLE IF NOT EXISTS users (
      id INT AUTO_INCREMENT PRIMARY KEY,
