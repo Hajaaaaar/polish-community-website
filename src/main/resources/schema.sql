@@ -10,7 +10,7 @@ CREATE TABLE IF NOT EXISTS users (
      password_hash VARCHAR(255) NOT NULL
 ) ENGINE = InnoDB;
 
-CREATE TABLE work_information (
+CREATE TABLE IF NOT EXISTS work_information (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
     description TEXT,
