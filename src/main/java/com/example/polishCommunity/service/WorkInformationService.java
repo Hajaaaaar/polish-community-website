@@ -1,7 +1,7 @@
-package com.example.workPage.service;
+package com.example.polishCommunity.service;
 
-import com.example.workPage.model.WorkInformation;
-import com.example.workPage.repository.WorkInformationRepository;
+import com.example.polishCommunity.model.WorkInformation;
+import com.example.polishCommunity.repository.WorkInformationRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
