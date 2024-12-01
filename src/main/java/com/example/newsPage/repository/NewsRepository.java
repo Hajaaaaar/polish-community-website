@@ -30,7 +30,6 @@ public class NewsRepository {
         this.jdbcTemplate = jdbcTemplate;
     }
 
-    // Method to fetch all news records
     public List<News> findAll() {
         String sql = "SELECT title, content, link, date FROM News";
         return jdbcTemplate.query(sql, newsRowMapper);
