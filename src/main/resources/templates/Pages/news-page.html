@@ -4,15 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>News Page</title>
-    <link rel="stylesheet" th:href="@{/stylesheet/style.css}">
+    <link th:replace="~{fragments/header :: bootstrap-css}" />
+    <link rel="stylesheet" th:href="@{/stylesheet/newsPage.css}">
 </head>
 <body>
-<header>
-    <div class="header-container">
-        <h1>Polish Community News</h1>
-        <p class="subheading">Stay updated with the latest news</p>
-    </div>
-</header>
+<header th:replace="~{fragments/header}"></header>
 <section class="news-grid">
     <div class="news-item" th:each="news : ${newsList}">
         <a th:href="${news.link}">
@@ -22,5 +18,7 @@
         </a>
     </div>
 </section>
+<div th:replace="~{fragments/footer :: bootstrap-js}"></div>
+<footer th:replace="~{fragments/footer}"></footer>
 </body>
 </html>

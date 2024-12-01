@@ -1,6 +1,7 @@
 package com.example.newsPage.service;
 
 import com.example.newsPage.model.News;
+import com.example.newsPage.repository.NewsRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

@@ -17,7 +17,7 @@ public class NewsController {
         this.newsService = newsService;
     }
 
-    @GetMapping("/newsPage")
+    @GetMapping("/news")
     public String getNewsPage(Model model) {
         List<News> newsList = newsService.getAllNews();
         model.addAttribute("newsList", newsList);
