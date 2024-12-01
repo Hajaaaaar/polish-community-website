@@ -32,4 +32,5 @@ public class PagesController {
     @GetMapping("/healthPage")
     public String healthPage(Model model) {return "Pages/healthPage";}
 
+
 }

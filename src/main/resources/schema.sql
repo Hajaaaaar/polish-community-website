@@ -9,3 +9,11 @@ CREATE TABLE IF NOT EXISTS users (
      email VARCHAR(100) NOT NULL UNIQUE,
      password_hash VARCHAR(255) NOT NULL
 ) ENGINE = InnoDB;
+
+CREATE TABLE IF NOT EXISTS healthTable (
+    name VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    location VARCHAR(50) NOT NULL,
+    q1registered BOOLEAN NOT NULL,
+    q2queries TEXT NOT NULL
+)
