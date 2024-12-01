@@ -29,4 +29,9 @@ public class PagesController {
         return "Pages/signin-register";
     }
 
+    @GetMapping("/workPage")
+    public String work(Model model) {
+        return "Pages/workPage";
+    }
+
 }
