@@ -12,6 +12,24 @@ CREATE TABLE IF NOT EXISTS users (
      password_hash VARCHAR(255) NOT NULL
 ) ENGINE = InnoDB;
 
+
+
+
+
+
+
+
+
+
+
+CREATE TABLE IF NOT EXISTS healthtable (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    location VARCHAR(255) NOT NULL,
+    q1registered BOOLEAN NOT NULL,
+    q2queries TEXT NOT NULL
+);
 CREATE TABLE IF NOT EXISTS work_information (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
