@@ -20,6 +20,7 @@ public class AuthController {
                                @RequestParam String email,
                                @RequestParam String password,
                                RedirectAttributes redirectAttributes) {  // Use RedirectAttributes to pass messages
+        System.out.println("Test!!!");
         try {
             userService.registerUser(name, surname, email, password);
             redirectAttributes.addFlashAttribute("successMessage", "Account created successfully! Please log in.");

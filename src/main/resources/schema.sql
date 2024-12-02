@@ -9,3 +9,12 @@ CREATE TABLE IF NOT EXISTS users (
      email VARCHAR(100) NOT NULL UNIQUE,
      password_hash VARCHAR(255) NOT NULL
 ) ENGINE = InnoDB;
+
+CREATE TABLE IF NOT EXISTS resources (
+    name TEXT NOT NULL,
+    description TEXT NOT NULL,
+    access TEXT NOT NULL,
+    link TEXT NULL DEFAULT NULL,
+    address TEXT NULL DEFAULT NULL,
+    phone TEXT NULL DEFAULT NULL
+) ENGINE = InnoDB;
