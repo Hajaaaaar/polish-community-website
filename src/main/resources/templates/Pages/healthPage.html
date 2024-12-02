@@ -42,18 +42,18 @@
         </div>
 
 <h1 class="survey-title">Your Health Queries</h1>
-<form th:action="@{/polishCommunity}" th:object="${healthInformation}" method="post">
+<form th:action="@{/health/submit}" th:object="${healthInformation}" method="post">
     <label for="name">Name:</label>
-    <input type="text" id="name" th:field="{name}" required><br>
+    <input type="text" id="name" th:field="*{name}" required><br>
 
     <label for="email">Email address:</label>
-    <input type="email" id="email" th:field="{email}" required><br>
+    <input type="email" id="email" th:field="*{email}" required><br>
 
     <label for="location">What area of South Wales do you live in?:</label>
-    <input type="text" id="location" th:field="{location}" required><br>
+    <input type="text" id="location" th:field="*{location}" required><br>
 
     <label for="q1registered">Are you registered to a local GP?</label>
-    <input type="checkbox" id="q1registered" th:field="{q1registered}"><br>
+    <input type="checkbox" id="q1registered" th:field="*{q1registered}"><br>
 
     <label for="q2queries">Do you have any queries when it comes to healthcare and how to approach it?</label>
     <textarea id="q2queries" th:field="*{q2queries}" required></textarea><br>
