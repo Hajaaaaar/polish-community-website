@@ -119,3 +119,17 @@ h1 {
     background-color: #850023;
 }
 
+#learnMore {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+}
+
+#learnMore:hover {
+    background-color: #333;
+}
+
