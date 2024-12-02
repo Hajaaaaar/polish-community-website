@@ -18,8 +18,7 @@ public class SecurityConfig {
                 .csrf(csrf -> csrf.disable()) // Disable CSRF for now
                 .authorizeHttpRequests(authorize -> authorize
                         // Allow public access to these URLs
-                        .requestMatchers("/", "/signin-register", "/register", "/login", "/home", "/news", "/events", "/EventsPage", "/contact", "/FAQpage", "resources/education", "/healthPage", "/health")
-
+                        .requestMatchers("/", "/signin-register", "/register", "/login", "/home", "/news", "/events", "/EventsPage", "/contact", "/FAQpage", "resources/education", "/healthPage", "/health", "/workPage")
                         .permitAll()
                         // Allow static resources
                         .requestMatchers("/static/**", "/stylesheet/**", "/JavaScript/**", "/images/**", "/templates/**").permitAll()
@@ -33,7 +32,6 @@ public class SecurityConfig {
         return http.build();
     }
     @Bean
-    public PasswordEncoder passwordEncoder() {
-        return new BCryptPasswordEncoder();
+    public PasswordEncoder passwordEncoder() { return new BCryptPasswordEncoder();
     }
 }
