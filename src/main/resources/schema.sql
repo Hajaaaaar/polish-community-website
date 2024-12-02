@@ -2,6 +2,8 @@ CREATE DATABASE IF NOT EXISTS polishsite;
 
 USE polishsite;
 
+# drop table if exists users;
+
 CREATE TABLE IF NOT EXISTS users (
      id INT AUTO_INCREMENT PRIMARY KEY,
      name VARCHAR(50) NOT NULL,
@@ -26,7 +28,7 @@ CREATE TABLE IF NOT EXISTS healthtable (
     location VARCHAR(255) NOT NULL,
     q1registered BOOLEAN NOT NULL,
     q2queries TEXT NOT NULL
-); 
+);
 
 CREATE TABLE IF NOT EXISTS work_information (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -36,3 +38,4 @@ CREATE TABLE IF NOT EXISTS work_information (
     job_type VARCHAR(50),
     expiry_date DATE
 );
+
