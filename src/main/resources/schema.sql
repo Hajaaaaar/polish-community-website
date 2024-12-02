@@ -12,6 +12,16 @@ CREATE TABLE IF NOT EXISTS users (
      password_hash VARCHAR(255) NOT NULL
 ) ENGINE = InnoDB;
 
+
+
+
+
+
+
+
+
+
+
 CREATE TABLE IF NOT EXISTS healthtable (
     id SERIAL PRIMARY KEY,
     name VARCHAR(255) NOT NULL,

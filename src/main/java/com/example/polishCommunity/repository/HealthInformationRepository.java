@@ -14,6 +14,9 @@ public class HealthInformationRepository {
     public HealthInformationRepository(DataSource dataSource){
         this.dataSource = dataSource;
     }
+
+
+
     public void saveHealthInformation(HealthInformation healthInformation) {
         String sql = "INSERT INTO healthtable (name, email, location, q1registered, q2queries) VALUES (?, ?, ?, ?, ?)";
         try (Connection connection = dataSource.getConnection();

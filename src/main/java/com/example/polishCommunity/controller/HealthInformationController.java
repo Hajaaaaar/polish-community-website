@@ -1,17 +1,16 @@
 package com.example.polishCommunity.controller;
 
 import com.example.polishCommunity.model.HealthInformation;
+import com.example.polishCommunity.repository.HealthInformationRepository;
 import com.example.polishCommunity.service.HealthInformationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 @Controller
-@RequestMapping("/health")
+//@RequestMapping("/health")
 public class HealthInformationController {
 
     @Autowired
@@ -20,7 +19,7 @@ public class HealthInformationController {
     @GetMapping
     public String showHealthSurvey(Model model) {
         model.addAttribute("healthInformation", new HealthInformation()); // Add the object here
-        return "healthPage";
+        return "Pages/healthPage";
     }
 
     @PostMapping("/submit")
@@ -29,3 +28,21 @@ public class HealthInformationController {
         return "redirect:/health";
     }
 }
+
+//    @PostMapping("/submit")
+//    public String submitHealthInformation(@RequestParam String name,
+//                                          @RequestParam String email,
+//                                          @RequestParam String location,
+//                                          @RequestParam Boolean q1registered,
+//                                          @RequestParam String q2queries,
+//                                          HealthInformation healthInformation) {
+//        try {
+//            HealthInformationRepository.dataSource (name, email, location, q1registered,q2queries);
+//            return "redirect:/health"; // Redirect to signin-register with successMessage
+//        } catch (RuntimeException e) {
+//            return "redirect:/home";  // Redirect to the same page with errorMessage
+//        }
+//
+//    }
+//
+//}
