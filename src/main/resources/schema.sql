@@ -21,6 +21,15 @@ CREATE TABLE IF NOT EXISTS work_information (
     expiry_date DATE
 );
 
+drop table if exists rights_table;
+
+create table if not exists rights_table(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,
+    description TEXT,
+    link VARCHAR(255)
+)ENGINE = InnoDB;
+
 
 
 

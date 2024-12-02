@@ -34,4 +34,9 @@ public class PagesController {
         return "Pages/workPage";
     }
 
+    @GetMapping("/rights")
+    public String getRightsPage(Model model){
+            return "Pages/Rights";
+        }
+
 }
