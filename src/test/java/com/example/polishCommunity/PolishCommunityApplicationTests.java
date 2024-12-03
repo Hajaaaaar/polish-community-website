@@ -8,6 +8,7 @@ class PolishCommunityApplicationTests {
 
 	@Test
 	void contextLoads() {
+
 	}
 
 }

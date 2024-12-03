@@ -4,8 +4,6 @@ import com.example.newsPage.model.News;
 import com.example.newsPage.repository.NewsRepository;
 import org.springframework.stereotype.Service;
 
-import java.time.LocalDate;
-import java.util.Arrays;
 import java.util.List;
 
 @Service
