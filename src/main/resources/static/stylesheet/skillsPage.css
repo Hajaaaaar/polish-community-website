@@ -19,6 +19,16 @@ body {
     transition: transform 0.3s ease-in-out;
 }
 
+.resources-item {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    outline: 2px solid #d50032;
+    outline-offset: 4px;
+}
+
 .skills-item:hover {
     transform: translateY(-5px);
     outline: 2px solid #d50032;
@@ -36,19 +46,19 @@ body {
     object-fit: cover;
 }
 
-.skills-item h2 {
+.skills-item h2, .resources-item h2 {
     font-size: 1.8rem;
     color: #d50032;
     padding: 15px;
 }
 
-.skills-item p {
+.skills-item p, .resources-item p {
     padding: 0 15px 15px;
     font-size: 1rem;
     color: #555;
 }
 
-.skills-grid .skills-item a {
+.skills-item a, .resources-item a {
     text-decoration: none;
     color: inherit;
 }
@@ -76,7 +86,50 @@ h1 {
     margin-right: 10rem;
 }
 
-#readMore {
+#learnMore {
     padding-top: 25px;
     text-align: center;
 }
+
+.resourceLink {
+    color: #d50032 !important;
+    text-decoration: underline; !important
+}
+
+.resource {
+    color: #d50032 !important;
+}
+
+#toggleButton {
+    background-color: #d50032;
+    color: white;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    display: block;
+    margin: 20px auto;
+    width: 200px;
+    height: 60px;
+    text-align: center;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#toggleButton:hover {
+    background-color: #850023;
+}
+
+#learnMore {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+}
+
+#learnMore:hover {
+    background-color: #333;
+}
+

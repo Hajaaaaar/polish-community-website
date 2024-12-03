@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Work </title>
+    <link th:replace="~{fragments/header :: bootstrap-css}" />
+    <link rel="stylesheet" th:href="@{/stylesheet/skillsPage.css}">
+</head>
+<body>
+
+<header th:replace="~{fragments/header}"></header>
+<h1>Importance Of Work In Integration</h1>
+<p id="mainText">  Being in employment (particularly in job roles which match migrants' skills and qualifications) can be a critical factor in promoting integration and independence. Employment provides social status, social connections and a sense of purpose. Supporting entrepreneurship and self-employment opportunities can also provide additional avenues for economic integration </p>
+<a href="https://www.gov.wales/migrant-integration-framework-html#135674">
+    <button id="learnMore">Learn More</button>
+</a>
+<div class="work-item" th:each="workInformation : ${workInformationList}">
+    <a th:href="${workInformation.link}">
+        <h2 th:text="${workInformation.name}"></h2>
+        <p th:text="${workInformation.description}"></p>
+        <p>
+            Job Type: <span class="job-type" th:text="${workInformation.jobType}"></span>
+        </p>
+        <p>
+            Expires On: <span class="date" th:text="${workInformation.expiryDate}"></span>
+        </p>
+    </a>
+</div>
+
+
+
+<div th:replace="~{fragments/footer :: bootstrap-js}"></div>
+<footer th:replace="~{fragments/footer}"></footer>
+</body>
+</html>

@@ -39,7 +39,7 @@
         /* Dropdown Menu Styling */
         .dropdown-menu {
             background-color: #F2DAE1;
-            border: 1px solid #D9A3C5;
+            border: 1px solid rgba(221, 198, 211, 0.55);
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             border-radius: 4px;
         }
@@ -51,7 +51,7 @@
         }
 
         .dropdown-item:hover {
-            background-color: #D9A3C5;
+            background-color: rgba(198, 163, 184, 0.7);
             color: #000;
         }
 
@@ -102,6 +102,7 @@
 
 
     </style>
+    <title></title>
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light header" th:fragment="header">
@@ -144,11 +145,11 @@
                 <!-- Communities with dropdown -->
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="communitiesDropdown" role="button" aria-expanded="false">
-                        COMMUNITIES
+                        ORGANIZATIONS
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="communitiesDropdown">
-                        <li><a class="dropdown-item" th:href="@{/communities/community1}">Community 1</a></li>
-                        <li><a class="dropdown-item" th:href="@{/communities/community2}">Community 2</a></li>
+                        <li><a class="dropdown-item" th:href="@{/organizations/organization1}">Organization 1</a></li>
+                        <li><a class="dropdown-item" th:href="@{/organizations/organization2}">Organization 2</a></li>
                     </ul>
                 </li>
 
@@ -158,9 +159,9 @@
                         RESOURCES
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="resourcesDropdown">
-                        <li><a class="dropdown-item" th:href="@{/resources/work}">Work</a></li>
+                        <li><a class="dropdown-item" th:href="@{/workPage}">Work</a></li>
                         <li><a class="dropdown-item" th:href="@{/resources/housing}">Housing</a></li>
-                        <li><a class="dropdown-item" th:href="@{/resources/health}">Health</a></li>
+                        <li><a class="dropdown-item" th:href="@{/healthPage}">Health</a></li>
                         <li><a class="dropdown-item" th:href="@{/resources/social-connections}">Social Connections</a></li>
                         <li><a class="dropdown-item" th:href="@{/resources/education}">Education and Skills</a></li>
                         <li><a class="dropdown-item" th:href="@{/resources/safety}">Safety and Stability</a></li>
@@ -173,6 +174,10 @@
                     <a class="nav-link" th:href="@{/contact}">CONTACT</a>
                 </li>
 
+                <!-- Donation -->
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/}">DONATE</a>
+                </li>
 
                 <!-- Login -->
                 <li class="nav-item">

@@ -1,0 +1,113 @@
+html, body{
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.top_sec{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    padding: 20px;
+    flex-grow: 1;
+}
+.title {
+    font-family: "Times New Roman", sans-serif;
+    font-size: 3rem;
+    font-weight: 250;
+    letter-spacing: 1px;
+    padding: 10px;
+    color: #c9033f;
+    margin: 0 0 20px 0;
+}
+
+.intro_para {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.intro_para p {
+    font-size: 1rem;
+    font-family: "Times New Roman", sans-serif;
+    font-weight: bold;
+    color: #333;
+    margin: 0 0 20px 0;
+    line-height: 1.9;
+    width: 85%;
+}
+
+
+.web_link{
+    font-family: "Times New Roman", sans-serif;
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: #fcd4d4;
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.5s ease;
+    color: red;
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+
+.web_link:hover{
+    background-color: #fc9494;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.web_link:active {
+    transform: translateY(2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.map_filter{
+    margin-top: 30px;
+    font-family: "Times New Roman", sans-serif;
+    font-weight: bold;
+    color: #c9033f;
+    line-height: 1.9;
+    width: 85%;
+}
+
+#mapFilter{
+    margin-left: 5px;
+    font-family: "Times New Roman", sans-serif;
+    border: none;
+    border-radius: 50px;
+    background-color: #fcd4d4;
+    color: red;
+    font-weight: bolder;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.map_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0;
+}
+
+.hospital_map, .clinics_map, .emergency_map {
+    width: 700px;
+    height: 300px;
+    border: 0;
+    display: block;
+}
+
+.map {
+    display: none;
+}
