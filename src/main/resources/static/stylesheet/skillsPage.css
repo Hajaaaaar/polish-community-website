@@ -95,11 +95,9 @@ h1 {
     color: #d50032 !important;
     text-decoration: underline; !important
 }
-
 .resource {
     color: #d50032 !important;
 }
-
 #toggleButton {
     background-color: #d50032;
     color: white;
@@ -114,9 +112,8 @@ h1 {
     border-radius: 5px;
     transition: background-color 0.3s ease;
 }
-
 #toggleButton:hover {
-    background-color: #850023;
+    background-color: #d50032;
 }
 
 #learnMore {
@@ -133,3 +130,41 @@ h1 {
     background-color: #333;
 }
 
+h2 {
+    font-size: 2rem;
+    text-align: center;
+    color: #d50032 !important;
+    padding-top: 25px;
+}
+.button-container {
+    text-align: center;
+}
+
+.button-link {
+    display: inline-block;
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 0px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.button-link:hover {
+    background-color: black;
+}
+li {
+    color: black;
+    font-size: 16px;
+    line-height: 1.6;
+}
+li strong {
+    color: #d50032;
+}
+#mainText1 {
+    padding-top: 25px;
+    text-align: justify;
+    margin-left: 10rem;
+    margin-right: 10rem;
+}
