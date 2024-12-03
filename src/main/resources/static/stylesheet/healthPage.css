@@ -99,6 +99,7 @@ html, body{
     align-items: center;
     gap: 10px;
     padding: 10px 0;
+    margin-bottom: 50px;
 }
 
 .hospital_map, .clinics_map, .emergency_map {
@@ -111,3 +112,182 @@ html, body{
 .map {
     display: none;
 }
+
+.mentalHealth-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    padding: 20px;
+    flex-grow: 1;
+    margin-bottom: 50px;
+}
+
+.mental-title {
+    font-family: "Times New Roman", sans-serif;
+    font-size: 2rem;
+    font-weight: 250;
+    letter-spacing: 1px;
+    padding: 10px;
+    color: #c9033f;
+    margin: 0 0 20px 0;
+}
+
+.mentalHealth-intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.mentalHealth-intro p {
+    font-size: 1rem;
+    font-family: "Times New Roman", sans-serif;
+    font-weight: bold;
+    color: #333;
+    margin: 0 0 20px 0;
+    line-height: 1.9;
+    width: 85%;
+}
+
+.mentalHealth-linkArea{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 40px 110px 50px 110px;
+    text-align: center;
+    padding: 20px;
+    flex-grow: 1;
+    background-color: #fcd4d4;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+    border-color: #c9033f;
+    border-radius: 20px;
+}
+
+.mentalHealth-buttonText{
+    font-family: "Times New Roman", sans-serif;
+    font-weight: lighter;
+    color: #c9033f;
+    margin: 0 0 20px 0;
+    line-height: 1.2;
+    width: 85%;
+}
+
+.mentalHealth-link{
+    font-family: "Times New Roman", sans-serif;
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: #fceeee;
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.5s ease;
+    color: red;
+    text-decoration: none;
+}
+
+.mentalHealth-link:hover{
+    background-color: #fc9494;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.mentalHealth-link:active {
+    transform: translateY(2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.mentalHealth-map{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.mentalHealth-map p{
+    align-items: center;
+    text-align: center;
+    font-size: 1rem;
+    font-family: "Times New Roman", sans-serif;
+    font-weight: bold;
+    color: #c9033f;
+    margin: 0 0 8px 0;;
+    line-height: 1.2;
+    width: 85%;
+}
+
+.crisis-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 90px 110px 0 110px;
+    text-align: center;
+    padding: 20px;
+    flex-grow: 1;
+    background-color: #fcd4d4;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+    border-color: #c9033f;
+    border-radius: 20px;
+}
+
+.crisis-title{
+    font-family: "Times New Roman", sans-serif;
+    font-size: 2rem;
+    font-weight: bolder;
+    text-decoration: underline;
+    letter-spacing: 1px;
+    padding: 10px;
+    color: #c9033f;
+    margin: 0 0 20px 0;
+}
+
+.crisis-para{
+    font-family: "Times New Roman", sans-serif;
+    font-weight: 90;
+    color: #000000;
+    margin: 0 0 20px 0;
+    line-height: 1.9;
+    width: 85%;
+}
+
+.crisis-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+    width: 85%;
+    text-align: left;
+}
+
+.crisis-list li {
+    font-family: "Times New Roman", sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+    margin-top: -10px;
+    line-height: 1.8;
+    background: #f9f9f9;
+    padding: 10px;
+    border-left: 5px solid #c9033f;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.crisis-list li a {
+    color: #c9033f;
+    text-decoration: none;
+}
+
+.crisis-list li a:hover {
+    text-decoration: underline;
+}
+
+
