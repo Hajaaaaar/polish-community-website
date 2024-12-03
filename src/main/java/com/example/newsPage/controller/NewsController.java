@@ -20,6 +20,7 @@ public class NewsController {
     @GetMapping("/news")
     public String getNewsPage(Model model) {
         List<News> newsList = newsService.getAllNews();
+        newsList.sort((n1, n2) -> n2.getDate().compareTo(n1.getDate()));
         model.addAttribute("newsList", newsList);
         return "Pages/news-page";
     }
