@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills Page</title>
+    <link th:replace="~{fragments/header :: bootstrap-css}" />
+    <link rel="stylesheet" th:href="@{/stylesheet/rights.css}">
+</head>
+<body>
+<header th:replace="~{fragments/header}"></header>
+<h1 th:text = "${rights.getTitle()}"></h1>
+<p id="description" th:text = "${rights.getDescription()}"></p>
+<div th:each="subright:${rights.getSubTitle()}">
+    <h2 th:text="${subright.getSubTitle()}"></h2>
+    <p th:text="${subright.getDescription()}"></p>
+</div>
+
+<div th:replace="~{fragments/footer :: bootstrap-js}"></div>
+<footer th:replace="~{fragments/footer}"></footer>
+</body>
+</html>

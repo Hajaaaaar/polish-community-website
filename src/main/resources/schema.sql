@@ -38,7 +38,21 @@ CREATE TABLE IF NOT EXISTS work_information (
     job_type VARCHAR(50),
     expiry_date DATE
 );
+drop table if exists sub_rights;
+drop table if exists rights;
 
+create table if not exists rights(
+    title_id INT AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,
+    description TEXT
+);
 
+create table if not exists sub_rights(
+    sub_title_id INT AUTO_INCREMENT PRIMARY KEY,
+    sub_title VARCHAR(255) NOT NULL,
+    description TEXT,
+    title_id int,
+    FOREIGN KEY (title_id) REFERENCES rights(title_id)
+);
 
 
