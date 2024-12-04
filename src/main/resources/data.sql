@@ -28,15 +28,6 @@ insert into rights(title, description) values
 
 insert into sub_rights(sub_title,description,title_id) values
 ('Indicator 1: percent registering to vote','Does data exist for UK-born individuals in Wales? Yes: Electoral statistics for the UK.
-\n Does data exist for migrants in Wales? Yes: Overseas, anonymous, opted-out, EU citizens and Parliamentary electors by local authority.',1),
-('test','test',1);
-
-delete
-from housing_questionnaire;
-
-insert into sub_rights(sub_title,description,title_id) values
-                                                           ('Key Indicators of Integration', 'Although there are many ways to measure the integration of migrants in terms of rights and responsibilities, we have selected a few key indicators which we will use for the purposes of this Framework.',1),
-                                                           ('Indicator 1: percent registering to vote','Does data exist for UK-born individuals in Wales? Yes: Electoral statistics for the UK.
 Does data exist for migrants in Wales? Yes: Overseas, anonymous, opted-out, EU citizens and Parliamentary electors by local authority.',1),
                                                            ('Indicator 2: percentage utilising advice services','Does data exist for UK-born individuals in Wales? Yes: National Survey for Wales.
 Does data exist for migrants in Wales? No.
