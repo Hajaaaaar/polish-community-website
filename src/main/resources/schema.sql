@@ -65,3 +65,11 @@ CREATE TABLE IF NOT EXISTS resources (
     address TEXT NULL DEFAULT NULL,
     phone TEXT NULL DEFAULT NULL
 ) ENGINE = InnoDB;
+
+
+CREATE TABLE IF NOT EXISTS housing_questionnaire (
+     id BIGINT AUTO_INCREMENT PRIMARY KEY,
+     name VARCHAR(255),
+     email VARCHAR(255),
+     message TEXT NOT NULL
+) ENGINE = InnoDB;

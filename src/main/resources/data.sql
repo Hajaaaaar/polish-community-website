@@ -30,3 +30,6 @@ insert into sub_rights(sub_title,description,title_id) values
 ('Indicator 1: percent registering to vote','Does data exist for UK-born individuals in Wales? Yes: Electoral statistics for the UK.
 \n Does data exist for migrants in Wales? Yes: Overseas, anonymous, opted-out, EU citizens and Parliamentary electors by local authority.',1),
 ('test','test',1);
+
+delete
+from housing_questionnaire;
