@@ -53,7 +53,7 @@
     <div class="map_container">
         <iframe id="hospitalsMap" class="hospital_map map" src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d415317.57121805643!2d-3.7634396405014114!3d51.63963424384351!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1shospitals%20in%20south%20wales!5e0!3m2!1sen!2suk!4v1733015749740!5m2!1sen!2suk"
     width="700" height="300" style="border:0px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        <iframe id="clinicsMap" class="clinics_map map" src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d633956.2066190372!2d-3.763462056666309!3d51.63435619627976!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sclinics%20in%20South%20Wales!5e0!3m2!1sen!2suk!4v1733017299137!5m2!1sen!2suk"
+        <iframe id="clinicsMap" class="clinics_map map" src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d633095.0505701001!2d-3.9206347310942817!3d51.69594109969169!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sSouth%20Wales%20health%20clinics!5e0!3m2!1sen!2suk!4v1733274002471!5m2!1sen!2suk"
                 width="700" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         <iframe id="emergenciesMap" class="emergency_map map" src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d634007.8260032125!2d-3.76347774565222!3d51.630663012241875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1semergency%20centres%20south%20wales!5e0!3m2!1sen!2suk!4v1733017428254!5m2!1sen!2suk"
                 width="700" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -113,7 +113,7 @@
 
 <!--        <button type="submit">Submit answers</button>-->
 <!--    </form>-->
-    <form action="/submit" th:action="@{/submit}" th:object="${HealthInformationController}" method="post">
+    <form class="healthQueryForm" action="/submit" th:action="@{/submit}" th:object="${HealthInformationController}" method="post">
         <label for="name">Name:</label>
         <input type="text" id="name"  required><br>
 
@@ -130,7 +130,7 @@
         <label for="q2queries">Do you have any queries when it comes to healthcare and how to approach it?</label>
         <textarea id="q2queries" required></textarea><br>
 
-        <button type="submit">Submit answers</button>
+        <button class="healthSubmit" type="submit">Submit answers</button>
     </form>
 
 
