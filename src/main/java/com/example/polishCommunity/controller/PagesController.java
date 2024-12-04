@@ -34,15 +34,6 @@ public class PagesController {
         return "Pages/housingPage";
     }
 
-
-
-
-
-
-
-
-
-
     @GetMapping("/healthPage")
     public String healthPage(Model model) {return "Pages/healthPage";}
 
@@ -51,5 +42,8 @@ public class PagesController {
         return "Pages/workPage";
     }
 
+    @GetMapping("/Work-SurveyPage")
+    public String WorkSurvey(Model model) { return "Pages/Work-SurveyPage";
+    }
 
 }
