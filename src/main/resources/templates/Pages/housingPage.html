@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link th:replace="~{fragments/header :: bootstrap-css}" />
+    <link rel="stylesheet" th:href="@{stylesheet/housingPage.css}">
+    <title>Housing</title>
+</head>
+<body>
+    <header th:replace="~{fragments/header}"></header>
+
+    <main class="container">
+        <section class="housing-info">
+            <h1>Housing Information</h1>
+            <p>
+                The availability of adequate, affordable and stable housing is an essential
+                component of migrant integration, as it can provide individuals with stability,
+                security, and a sense of belonging and well-being. Providing access to good
+                quality housing which meets the needs of individuals and families can
+                therefore be an important factor in promoting integration.
+            </p>
+            <p>
+                While considering housing needs it is important to take into account not
+                only the quality, size, affordability, and suitability of available housing,
+                but also the associated social and cultural aspects. Those who migrate to
+                Wales may find that renting a house or room is difficult as they may not
+                have credit history, references, a guarantor, or money to pay a bond. They
+                may also find it difficult to understand the difference between the various
+                housing options available to them. Precarious financial situations and a
+                lack of social connections may also contribute towards less stable housing
+                arrangements, requiring frequent moves which make individuals feel less
+                secure.
+            </p>
+            <a href="https://www.gov.wales/migrant-integration-framework-html#135676"
+               target="_blank" class="btn btn-primary">Visit Official Government Page For More</a>
+        </section>
+    </main>
+
+    <footer th:replace="~{fragments/footer}"></footer>
+</body>
+</html>
+
+
+
