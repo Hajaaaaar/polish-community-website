@@ -92,6 +92,7 @@ li{
     /*font-family: "Poppins", sans-serif;*/
     transform: translateX(100%);
     animation: slideInRight 1s forwards;
+    white-space: pre-line;
 }
 
 @keyframes slideInRight {

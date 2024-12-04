@@ -79,37 +79,44 @@ Read more about this successful approach in our accompanying case studies docume
 
 insert into rights_FAQs(que,answer,title_id) values
 ('Does data exist for UK-born individuals in Wales regarding voter registration?','Yes, data for UK-born individuals regarding voter registration in Wales is available through official electoral statistics. These statistics help track voter participation rates and show how many eligible voters, including UK-born citizens, are registered to vote. This data helps us understand civic engagement within Wales.',1),
-('Does data exist for migrants in Wales regarding voter registration?','Yes, there is data for migrants, though it’s more segmented. This data includes overseas voters, anonymous voters, opted-out voters, EU citizens, and parliamentary electors by local authority. For the Polish community, this data is particularly important, as many EU migrants, including Polish nationals, are eligible to vote in local elections and referenda. However, registration data for non-EU migrants is less readily available, making it harder to gauge overall participation.',1),
+('Does data exist for migrants in Wales regarding voter registration?','Yes, there is data for migrants, though it is more segmented. This data includes overseas voters, anonymous voters, opted-out voters, EU citizens, and parliamentary electors by local authority. For the Polish community, this data is particularly important, as many EU migrants, including Polish nationals, are eligible to vote in local elections and referenda. However, registration data for non-EU migrants is less readily available, making it harder to gauge overall participation.',1),
 ('Does data exist for UK-born individuals in Wales regarding the use of advice services?','Yes, the National Survey for Wales collects data about UK-born individuals and their use of advice services. The survey covers areas like housing, welfare benefits, debt, employment, and more. This helps identify which services are most used and whether there are any gaps in service provision.',1),
 ('Does data exist for migrants in Wales regarding the use of advice services?','No, unfortunately, there is no comprehensive data available specifically for Polish or other migrant communities in Wales regarding the use of advice services. This is a significant gap, as it makes it difficult to assess whether migrants are accessing the help they need. Migrants, especially those who are newly arrived or with limited English skills, may face barriers in accessing services such as housing advice, welfare support, or legal assistance.',1),
 ('What questions are asked in the survey to assess the use of advice services?',' The survey asks whether individuals, including migrants, have accessed advice or support in the past 12 months for a range of issues that Polish immigrants may face, including:
-\nDebt: Have you sought help for managing or clearing debt, such as credit cards, loans, or unpaid bills?
-\nFinancial matters other than debt: Have you received assistance with budgeting, saving, or managing your finances?
-\nWelfare benefits: Have you accessed support for benefits such as Universal Credit or housing benefits?
-\nHousing: Have you sought help with housing issues, such as finding accommodation or understanding your tenancy rights?
-\nEmployment: Have you needed support regarding your rights as an employee, finding a job, or resolving workplace issues?
-\nDiscrimination: Have you experienced or sought help regarding discrimination in employment, housing, or public services?
-\nDivorce or problems relating to relationship breakdown: Have you sought advice on family law matters?
-\nSocial care: Have you needed support related to health, social care, or the care of a family member?
-\nGoods and services: Have you experienced issues with consumer rights, faulty products, or services?
-\nOther: Have you sought advice on any other issues not listed above?
-\nNone of these: Have you not used any advice services in the past year?
-\nThese questions help assess whether migrants, including the Polish community, are accessing services that can assist with integration and provide support for common challenges.',1),
+
+Debt: Have you sought help for managing or clearing debt, such as credit cards, loans, or unpaid bills?
+Financial matters other than debt: Have you received assistance with budgeting, saving, or managing your finances?
+Welfare benefits: Have you accessed support for benefits such as Universal Credit or housing benefits?
+Housing: Have you sought help with housing issues, such as finding accommodation or understanding your tenancy rights?
+Employment: Have you needed support regarding your rights as an employee, finding a job, or resolving workplace issues?
+Discrimination: Have you experienced or sought help regarding discrimination in employment, housing, or public services?
+Divorce or problems relating to relationship breakdown: Have you sought advice on family law matters?
+Social care: Have you needed support related to health, social care, or the care of a family member?
+Goods and services: Have you experienced issues with consumer rights, faulty products, or services?
+Other: Have you sought advice on any other issues not listed above?
+None of these: Have you not used any advice services in the past year?
+
+These questions help assess whether migrants, including the Polish community, are accessing services that can assist with integration and provide support for common challenges.',1),
 ('Does data exist for UK-born individuals in Wales regarding knowledge of rights?','No, there is no specific data available for UK-born individuals in Wales regarding their knowledge of rights. While there is general awareness of rights in the UK, the lack of segmented data makes it hard to measure the depth of understanding among UK-born citizens about laws like the Equality Act, Human Rights Act, and Social Services and Well-being Act.',1),
-('Does data exist for migrants in Wales regarding knowledge of rights?','No, there is no data available for migrants, including Polish nationals, specifically regarding knowledge of their rights. For Polish immigrants, this is particularly important, as many may not be fully aware of the protections available to them under UK law. There may also be confusion about the changes to immigration laws, benefits, and access to services since the UK’s exit from the EU.',1),
+('Does data exist for migrants in Wales regarding knowledge of rights?','No, there is no data available for migrants, including Polish nationals, specifically regarding knowledge of their rights. For Polish immigrants, this is particularly important, as many may not be fully aware of the protections available to them under UK law. There may also be confusion about the changes to immigration laws, benefits, and access to services since the UKs exit from the EU.',1),
 ('What questions could be asked to assess knowledge of rights?','To better understand how Polish migrants feel about their legal rights, we could ask:
 
-\nHuman Rights Act: How much do you know about your rights, such as the right to life, freedom from discrimination, or the right to a fair trial?
-\nEquality Act: How familiar are you with the law protecting against discrimination in work, housing, and public services based on race, gender, disability, or other characteristics?
-\nSocial Services and Well-being Act: How well do you understand your rights regarding access to social services, healthcare, and other support systems in Wales?
-\nRespondents can rate their knowledge as:
+Human Rights Act: How much do you know about your rights, such as the right to life, freedom from discrimination, or the right to a fair trial?
+Equality Act: How familiar are you with the law protecting against discrimination in work, housing, and public services based on race, gender, disability, or other characteristics?
+Social Services and Well-being Act: How well do you understand your rights regarding access to social services, healthcare, and other support systems in Wales?
 
-\nI know nothing at all
-\nI know a little
-\nI know a fair amount
-\nI know a great deal
-\nThese questions would help identify whether Polish migrants, in particular, understand their rights in relation to key legislation and if they feel equipped to navigate challenges in Wales.',1),
+Respondents can rate their knowledge as:
+
+I know nothing at all
+I know a little
+I know a fair amount
+I know a great deal
+
+These questions would help identify whether Polish migrants, in particular, understand their rights in relation to key legislation and if they feel equipped to navigate challenges in Wales.',1),
 ('What approaches can improve the integration of migrants, especially the Polish community, in education?','Several key approaches can significantly enhance the integration of Polish migrants in Wales:
-\nProvide tailored information: Clear and accessible information should be provided in Polish, focusing on living and working in Wales. This could cover essential topics like understanding the UK benefits system, knowing your rights in the workplace, housing, and healthcare. Community-based organisations can help distribute this information, especially through platforms like WhatsApp, Facebook, or local Polish-language newspapers.
-Monitor advice service uptake: To ensure Polish migrants are using services effectively, it’s essential to regularly monitor and assess the accessibility of advice services. This includes providing translation services, offering advice in Polish, and ensuring migrant-specific needs are addressed, such as support for people with limited English skills.
-\nPromote political participation: Encouraging Polish migrants to register to vote and participate in elections is crucial. Initiatives should actively involve Polish community leaders, local organisations, and bilingual materials to make voting accessible and understandable. This could include information about local and national elections, eligibility, and the benefits of participating in the democratic process.',1);
+Provide tailored information: Clear and accessible information should be provided in Polish, focusing on living and working in Wales. This could cover essential topics like understanding the UK benefits system, knowing your rights in the workplace, housing, and healthcare. Community-based organisations can help distribute this information, especially through platforms like WhatsApp, Facebook, or local Polish-language newspapers.
+Monitor advice service uptake: To ensure Polish migrants are using services effectively, it is essential to regularly monitor and assess the accessibility of advice services. This includes providing translation services, offering advice in Polish, and ensuring migrant-specific needs are addressed, such as support for people with limited English skills.
+Promote political participation: Encouraging Polish migrants to register to vote and participate in elections is crucial. Initiatives should actively involve Polish community leaders, local organisations, and bilingual materials to make voting accessible and understandable. This could include information about local and national elections, eligibility, and the benefits of participating in the democratic process.',1),
+('What successful approach was used in Swansea to increase voter registration among migrants, including Polish nationals?','Swansea implemented a highly effective initiative to increase voter registration among migrants by creating a Step-by-Step Guide on how to register to vote. This guide was translated into 10 languages, including Polish, and made available on the local authority''s website. By providing clear instructions in multiple languages, Swansea removed a major barrier for Polish migrants who may not have been familiar with the process or the importance of registration.
+As a result, the number of registered foreign nationals increased dramatically, with the number of qualifying foreign nationals nearly doubling between January and April 2022. This approach can serve as a model for other areas looking to engage migrant communities in political participation.
+This version is tailored to address the unique needs of the Polish immigrant community in Wales, including barriers to service access, political participation, and understanding legal rights. Let me know if you need any more specific details or adjustments!',1);
