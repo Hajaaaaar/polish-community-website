@@ -38,6 +38,7 @@ CREATE TABLE IF NOT EXISTS work_information (
     job_type VARCHAR(50),
     expiry_date DATE
 );
+drop table if exists rights_FAQs;
 drop table if exists sub_rights;
 drop table if exists rights;
 
@@ -65,3 +66,11 @@ CREATE TABLE IF NOT EXISTS resources (
     address TEXT NULL DEFAULT NULL,
     phone TEXT NULL DEFAULT NULL
 ) ENGINE = InnoDB;
+
+create table if not exists rights_FAQs(
+                                         que_id INT AUTO_INCREMENT PRIMARY KEY,
+                                         que VARCHAR(255) NOT NULL,
+                                         answer TEXT,
+                                         title_id int,
+                                         FOREIGN KEY (title_id) REFERENCES rights(title_id)
+);

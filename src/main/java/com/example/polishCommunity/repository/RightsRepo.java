@@ -1,6 +1,7 @@
 package com.example.polishCommunity.repository;
 
 import com.example.polishCommunity.model.Rights;
+import com.example.polishCommunity.model.RightsFAQs;
 import com.example.polishCommunity.model.SubRights;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
@@ -14,11 +15,13 @@ public class RightsRepo {
     private JdbcTemplate jdbcTemplate;
     private RowMapper<Rights> rightsMapper;
     private RowMapper<SubRights> subRightsMapper;
+    private RowMapper<RightsFAQs> rightsFAQsMapper;
 
     public RightsRepo(JdbcTemplate jdbcTemplate){
         this.jdbcTemplate=jdbcTemplate;
         setRightsMapper();
         setSubRightsMapper();
+        setRightsFAQsMapper();
     }
 
     public void setRightsMapper(){
@@ -29,11 +32,19 @@ public class RightsRepo {
         );
     }
 
-    public void setSubRightsMapper(){
-        subRightsMapper = (rs,i) -> new SubRights(
+    public void setSubRightsMapper() {
+        subRightsMapper = (rs, i) -> new SubRights(
                 rs.getInt("sub_title_id"),
                 rs.getString("sub_title"),
                 rs.getString("description"),
+                rs.getInt("title_id")
+        );
+    }
+    public void setRightsFAQsMapper() {
+        rightsFAQsMapper = (rs, i) -> new RightsFAQs(
+                rs.getInt("que_id"),
+                rs.getString("que"),
+                rs.getString("answer"),
                 rs.getInt("title_id")
         );
     }
@@ -47,4 +58,9 @@ public class RightsRepo {
         String sql = "select * from sub_rights where title_id =?";
         return jdbcTemplate.query(sql, subRightsMapper, id);
     }
+
+    public List<RightsFAQs> getRightsFAQsByRightsId(int id){
+        String sql = "select * from rights_FAQs where title_id =?";
+        return jdbcTemplate.query(sql, rightsFAQsMapper, id);
+        }
 }
