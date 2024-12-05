@@ -111,4 +111,7 @@ h2 {
     text-decoration: none;
     text-align:center;
 }
-
+.button-container-div {
+    display: flex;
+    justify-content: center;
+}
