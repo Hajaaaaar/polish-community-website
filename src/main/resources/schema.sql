@@ -125,7 +125,7 @@ create table if not exists rights_FAQs(
 );
 
 CREATE TABLE IF NOT EXISTS organisations (
-    Name TEXT NOT NULL,
-    Description TEXT NOT NULL,
-    Logo TEXT NOT NULL
+    name TEXT NOT NULL,
+    description TEXT NOT NULL,
+    logo TEXT NOT NULL
 ) ENGINE=InnoDB;
