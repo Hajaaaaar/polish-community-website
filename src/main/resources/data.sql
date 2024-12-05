@@ -1,14 +1,10 @@
-# delete
-# from users;
-#
-# insert into users (id, name, surname, email, password_hash, role)
-# values (1, 'hajar', 'nefaa', 'hajarnefaa@gmail.com', '$2a$10$4OfOn5s5Dh8XlVrI1jN0f.BX0LDb8CYsdTXSdPW.25l6KZ3K/zw3m', 'User');
-# insert into users (id, name, surname, email, password_hash)
-# values (2, 'sara', 'Doe', 'sara@gmail.com', '$2a$10$4OfOn5s5Dh8XlVrI1jN0f.BX0LDb8CYsdTXSdPW.25l6KZ3K/zw3m');
-#
+delete from users;
 
-#
-#
+insert into users (id, name, surname, email, password_hash, role)
+values (1, 'hajar', 'nefaa', 'hajarnefaa@gmail.com', '$2a$10$4OfOn5s5Dh8XlVrI1jN0f.BX0LDb8CYsdTXSdPW.25l6KZ3K/zw3m', 'User');
+insert into users (id, name, surname, email, password_hash)
+values (2, 'sara', 'Doe', 'sara@gmail.com', '$2a$10$4OfOn5s5Dh8XlVrI1jN0f.BX0LDb8CYsdTXSdPW.25l6KZ3K/zw3m');
+
 INSERT INTO users (id, name, surname, email, password_hash, role)
 SELECT 1, 'hajar', 'nefaa', 'hajarnefaa@gmail.com', '$2a$10$4OfOn5s5Dh8XlVrI1jN0f.BX0LDb8CYsdTXSdPW.25l6KZ3K/zw3m', 'User'
 WHERE NOT EXISTS (SELECT 1 FROM users WHERE id = 1);
@@ -17,6 +13,18 @@ INSERT INTO users (id, name, surname, email, password_hash, role)
 SELECT 2, 'sara', 'Doe', 'sara@gmail.com', '$2a$10$4OfOn5s5Dh8XlVrI1jN0f.BX0LDb8CYsdTXSdPW.25l6KZ3K/zw3m', 'User'
 WHERE NOT EXISTS (SELECT 1 FROM users WHERE id = 2);
 
+DELETE FROM news;
+INSERT INTO polishsite.news (`title`, `content`, `date`, `link`) VALUES ('Test News 1', 'Blah blah blah', '2024-12-05', 'www.test.com');
+INSERT INTO polishsite.news (`title`, `content`, `date`, `link`) VALUES ('Test News 2', 'Tra la la la', '2024-12-02', 'www.testagain.com');
+
+DELETE FROM resources;
+INSERT INTO polishsite.resources (`name`, `description`, `access`, `link`, `address`, `phone`) VALUES ('Learn French', 'Pretend this is a resource without a website. The user has to go to their offices in real life to register.', 'Go to your local center and ask for more information.', NULL, '12 French Street CF00 0AA', '+44 777777777');
+INSERT INTO polishsite.resources (`name`, `description`, `access`, `link`, `address`, `phone`) VALUES ('Learn English', 'This is just a long test description. Pretend you''re reading about an offer to learn english through a specific resource, maybe a course or website.', 'Sign up for a free plan on the website:', 'www.english.com', NULL, '+44 123456789');
+
+DELETE FROM skills;
+INSERT INTO polishsite.skills (`name`, `description`, `link`, `duration`, `expiryDate`) VALUES ('Skill #1', 'This is the first description.', 'www.google.com', '26', '2024-12-02');
+INSERT INTO polishsite.skills (`name`, `description`, `link`, `duration`, `expiryDate`) VALUES ('Skill #2', 'This is the second description.', 'www.linkedin.com', '54', '2026-06-13');
+INSERT INTO polishsite.skills (`name`, `description`, `link`, `duration`, `expiryDate`) VALUES ('Skill #3', 'This is the third description.', 'www.reddit.com', '8', '2025-01-23');
 
 INSERT INTO work_information(name, description, link, job_type, expiry_date)
 VALUES
