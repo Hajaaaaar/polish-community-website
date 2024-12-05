@@ -2,7 +2,7 @@ CREATE DATABASE IF NOT EXISTS polishsite;
 
 USE polishsite;
 
-# drop table if exists users;
+#drop table if exists users;
 
 CREATE TABLE IF NOT EXISTS users (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -28,9 +28,9 @@ CREATE TABLE IF NOT EXISTS work_information (
     job_type VARCHAR(50),
     expiry_date DATE
 );
+drop table if exists rights_FAQs;
 drop table if exists sub_rights;
 drop table if exists rights;
-
 create table if not exists rights(
     title_id INT AUTO_INCREMENT PRIMARY KEY,
     title VARCHAR(255) NOT NULL,
@@ -69,3 +69,20 @@ CREATE TABLE IF NOT EXISTS survey_responses (
     job_stability VARCHAR(100),
     job_impact_on_life VARCHAR(255)
 )ENGINE = InnoDB;
+
+
+CREATE TABLE IF NOT EXISTS housing_questionnaire (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255),
+    email VARCHAR(255),
+    message TEXT NOT NULL
+) ENGINE = InnoDB;
+
+create table if not exists rights_FAQs(
+    que_id INT AUTO_INCREMENT PRIMARY KEY,
+    que VARCHAR(255) NOT NULL,
+    answer TEXT,
+    title_id int,
+    FOREIGN KEY (title_id) REFERENCES rights(title_id)
+);
+

@@ -19,8 +19,8 @@ public class SecurityConfig {
                 .authorizeHttpRequests(authorize -> authorize
                         // Allow public access to these URLs
 
-                        .requestMatchers("/", "/signin-register", "/register", "/login", "/home", "/news", "/events", "/EventsPage", "/contact", "/FAQpage", "resources/education", "/healthPage", "/health", "/workPage", "/rights/{id}","/Work-Survey")
 
+                        .requestMatchers("/", "/signin-register", "/register", "/login", "/home", "/news", "/events", "/EventsPage", "/contact", "/FAQpage", "resources/education", "/healthPage", "/health", "/workPage", "/rights/{id}","/Work-Survey", "/housing", "/housing-questionnaire")
                         .permitAll()
                         // Allow static resources
                         .requestMatchers("/static/**", "/stylesheet/**", "/JavaScript/**", "/images/**", "/templates/**").permitAll()

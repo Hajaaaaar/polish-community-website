@@ -1,5 +1,6 @@
 package com.example.polishCommunity.controller;
 
+import com.example.polishCommunity.model.Rights;
 import com.example.polishCommunity.service.RightsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -19,7 +20,8 @@ public class RightsController {
     @GetMapping("/rights/{id}")
     public ModelAndView getRightsPage(@PathVariable int id){
         ModelAndView mav=new ModelAndView("Pages/Rights");
-        mav.addObject("rights",rightsService.getRightsByTitleId(id));
+        Rights rights =rightsService.getRightsByTitleId(id);
+        mav.addObject("rights",rights);
         return mav;
     }
 }
