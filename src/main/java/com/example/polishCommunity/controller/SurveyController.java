@@ -1,11 +1,10 @@
 package com.example.polishCommunity.controller;
 
 import com.example.polishCommunity.model.SurveyResponse;
-import com.example.polishCommunity.service.SurveyService;
+import com.example.polishCommunity.repository.SurveyRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -13,17 +12,12 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class SurveyController {
 
     @Autowired
-    private SurveyService surveyService;
+    private SurveyRepository surveyRepository;
 
-    // Handle GET request for showing the survey form
-    @GetMapping("/work-surveyPage")
-    public String showSurveyForm() {
-        return "Work-SurveyPage"; // Show the survey page
-    }
 
     // Handle POST request to save the survey response
     @PostMapping("/work-survey")
-    public String submitSurvey(@RequestParam(name = "name") String name,
+    public String handleFormSubmission(@RequestParam(name = "name") String name,
                                @RequestParam(name = "email") String email,
                                @RequestParam(name = "question1") String question1,
                                @RequestParam(name = "question2") String question2,
@@ -36,17 +30,18 @@ public class SurveyController {
                                @RequestParam(name = "question9") String question9,
                                @RequestParam(name = "question10") String question10,
                                Model model) {
+        try {
         // Create a new SurveyResponse object using the data from the form
         SurveyResponse surveyResponse = new SurveyResponse(name, email, question1, question2, question3, question4, question5, question6, question7, question8, question9, question10);
-
-        // Save the survey response to the database using the service layer
-        surveyService.saveSurveyResponse(surveyResponse);
+        surveyRepository.save(surveyResponse);
 
         // Add success message to model to display it on the page
         model.addAttribute("successMessage", "Thank you for submitting the survey!");
-
+        }   catch (Exception e) {
+            model.addAttribute("errorMessage", "An error occurred while submitting your response. Please try again.");
+        }
         // Return to the survey page with a success message
-        return "Work-SurveyPage";
+        return "Pages/Work-SurveyPage";
     }
 }
 
