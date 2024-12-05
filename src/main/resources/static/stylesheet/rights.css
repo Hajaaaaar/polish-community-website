@@ -68,12 +68,29 @@ h1 {
     color: #d50032 !important;
     padding-top: 25px;
 }
+h2 {
+    font-size: 1rem;
+    text-align: center;
+    color: #d50032 !important;
+    padding-top: 25px;
+}
 
-#mainText {
+#titleDescription {
     padding-top: 25px;
     text-align: justify;
     margin-left: 10rem;
     margin-right: 10rem;
+    color: black;
+    white-space: pre-line;
+}
+
+#subtitleDescription {
+    padding-top: 25px;
+    text-align: justify;
+    margin-left: 10rem;
+    margin-right: 10rem;
+    color: black;
+    white-space: pre-line;
 }
 
 #readMore {
