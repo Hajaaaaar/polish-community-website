@@ -42,7 +42,6 @@ public class SurveyResponse {
     private String question10;
 
     // Constructors
-    public SurveyResponse() {}
 
     public SurveyResponse(String name, String email, String question1, String question2, String question3,
                           String question4, String question5, String question6, String question7,

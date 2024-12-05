@@ -34,6 +34,8 @@ public class SurveyController {
                     question5, question6, question7, question8, question9,
                     question10);
 
+            System.out.println(surveyResponse.getEmail());
+
             // Save the response via service
             surveyService.saveSurveyResponse(surveyResponse);
 
