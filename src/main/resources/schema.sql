@@ -49,6 +49,21 @@ create table if not exists sub_rights(
      FOREIGN KEY (title_id) REFERENCES rights(title_id)
 );
 
+CREATE TABLE IF NOT EXISTS news (
+    title TEXT NOT NULL,
+    content TEXT NOT NULL,
+    date DATE NOT NULL,
+    link TEXT NOT NULL
+) ENGINE=InnoDB;
+
+CREATE TABLE IF NOT EXISTS skills (
+    name TEXT NOT NULL,
+    description TEXT NOT NULL,
+    link TEXT NOT NULL,
+    duration INT(11) NULL DEFAULT NULL,
+    expiryDate DATE NULL DEFAULT NULL
+) ENGINE=InnoDB;
+
 CREATE TABLE IF NOT EXISTS resources (
      name TEXT NOT NULL,
      description TEXT NOT NULL,
