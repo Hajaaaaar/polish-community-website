@@ -131,6 +131,13 @@ h2 {
     background-color: #333;
 }
 
+h2 {
+    font-size: 2rem;
+    text-align: center;
+    color: #d50032 !important;
+    padding-top: 25px;
+}
+
 .button-container {
     text-align: center;
 }
@@ -159,8 +166,14 @@ li {
     line-height: 1.6;
 }
 
+
+
 li strong {
     color: #d50032;
 }
-
-
+#mainText1 {
+    padding-top: 25px;
+    text-align: justify;
+    margin-left: 10rem;
+    margin-right: 10rem;
+}

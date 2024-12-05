@@ -46,9 +46,8 @@ public class PagesController {
         return "Pages/workPage";
     }
 
-
-//    @GetMapping("/work-survey")
-//    public String WorkSurvey(Model model) { return "Pages/Work-SurveyPage";
-//    }
-//
+    @GetMapping("/Work-Survey")
+    public String work_survey(Model model) {
+        return "Pages/Work-SurveyPage";
+    }
 }
