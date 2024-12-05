@@ -18,9 +18,13 @@ public class SecurityConfig {
                 .csrf(csrf -> csrf.disable()) // Disable CSRF for now
                 .authorizeHttpRequests(authorize -> authorize
                         // Allow public access to these URLs
-
-
-                        .requestMatchers("/", "/signin-register", "/register", "/login", "/home", "/news", "/events", "/EventsPage", "/contact", "/FAQpage", "resources/education", "/healthPage", "/health", "/workPage", "/rights/{id}","/Work-Survey", "/housing", "/housing-questionnaire", "/work-survey")
+                        .requestMatchers("/", "/signin-register", "/register",
+                                "/login", "/home", "/news", "/events",
+                                "/EventsPage", "/contact", "/FAQpage",
+                                "resources/education", "/healthPage",
+                                "/health", "/workPage", "/housing",
+                                "/rights/{id}", "/housing-questionnaire",
+                                "/housing", "/housing/housing-questionnaire", "/housing/submit-reply")
                         .permitAll()
                         // Allow static resources
                         .requestMatchers("/static/**", "/stylesheet/**", "/JavaScript/**", "/images/**", "/templates/**").permitAll()

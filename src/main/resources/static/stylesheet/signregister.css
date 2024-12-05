@@ -45,7 +45,7 @@ label {
     color: #555;
 }
 
-input {
+input, select {
     margin-top: 5px;
     padding: 10px;
     border: 1px solid #ddd;
@@ -92,6 +92,7 @@ button:hover {
 .password-container i:hover {
     color: #d3003f;
 }
+
 .helper-text {
     font-size: 0.85rem;
     color: #666;

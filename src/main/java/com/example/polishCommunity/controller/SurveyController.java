@@ -41,6 +41,6 @@ public class SurveyController {
             model.addAttribute("errorMessage", "An error occurred while submitting your response. Please try again.");
         }
         // Return to the survey page with a success message
-        return "Pages/Work-SurveyPage";
+        return "redirect:/Work-Survey";
     }
 }
