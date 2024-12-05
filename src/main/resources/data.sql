@@ -120,6 +120,7 @@ Promote political participation: Encouraging Polish migrants to register to vote
 As a result, the number of registered foreign nationals increased dramatically, with the number of qualifying foreign nationals nearly doubling between January and April 2022. This approach can serve as a model for other areas looking to engage migrant communities in political participation.
 This version is tailored to address the unique needs of the Polish immigrant community in Wales, including barriers to service access, political participation, and understanding legal rights. Let me know if you need any more specific details or adjustments!',1);
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -129,6 +130,8 @@ This version is tailored to address the unique needs of the Polish immigrant com
 
 
 
+=======
+>>>>>>> 811611bb5eab49c4fff1f316e75facf2ff31af33
 delete from housing_questionnaire;
 delete from housing_replies;
 
@@ -143,4 +146,8 @@ VALUES
     (NULL, 'Thank you!', 1);
 
 
+<<<<<<< HEAD
 >>>>>>> 742171a842ad3c5a1501831c77ec53bfce80ec13
+=======
+
+>>>>>>> 811611bb5eab49c4fff1f316e75facf2ff31af33
