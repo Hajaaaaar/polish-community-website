@@ -2,14 +2,16 @@ CREATE DATABASE IF NOT EXISTS polishsite;
 
 USE polishsite;
 
-#drop table if exists users;
+drop table if exists users;
 
 CREATE TABLE IF NOT EXISTS users (
-                                     id INT AUTO_INCREMENT PRIMARY KEY,
-                                     name VARCHAR(50) NOT NULL,
-                                     surname VARCHAR(50) NOT NULL,
-                                     email VARCHAR(100) NOT NULL UNIQUE,
-                                     password_hash VARCHAR(255) NOT NULL
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(50) NOT NULL,
+    surname VARCHAR(50) NOT NULL,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    password_hash VARCHAR(255) NOT NULL,
+    role VARCHAR(255) NOT NULL DEFAULT 'User'
+
 ) ENGINE = InnoDB;
 
 CREATE TABLE IF NOT EXISTS healthtable (
@@ -20,6 +22,7 @@ CREATE TABLE IF NOT EXISTS healthtable (
                                            q1registered BOOLEAN NOT NULL,
                                            q2queries TEXT NOT NULL
 );
+
 CREATE TABLE IF NOT EXISTS work_information (
                                                 id INT AUTO_INCREMENT PRIMARY KEY,
                                                 name VARCHAR(255) NOT NULL,
@@ -28,9 +31,11 @@ CREATE TABLE IF NOT EXISTS work_information (
                                                 job_type VARCHAR(50),
                                                 expiry_date DATE
 );
+
 drop table if exists rights_FAQs;
 drop table if exists sub_rights;
 drop table if exists rights;
+
 create table if not exists rights(
                                      title_id INT AUTO_INCREMENT PRIMARY KEY,
                                      title VARCHAR(255) NOT NULL,
@@ -53,6 +58,28 @@ CREATE TABLE IF NOT EXISTS resources (
                                          address TEXT NULL DEFAULT NULL,
                                          phone TEXT NULL DEFAULT NULL
 ) ENGINE = InnoDB;
+
+
+DROP TABLE IF EXISTS housing_replies;
+DROP TABLE IF EXISTS housing_questionnaire;
+
+CREATE TABLE IF NOT EXISTS housing_questionnaire (
+     id BIGINT AUTO_INCREMENT PRIMARY KEY,
+     name VARCHAR(100),
+     email VARCHAR(100),
+     message TEXT NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS housing_replies (
+   id BIGINT AUTO_INCREMENT PRIMARY KEY,
+   name VARCHAR(100),
+   message TEXT NOT NULL,
+   question_id BIGINT,
+   FOREIGN KEY (question_id) REFERENCES housing_questionnaire(id) ON DELETE CASCADE
+);
+
+
+
 
 CREATE TABLE IF NOT EXISTS survey_responses (
                                                 id INT AUTO_INCREMENT PRIMARY KEY,

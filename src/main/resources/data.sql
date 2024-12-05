@@ -1,20 +1,20 @@
 # delete
 # from users;
 #
-# insert into users (id, name, surname, email, password_hash)
-# values (1, 'hajar', 'nefaa', 'hajarnefaa@gmail.com', '$2a$10$4OfOn5s5Dh8XlVrI1jN0f.BX0LDb8CYsdTXSdPW.25l6KZ3K/zw3m');
+# insert into users (id, name, surname, email, password_hash, role)
+# values (1, 'hajar', 'nefaa', 'hajarnefaa@gmail.com', '$2a$10$4OfOn5s5Dh8XlVrI1jN0f.BX0LDb8CYsdTXSdPW.25l6KZ3K/zw3m', 'User');
 # insert into users (id, name, surname, email, password_hash)
 # values (2, 'sara', 'Doe', 'sara@gmail.com', '$2a$10$4OfOn5s5Dh8XlVrI1jN0f.BX0LDb8CYsdTXSdPW.25l6KZ3K/zw3m');
 #
 
 #
 #
-INSERT INTO users (id, name, surname, email, password_hash)
-SELECT 1, 'hajar', 'nefaa', 'hajarnefaa@gmail.com', '$2a$10$4OfOn5s5Dh8XlVrI1jN0f.BX0LDb8CYsdTXSdPW.25l6KZ3K/zw3m'
+INSERT INTO users (id, name, surname, email, password_hash, role)
+SELECT 1, 'hajar', 'nefaa', 'hajarnefaa@gmail.com', '$2a$10$4OfOn5s5Dh8XlVrI1jN0f.BX0LDb8CYsdTXSdPW.25l6KZ3K/zw3m', 'User'
 WHERE NOT EXISTS (SELECT 1 FROM users WHERE id = 1);
 
-INSERT INTO users (id, name, surname, email, password_hash)
-SELECT 2, 'sara', 'Doe', 'sara@gmail.com', '$2a$10$4OfOn5s5Dh8XlVrI1jN0f.BX0LDb8CYsdTXSdPW.25l6KZ3K/zw3m'
+INSERT INTO users (id, name, surname, email, password_hash, role)
+SELECT 2, 'sara', 'Doe', 'sara@gmail.com', '$2a$10$4OfOn5s5Dh8XlVrI1jN0f.BX0LDb8CYsdTXSdPW.25l6KZ3K/zw3m', 'User'
 WHERE NOT EXISTS (SELECT 1 FROM users WHERE id = 2);
 
 
@@ -119,5 +119,19 @@ Promote political participation: Encouraging Polish migrants to register to vote
                                                  ('What successful approach was used in Swansea to increase voter registration among migrants, including Polish nationals?','Swansea implemented a highly effective initiative to increase voter registration among migrants by creating a Step-by-Step Guide on how to register to vote. This guide was translated into 10 languages, including Polish, and made available on the local authority''s website. By providing clear instructions in multiple languages, Swansea removed a major barrier for Polish migrants who may not have been familiar with the process or the importance of registration.
 As a result, the number of registered foreign nationals increased dramatically, with the number of qualifying foreign nationals nearly doubling between January and April 2022. This approach can serve as a model for other areas looking to engage migrant communities in political participation.
 This version is tailored to address the unique needs of the Polish immigrant community in Wales, including barriers to service access, political participation, and understanding legal rights. Let me know if you need any more specific details or adjustments!',1);
+
+delete from housing_questionnaire;
+delete from housing_replies;
+
+insert into housing_questionnaire(name, email, message)
+VALUES ('Hajar', 'hajarnefaa@gmail.com', 'Hello everyone I am looking for rent. Can you give me any suggestions where to look?'),
+       ('Sara', 'sara@gmail.com', 'Dobry wieczór, I want to buy a house what are the documents needed?');
+
+INSERT INTO housing_replies (name, message, question_id)
+VALUES
+    ('Sara Doe', 'Hello, you can check this website, you may fined some useful info:https://www.gov.wales/migrant-integration-framework-html#135676', 1),
+    ('Louise', 'I also have the same question,does anyone have any idea?', 2),
+    (NULL, 'Thank you!', 1);
+
 
 
