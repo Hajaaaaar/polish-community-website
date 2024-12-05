@@ -1,141 +1,51 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" lang="en-GB">
+<!--<html xmlns:th="http://www.thymeleaf.org" lang="en-GB">-->
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Skills Page</title>
     <link th:replace="~{fragments/header :: bootstrap-css}" />
     <link rel="stylesheet" th:href="@{/stylesheet/rights.css}">
-<body>
-<header th:replace="~{fragments/header}"></header>
-<h1 th:text = "${rights.getTitle()}"></h1>
-<p id="titleDescription" th:text = "${rights.getDescription()}"></p>
-<div th:each="subright:${rights.getSubTitle()}">
-    <h2 th:text="${subright.getSubTitle()}"></h2>
-    <p id="subtitleDescription" class="bullet" th:utext="${subright.getDescription()}"></p>
-</div>
-
-<div class="button-container-div">
-    <a class="button-container" th:href="@{/addNewPolicy}">
-        <button id="learnMore">Add New Policy</button>
-    </a>
-</div>
-
-
-</body>
-<link rel="stylesheet" th:href="@{/stylesheet/FAQpage.css}">
+    <link rel="stylesheet" th:href="@{/stylesheet/FAQpage.css}">
+    <script th:src="@{/JavaScript/FAQpage.js}"></script>
 </head>
 <body>
-<section id="faq_section" class="faq_section">
-    <div class="title-area">
-        <h1>Frequently Asked Questions (FAQs)</h1>
-        <img src="/images/Qmark.jpg" alt="red question mark" class="title-img" >
+    <header th:replace="~{fragments/header}"></header>
+    <h1 th:text = "${rights.getTitle()}"></h1>
+    <p id="titleDescription" th:text = "${rights.getDescription()}"></p>
+    <div th:each="subright:${rights.getSubTitle()}">
+        <h2 th:text="${subright.getSubTitle()}"></h2>
+        <p id="subtitleDescription" class="bullet" th:utext="${subright.getDescription()}"></p>
     </div>
-<!--    <div class="filter_faq">-->
-<!--        <label class="filter_topic" for="filter_topic">Filter:</label>-->
-<!--        <select id="filter_topic">-->
-<!--            <option value="all">All Questions</option>-->
-<!--            <option value="about us">About Us</option>-->
-<!--            <option value="events">Events</option>-->
-<!--            <option value="resources">Resources</option>-->
-<!--            <option value="joining">Joining</option>-->
-<!--        </select>-->
 
-<!--    </div>-->
-    <ul th:each="que:${rights.getQue()}">
-        <li>
-            <div class="question" >
-                <span th:text="${que.getQue()}"></span>
-                <span class="icon"><ion-icon name="chevron-forward-outline"></ion-icon></span>
-            </div>
-            <div class="answer">
-                <span th:utext="${que.getAnswer()}"></span>
+    <div class="button-container-div">
+        <a class="button-container" th:href="@{/addNewPolicy}">
+            <button id="learnMore">Add New Policy</button>
+        </a>
+    </div>
 
-            </div>
-        </li>
-<!--        <li>-->
-<!--            <div class="question" data-topic="about us">-->
-<!--                <span th:text="${que.getQue()}"></span>-->
-<!--                <span class="icon"><ion-icon name="chevron-forward-outline"></ion-icon></span>-->
-<!--            </div>-->
-<!--            <div class="answer">-->
-<!--                <span></span>-->
 
-<!--            </div>-->
-<!--        </li>-->
-<!--        <li>-->
-<!--            <div class="question" data-topic="events">-->
-<!--                <span>Type events question here?</span>-->
-<!--                <span class="icon"><ion-icon name="chevron-forward-outline"></ion-icon></span>-->
-<!--            </div>-->
-<!--            <div class="answer">-->
-<!--                <span>Type Answer here</span>-->
+    <section id="faq_section" class="faq_section">
+        <div class="title-area">
+            <h1>Frequently Asked Questions (FAQs)</h1>
+            <img src="/images/Qmark.jpg" alt="red question mark" class="title-img" >
+        </div>
+        <ul th:each="que:${rights.getQue()}">
+            <li>
+                <div class="question" >
+                    <span th:text="${que.getQue()}"></span>
+                    <span class="icon"><ion-icon name="chevron-forward-outline"></ion-icon></span>
+                </div>
+                <div class="answer">
+                    <span th:utext="${que.getAnswer()}"></span>
+                </div>
+            </li>
+        </ul>
+    </section>
+    <div th:replace="~{fragments/footer :: bootstrap-js}"></div>
+    <footer th:replace="~{fragments/footer}"></footer>
 
-<!--            </div>-->
-<!--        </li>-->
-<!--        <li>-->
-<!--            <div class="question" data-topic="events">-->
-<!--                <span>Type events question here?</span>-->
-<!--                <span class="icon"><ion-icon name="chevron-forward-outline"></ion-icon></span>-->
-<!--            </div>-->
-<!--            <div class="answer">-->
-<!--                <span>Type Answer here</span>-->
-
-<!--            </div>-->
-<!--        </li>-->
-<!--        <li>-->
-<!--            <div class="question" data-topic="about us">-->
-<!--                <span>Type question about us here?</span>-->
-<!--                <span class="icon"><ion-icon name="chevron-forward-outline"></ion-icon></span>-->
-<!--            </div>-->
-<!--            <div class="answer">-->
-<!--                <span>Type Answer here</span>-->
-
-<!--            </div>-->
-<!--        <li>-->
-<!--            <div class="question" data-topic="resources">-->
-<!--                <span>Type resources question here?</span>-->
-<!--                <span class="icon"><ion-icon name="chevron-forward-outline"></ion-icon></span>-->
-<!--            </div>-->
-<!--            <div class="answer">-->
-<!--                <span>Type Answer here</span>-->
-
-<!--            </div>-->
-<!--        </li>-->
-<!--        <li>-->
-<!--            <div class="question" data-topic="joining">-->
-<!--                <span>Type joining question here?</span>-->
-<!--                <span class="icon"><ion-icon name="chevron-forward-outline"></ion-icon></span>-->
-<!--            </div>-->
-<!--            <div class="answer">-->
-<!--                <span>Type Answer here</span>-->
-
-<!--            </div>-->
-<!--        </li>-->
-<!--        <li>-->
-<!--            <div class="question" data-topic="joining">-->
-<!--                <span>Type joining question here?</span>-->
-<!--                <span class="icon"><ion-icon name="chevron-forward-outline"></ion-icon></span>-->
-<!--            </div>-->
-<!--            <div class="answer">-->
-<!--                <span>Type Answer here</span>-->
-
-<!--            </div>-->
-<!--        </li>-->
-<!--        <li>-->
-<!--            <div class="question" data-topic="resources">-->
-<!--                <span>Type resources question here?</span>-->
-<!--                <span class="icon"><ion-icon name="chevron-forward-outline"></ion-icon></span>-->
-<!--            </div>-->
-<!--            <div class="answer">-->
-<!--                <span>Type Answer here</span>-->
-
-<!--            </div>-->
-<!--        </li>-->
-    </ul>
-</section>
-<div th:replace="~{fragments/footer :: bootstrap-js}"></div>
-<footer th:replace="~{fragments/footer}"></footer>
 </body>
-<script th:src="@{/JavaScript/FAQpage.js}"></script>
+
 </html>
