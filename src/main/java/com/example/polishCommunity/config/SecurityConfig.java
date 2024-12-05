@@ -24,7 +24,7 @@ public class SecurityConfig {
                                 "resources/education", "/healthPage",
                                 "/health", "/workPage", "/housing",
                                 "/rights/{id}", "/housing-questionnaire",
-                                "/housing", "/housing/housing-questionnaire", "/housing/submit-reply")
+                                "/housing", "/housing/housing-questionnaire", "/housing/submit-reply", "/work-survey", "/Work-Survey")
                         .permitAll()
                         // Allow static resources
                         .requestMatchers("/static/**", "/stylesheet/**", "/JavaScript/**", "/images/**", "/templates/**").permitAll()

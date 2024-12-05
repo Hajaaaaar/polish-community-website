@@ -1,41 +1,62 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
+    background-color: #d50032;
     margin: 0;
-    padding: 20px;
+    padding: 0;
 }
 
 .container {
-    max-width: 600px;
-    margin: 0 auto;
-    background: white;
+    max-width: 800px;
+    margin: 20px auto;
     padding: 20px;
-    border-radius: 8px;
+    background: black;
+    border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 h1, h2 {
-    color: #333;
+    text-align: center;
+    color: white;
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
 label {
-    display: block;
-    margin: 10px 0 5px;
-}
-
-input, select, button {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-button {
-    background-color: #d50032;
+    font-weight: bold;
     color: white;
+}
+
+input, select {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #d50032;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Button Styles */
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #d50032;
     border: none;
+    border-radius: 5px;
     cursor: pointer;
+    align-self: center;
+    transition: background-color 0.3s ease;
 }
 
 button:hover {

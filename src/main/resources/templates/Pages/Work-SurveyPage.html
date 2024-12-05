@@ -8,19 +8,18 @@
     <link rel="stylesheet" th:href="@{/stylesheet/WorkSurvey.css}">
     <script th:src="@{JavaScript/WorkSurvey.js}" defer></script>
 </head>
-<body>
-<div class="container">
+<body><div class="container">
     <h1>Work Preferences Questionnaire</h1>
+    <form method="post" action="/work-survey">
 
-    <!-- Details Section -->
-    <div id="details-section">
-        <h2>Step 1: Provide Your Details</h2>
-        <form id="detailsForm" method="post" action="/work-survey">
+        <!-- Details Section -->
+        <div id="details-section">
+            <h2>Step 1: Provide Your Details</h2>
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
 
-            <label for="gender">Age:</label>
-            <input type="text" id="gender" name="gender" required>
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required>
 
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required>
@@ -30,15 +29,12 @@
 
             <label for="date">Date:</label>
             <input type="date" id="date" name="date" required>
+        </div>
 
-            <button type="submit">Proceed to Questionnaire</button>
-        </form>
-    </div>
+        <!-- Questionnaire Section -->
+        <div id="questionnaire-section">
+            <h2>Step 2: Answer the Questionnaire</h2>
 
-    <!-- Questionnaire Section -->
-    <div id="questionnaire-section">
-        <h2>Step 2: Answer the Questionnaire</h2>
-        <form th:action="@{/work-survey}" method="post">
             <label for="question1">Question 1: What is your primary reason for seeking work?</label>
             <select id="question1" name="question1" required>
                 <option value="">Select an option</option>
@@ -138,11 +134,14 @@
                 <option value="career_advancement">I’m looking for a job that offers opportunities for career advancement</option>
                 <option value="social_interaction">I prefer a job that allows me to interact and connect with people</option>
             </select>
+        </div>
 
-            <button type="submit">Submit</button>
-        </form>
+        <!-- Submit Button -->
+        <button type="submit">Submit</button>
+    </form>
+</div>
 
-        <!-- Success Message -->
+<!-- Success Message -->
         <div th:if="${successMessage}" class="alert alert-success">
             <p th:text="${successMessage}"></p>
         </div>
