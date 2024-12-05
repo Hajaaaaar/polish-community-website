@@ -77,9 +77,6 @@ CREATE TABLE IF NOT EXISTS housing_replies (
    FOREIGN KEY (question_id) REFERENCES housing_questionnaire(id) ON DELETE CASCADE
 );
 
-
-
-
 CREATE TABLE IF NOT EXISTS survey_responses (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(255),
@@ -112,3 +109,8 @@ create table if not exists rights_FAQs(
   FOREIGN KEY (title_id) REFERENCES rights(title_id)
 );
 
+CREATE TABLE IF NOT EXISTS organisations (
+    Name TEXT NOT NULL,
+    Description TEXT NOT NULL,
+    Logo TEXT NOT NULL
+) ENGINE=InnoDB;

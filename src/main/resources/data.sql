@@ -26,6 +26,14 @@ INSERT INTO polishsite.skills (`name`, `description`, `link`, `duration`, `expir
 INSERT INTO polishsite.skills (`name`, `description`, `link`, `duration`, `expiryDate`) VALUES ('Skill #2', 'This is the second description.', 'www.linkedin.com', '54', '2026-06-13');
 INSERT INTO polishsite.skills (`name`, `description`, `link`, `duration`, `expiryDate`) VALUES ('Skill #3', 'This is the third description.', 'www.reddit.com', '8', '2025-01-23');
 
+DELETE from organisations;
+INSERT INTO organisations (name, description, logo) VALUES ('Red Org 1', 'This is the red organisation', 'red.png');
+INSERT INTO organisations (name, description, logo) VALUES ('Blue Org 1', 'This is the blue organisation', 'blue.png');
+INSERT INTO organisations (name, description, logo) VALUES ('Red Org 2', 'This is the red organisation again', 'red.png');
+INSERT INTO organisations (name, description, logo) VALUES ('Blue Org 2', 'This is the blue organisation again', 'blue.png');
+INSERT INTO organisations (name, description, logo) VALUES ('Red Org 3', 'This is the red organisation again again', 'red.png');
+INSERT INTO organisations (name, description, logo) VALUES ('Blue Org 3', 'This is the blue organisation again again', 'blue.png');
+
 INSERT INTO work_information(name, description, link, job_type, expiry_date)
 VALUES
     ('Software Engineer', 'Develop and maintain software applications.', 'https://example.com/software-engineer', 'Full-Time', '2024-12-31'),
@@ -141,6 +149,8 @@ VALUES
     ('Sara Doe', 'Hello, you can check this website, you may fined some useful info:https://www.gov.wales/migrant-integration-framework-html#135676', 1),
     ('Louise', 'I also have the same question,does anyone have any idea?', 2),
     (NULL, 'Thank you!', 1);
+
+
 
 
 
