@@ -11,7 +11,12 @@ import java.util.List;
 @AllArgsConstructor
 
 public class Rights {
+
     private int titleId;
+    private String title;
+    private List<SubRights> subTitle;
+    private List<RightsFAQs> que;
+    private String description;
 
     public Rights(int titleId, String title, String description) {
         this.titleId = titleId;
@@ -19,7 +24,4 @@ public class Rights {
         this.description = description;
     }
 
-    private String title;
-    private List<SubRights> subTitle;
-    private String description;
 }

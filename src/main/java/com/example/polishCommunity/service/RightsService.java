@@ -19,6 +19,7 @@ public class RightsService {
         public Rights getRightsByTitleId(int id){
         Rights rights = rightsRepo.getRightsById(id);
         rights.setSubTitle(rightsRepo.getSubRightsByRightsId(id));
+        rights.setQue(rightsRepo.getRightsFAQsByRightsId(id));
         return rights;
         }
 
