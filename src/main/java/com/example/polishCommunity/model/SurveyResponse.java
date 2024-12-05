@@ -1,58 +1,52 @@
 package com.example.polishCommunity.model;
 
-import jakarta.persistence.*;
-import lombok.*;
+import lombok.Getter;
+import lombok.Setter;
 
-@Entity
-@Table(name = "survey_responses")
-@Getter
-@Setter
-@NoArgsConstructor
-@AllArgsConstructor
 public class SurveyResponse {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
+    @Setter
+    @Getter
     private String name;
-
+    @Setter
+    @Getter
     private String email;
-
-    @Column(nullable = false)
+    @Setter
+    @Getter
     private String question1;
-
-    @Column(nullable = false)
+    @Setter
+    @Getter
     private String question2;
-
-    @Column(nullable = false)
+    @Setter
+    @Getter
     private String question3;
-
-    @Column(nullable = false)
+    @Setter
+    @Getter
     private String question4;
-
-    @Column(nullable = false)
+    @Setter
+    @Getter
     private String question5;
-
-    @Column(nullable = false)
+    @Setter
+    @Getter
     private String question6;
-
-    @Column(nullable = false)
+    @Setter
+    @Getter
     private String question7;
-
-    @Column(nullable = false)
+    @Setter
+    @Getter
     private String question8;
-
-    @Column(nullable = false)
+    @Setter
+    @Getter
     private String question9;
-
-    @Column(nullable = false)
+    @Setter
+    @Getter
     private String question10;
 
-    // Constructor to handle required fields
+    // Constructors
+    public SurveyResponse() {}
+
     public SurveyResponse(String name, String email, String question1, String question2, String question3,
-                          String question4, String question5, String question6, String question7, String question8,
-                          String question9, String question10) {
+                          String question4, String question5, String question6, String question7,
+                          String question8, String question9, String question10) {
         this.name = name;
         this.email = email;
         this.question1 = question1;
@@ -66,4 +60,7 @@ public class SurveyResponse {
         this.question9 = question9;
         this.question10 = question10;
     }
+
+    // Getters and setters
+
 }

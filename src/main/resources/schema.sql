@@ -79,21 +79,20 @@ CREATE TABLE IF NOT EXISTS housing_replies (
 
 
 
-
 CREATE TABLE IF NOT EXISTS survey_responses (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(255),
-    gender VARCHAR(50),
-    reason_for_seeking_work VARCHAR(255),
-    education_level VARCHAR(100),
-    comfort_with_language VARCHAR(100),
-    work_environment VARCHAR(100),
-    team_preference VARCHAR(100),
-    skills_experience VARCHAR(100),
-    work_schedule VARCHAR(100),
-    desired_industry VARCHAR(100),
-    job_stability VARCHAR(100),
-    job_impact_on_life VARCHAR(255)
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(255),
+  email VARCHAR(255),
+  question1 TEXT,
+  question2 TEXT,
+  question3 TEXT,
+  question4 TEXT,
+  question5 TEXT,
+  question6 TEXT,
+  question7 TEXT,
+  question8 TEXT,
+  question9 TEXT,
+  question10 TEXT
 )ENGINE = InnoDB;
 
 
