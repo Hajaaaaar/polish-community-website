@@ -97,3 +97,18 @@ h2 {
     padding-top: 25px;
     text-align: center;
 }
+
+#learnMore {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
+    border-radius: 0px;
+    text-decoration: none;
+    text-align:center;
+}
+
