@@ -2,6 +2,7 @@ package com.example.polishCommunity.model;
 
 import jakarta.persistence.*;
 import lombok.*;
+import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "housing_questionnaire")
@@ -21,6 +22,14 @@ public class HousingQuestionnaire {
 
     @Column(nullable = false)
     private String message;
+
+    @Column(nullable = false)
+    private LocalDateTime createdAt;
+
+    @PrePersist
+    protected void onCreate() {
+        this.createdAt = LocalDateTime.now();
+    }
 
     public HousingQuestionnaire(String name, String email, String message) {
         this.name = name;

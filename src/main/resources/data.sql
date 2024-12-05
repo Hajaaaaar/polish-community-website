@@ -31,5 +31,8 @@ insert into sub_rights(sub_title,description,title_id) values
 \n Does data exist for migrants in Wales? Yes: Overseas, anonymous, opted-out, EU citizens and Parliamentary electors by local authority.',1),
 ('test','test',1);
 
-delete
-from housing_questionnaire;
+delete from housing_questionnaire;
+
+insert into housing_questionnaire(name, email, message)
+VALUES ('Hajar', 'hajarnefaa@gmail.com', 'First test comment.'),
+       ('Sara', 'sara@gmail.com', 'Second test comment.');

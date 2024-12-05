@@ -50,7 +50,7 @@
     <div class="container form-container">
         <h2>Housing Page Questionnaire</h2>
         <p>Have a question or comment? Share it below!</p>
-        <form action="/housing-questionnaire" method="post" id="housingForm">
+        <form action="/housing/housing-questionnaire" method="post" id="housingForm">
             <div class="form-group">
                 <label for="name">Name (optional):</label>
                 <input type="text" id="name" name="name" class="form-control" placeholder="Your Name">
@@ -67,13 +67,27 @@
                 <button type="submit" class="btn">Submit</button>
             </div>
         </form>
+
+
         <div th:if="${successMessage}" class="alert alert-success" role="alert">
             <p th:text="${successMessage}"></p>
         </div>
         <div th:if="${errorMessage}" class="alert alert-danger" role="alert">
             <p th:text="${errorMessage}"></p>
         </div>
+    </div>
 
+    <!-- Displaying Submitted Questions -->
+    <div class="container">
+        <h2>Community Questions</h2>
+        <ul>
+            <li th:each="question : ${questions}">
+                <strong th:text="${question.name} ?: 'Anonymous'"></strong>:
+                <p th:text="${question.message}"></p>
+
+
+            </li>
+        </ul>
     </div>
 
     <footer th:replace="~{fragments/footer}"></footer>

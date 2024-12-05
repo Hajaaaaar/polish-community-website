@@ -29,10 +29,10 @@ public class PagesController {
         return "Pages/signin-register";
     }
 
-    @GetMapping("/housing")
-    public String housingPage(Model model) {
-        return "Pages/housingPage";
-    }
+//    @GetMapping("/housing")
+//    public String housingPage(Model model) {
+//        return "Pages/housingPage";
+//    }
 
 
 

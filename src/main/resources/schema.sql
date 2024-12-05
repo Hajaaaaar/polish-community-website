@@ -67,9 +67,11 @@ CREATE TABLE IF NOT EXISTS resources (
 ) ENGINE = InnoDB;
 
 
+drop table if exists housing_questionnaire;
 CREATE TABLE IF NOT EXISTS housing_questionnaire (
      id BIGINT AUTO_INCREMENT PRIMARY KEY,
-     name VARCHAR(255),
-     email VARCHAR(255),
+     name VARCHAR(100),
+     email VARCHAR(100),
      message TEXT NOT NULL
 ) ENGINE = InnoDB;
+
