@@ -1,58 +1,51 @@
 package com.example.polishCommunity.controller;
 
-
 import com.example.polishCommunity.model.SurveyResponse;
 import com.example.polishCommunity.service.SurveyService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
-@RequestMapping("/Work-SurveyPage")
 public class SurveyController {
 
     @Autowired
     private SurveyService surveyService;
 
-    @RequestMapping
-    public String showSurveyPage() {
-        return "Pages/Work-SurveyPage";  // Ensure the name matches your HTML template file
+    // Handle GET request for showing the survey form
+    @GetMapping("/work-surveyPage")
+    public String showSurveyForm() {
+        return "Work-SurveyPage"; // Show the survey page
     }
 
-    @PostMapping("/submit")
-    public String submitSurvey(@RequestParam String name,
-                               @RequestParam String gender,
-                               @RequestParam String reasonForSeekingWork,
-                               @RequestParam String educationLevel,
-                               @RequestParam String comfortWithLanguage,
-                               @RequestParam String workEnvironment,
-                               @RequestParam String teamPreference,
-                               @RequestParam String skillsExperience,
-                               @RequestParam String workSchedule,
-                               @RequestParam String desiredIndustry,
-                               @RequestParam String jobStability,
-                               @RequestParam String jobImpactOnLife) {
+    // Handle POST request to save the survey response
+    @PostMapping("/work-survey")
+    public String submitSurvey(@RequestParam(name = "name") String name,
+                               @RequestParam(name = "email") String email,
+                               @RequestParam(name = "question1") String question1,
+                               @RequestParam(name = "question2") String question2,
+                               @RequestParam(name = "question3") String question3,
+                               @RequestParam(name = "question4") String question4,
+                               @RequestParam(name = "question5") String question5,
+                               @RequestParam(name = "question6") String question6,
+                               @RequestParam(name = "question7") String question7,
+                               @RequestParam(name = "question8") String question8,
+                               @RequestParam(name = "question9") String question9,
+                               @RequestParam(name = "question10") String question10,
+                               Model model) {
+        // Create a new SurveyResponse object using the data from the form
+        SurveyResponse surveyResponse = new SurveyResponse(name, email, question1, question2, question3, question4, question5, question6, question7, question8, question9, question10);
 
-        SurveyResponse response = new SurveyResponse();
-        response.setName(name);
-        response.setGender(gender);
-        response.setReasonForSeekingWork(reasonForSeekingWork);
-        response.setEducationLevel(educationLevel);
-        response.setComfortWithLanguage(comfortWithLanguage);
-        response.setWorkEnvironment(workEnvironment);
-        response.setTeamPreference(teamPreference);
-        response.setSkillsExperience(skillsExperience);
-        response.setWorkSchedule(workSchedule);
-        response.setDesiredIndustry(desiredIndustry);
-        response.setJobStability(jobStability);
-        response.setJobImpactOnLife(jobImpactOnLife);
+        // Save the survey response to the database using the service layer
+        surveyService.saveSurveyResponse(surveyResponse);
 
-        surveyService.saveSurveyResponse(response);
+        // Add success message to model to display it on the page
+        model.addAttribute("successMessage", "Thank you for submitting the survey!");
 
-        return "thankyou"; // A page that thanks users for submitting their survey
+        // Return to the survey page with a success message
+        return "Work-SurveyPage";
     }
 }
-

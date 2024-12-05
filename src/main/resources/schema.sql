@@ -19,7 +19,7 @@ CREATE TABLE IF NOT EXISTS healthtable (
     location VARCHAR(255) NOT NULL,
     q1registered BOOLEAN NOT NULL,
     q2queries TEXT NOT NULL
-);
+) ENGINE = InnoDB;
 CREATE TABLE IF NOT EXISTS work_information (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
@@ -27,15 +27,13 @@ CREATE TABLE IF NOT EXISTS work_information (
     link VARCHAR(255),
     job_type VARCHAR(50),
     expiry_date DATE
-);
-drop table if exists sub_rights;
-drop table if exists rights;
+) ENGINE = InnoDB;
 
 create table if not exists rights(
     title_id INT AUTO_INCREMENT PRIMARY KEY,
     title VARCHAR(255) NOT NULL,
     description TEXT
-);
+) ENGINE = InnoDB;
 
 create table if not exists sub_rights(
     sub_title_id INT AUTO_INCREMENT PRIMARY KEY,
@@ -43,7 +41,7 @@ create table if not exists sub_rights(
     description TEXT,
     title_id int,
     FOREIGN KEY (title_id) REFERENCES rights(title_id)
-);
+) ENGINE = InnoDB;
 
 
 
@@ -55,6 +53,7 @@ CREATE TABLE IF NOT EXISTS resources (
     address TEXT NULL DEFAULT NULL,
     phone TEXT NULL DEFAULT NULL
 ) ENGINE = InnoDB;
+
 
 CREATE TABLE IF NOT EXISTS survey_responses (
   id INT AUTO_INCREMENT PRIMARY KEY,
@@ -70,4 +69,13 @@ CREATE TABLE IF NOT EXISTS survey_responses (
   desired_industry VARCHAR(100),
   job_stability VARCHAR(100),
   job_impact_on_life VARCHAR(255)
-);
+)ENGINE = InnoDB;
+
+
+CREATE TABLE IF NOT EXISTS housing_questionnaire (
+     id BIGINT AUTO_INCREMENT PRIMARY KEY,
+     name VARCHAR(255),
+     email VARCHAR(255),
+     message TEXT NOT NULL
+) ENGINE = InnoDB;
+

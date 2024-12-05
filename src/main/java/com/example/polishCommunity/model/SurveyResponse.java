@@ -1,115 +1,69 @@
 package com.example.polishCommunity.model;
 
+import jakarta.persistence.*;
+import lombok.*;
+
+@Entity
+@Table(name = "survey_responses")
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class SurveyResponse {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
     private String name;
-    private String gender;
-    private String reasonForSeekingWork;
-    private String educationLevel;
-    private String comfortWithLanguage;
-    private String workEnvironment;
-    private String teamPreference;
-    private String skillsExperience;
-    private String workSchedule;
-    private String desiredIndustry;
-    private String jobStability;
-    private String jobImpactOnLife;
 
-    // Getter and Setter methods for each field
+    private String email;
 
-    public String getName() {
-        return name;
-    }
+    @Column(nullable = false)
+    private String question1;
 
-    public void setName(String name) {
+    @Column(nullable = false)
+    private String question2;
+
+    @Column(nullable = false)
+    private String question3;
+
+    @Column(nullable = false)
+    private String question4;
+
+    @Column(nullable = false)
+    private String question5;
+
+    @Column(nullable = false)
+    private String question6;
+
+    @Column(nullable = false)
+    private String question7;
+
+    @Column(nullable = false)
+    private String question8;
+
+    @Column(nullable = false)
+    private String question9;
+
+    @Column(nullable = false)
+    private String question10;
+
+    // Constructor to handle required fields
+    public SurveyResponse(String name, String email, String question1, String question2, String question3,
+                              String question4, String question5, String question6, String question7, String question8,
+                              String question9, String question10) {
         this.name = name;
-    }
-
-    public String getGender() {
-        return gender;
-    }
-
-    public void setGender(String gender) {
-        this.gender = gender;
-    }
-
-    public String getReasonForSeekingWork() {
-        return reasonForSeekingWork;
-    }
-
-    public void setReasonForSeekingWork(String reasonForSeekingWork) {
-        this.reasonForSeekingWork = reasonForSeekingWork;
-    }
-
-    public String getEducationLevel() {
-        return educationLevel;
-    }
-
-    public void setEducationLevel(String educationLevel) {
-        this.educationLevel = educationLevel;
-    }
-
-    public String getComfortWithLanguage() {
-        return comfortWithLanguage;
-    }
-
-    public void setComfortWithLanguage(String comfortWithLanguage) {
-        this.comfortWithLanguage = comfortWithLanguage;
-    }
-
-    public String getWorkEnvironment() {
-        return workEnvironment;
-    }
-
-    public void setWorkEnvironment(String workEnvironment) {
-        this.workEnvironment = workEnvironment;
-    }
-
-    public String getTeamPreference() {
-        return teamPreference;
-    }
-
-    public void setTeamPreference(String teamPreference) {
-        this.teamPreference = teamPreference;
-    }
-
-    public String getSkillsExperience() {
-        return skillsExperience;
-    }
-
-    public void setSkillsExperience(String skillsExperience) {
-        this.skillsExperience = skillsExperience;
-    }
-
-    public String getWorkSchedule() {
-        return workSchedule;
-    }
-
-    public void setWorkSchedule(String workSchedule) {
-        this.workSchedule = workSchedule;
-    }
-
-    public String getDesiredIndustry() {
-        return desiredIndustry;
-    }
-
-    public void setDesiredIndustry(String desiredIndustry) {
-        this.desiredIndustry = desiredIndustry;
-    }
-
-    public String getJobStability() {
-        return jobStability;
-    }
-
-    public void setJobStability(String jobStability) {
-        this.jobStability = jobStability;
-    }
-
-    public String getJobImpactOnLife() {
-        return jobImpactOnLife;
-    }
-
-    public void setJobImpactOnLife(String jobImpactOnLife) {
-        this.jobImpactOnLife = jobImpactOnLife;
+        this.email = email;
+        this.question1 = question1;
+        this.question2 = question2;
+        this.question3 = question3;
+        this.question4 = question4;
+        this.question5 = question5;
+        this.question6 = question6;
+        this.question7 = question7;
+        this.question8 = question8;
+        this.question9 = question9;
+        this.question10 = question10;
     }
 }
