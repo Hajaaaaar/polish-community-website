@@ -12,16 +12,6 @@ CREATE TABLE IF NOT EXISTS users (
     password_hash VARCHAR(255) NOT NULL
 ) ENGINE = InnoDB;
 
-
-
-
-
-
-
-
-
-
-
 CREATE TABLE IF NOT EXISTS healthtable (
     id SERIAL PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
@@ -55,8 +45,6 @@ create table if not exists sub_rights(
     FOREIGN KEY (title_id) REFERENCES rights(title_id)
 );
 
-
-
 CREATE TABLE IF NOT EXISTS resources (
     name TEXT NOT NULL,
     description TEXT NOT NULL,
@@ -65,3 +53,19 @@ CREATE TABLE IF NOT EXISTS resources (
     address TEXT NULL DEFAULT NULL,
     phone TEXT NULL DEFAULT NULL
 ) ENGINE = InnoDB;
+
+CREATE TABLE IF NOT EXISTS survey_responses (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255),
+    gender VARCHAR(50),
+    reason_for_seeking_work VARCHAR(255),
+    education_level VARCHAR(100),
+    comfort_with_language VARCHAR(100),
+    work_environment VARCHAR(100),
+    team_preference VARCHAR(100),
+    skills_experience VARCHAR(100),
+    work_schedule VARCHAR(100),
+    desired_industry VARCHAR(100),
+    job_stability VARCHAR(100),
+    job_impact_on_life VARCHAR(255)
+)ENGINE = InnoDB;

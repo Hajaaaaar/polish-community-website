@@ -17,36 +17,32 @@ public class PagesController {
     }
 
     @GetMapping("/FAQpage")
-    public String FAQpage(Model model) {return "Pages/FAQpage";}
+    public String FAQpage(Model model) {
+        return "Pages/FAQpage";
+    }
 
     @GetMapping("/contact")
     public String contact(Model model) {
-    return "Pages/contactsPage";
-}
+        return "Pages/contactsPage";
+    }
 
     @GetMapping("/signin-register")
     public String Signregister(Model model) {
         return "Pages/signin-register";
     }
 
-
-
-
-
-
-
-
-
-
-
-
     @GetMapping("/healthPage")
-    public String healthPage(Model model) {return "Pages/healthPage";}
+    public String healthPage(Model model) {
+        return "Pages/healthPage";
+    }
 
     @GetMapping("/workPage")
     public String work(Model model) {
         return "Pages/workPage";
     }
 
-
+    @GetMapping("/Work-Survey")
+    public String work_survey(Model model) {
+        return "Pages/Work-SurveyPage";
+    }
 }

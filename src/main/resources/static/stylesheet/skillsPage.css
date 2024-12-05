@@ -11,7 +11,8 @@ body {
     margin-top: 20px;
 }
 
-.skills-item {
+.skills-item,
+.resources-item {
     background-color: white;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -20,11 +21,6 @@ body {
 }
 
 .resources-item {
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: transform 0.3s ease-in-out;
     outline: 2px solid #d50032;
     outline-offset: 4px;
 }
@@ -46,40 +42,42 @@ body {
     object-fit: cover;
 }
 
-.skills-item h2, .resources-item h2 {
+.skills-item h2,
+.resources-item h2 {
     font-size: 1.8rem;
     color: #d50032;
     padding: 15px;
 }
 
-.skills-item p, .resources-item p {
+.skills-item p,
+.resources-item p {
     padding: 0 15px 15px;
     font-size: 1rem;
     color: #555;
 }
 
-.skills-item a, .resources-item a {
+.skills-item a,
+.resources-item a {
     text-decoration: none;
     color: inherit;
 }
 
-.duration {
+.duration,
+.date {
     font-weight: bold;
     font-size: 1.2rem;
 }
 
-.date {
-    font-weight: bold;
-}
-
-h1 {
+h1,
+h2 {
     font-size: 2rem;
     text-align: center;
     color: #d50032 !important;
     padding-top: 25px;
 }
 
-#mainText {
+#mainText,
+#mainText1 {
     padding-top: 25px;
     text-align: justify;
     margin-left: 10rem;
@@ -93,7 +91,7 @@ h1 {
 
 .resourceLink {
     color: #d50032 !important;
-    text-decoration: underline; !important
+    text-decoration: underline !important;
 }
 
 .resource {
@@ -116,7 +114,7 @@ h1 {
 }
 
 #toggleButton:hover {
-    background-color: #850023;
+    background-color: #ff3b3b;
 }
 
 #learnMore {
@@ -131,5 +129,37 @@ h1 {
 
 #learnMore:hover {
     background-color: #333;
+}
+
+.button-container {
+    text-align: center;
+}
+
+.button-link {
+    display: inline-block;
+    background-color: #d50032;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 0;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+    vertical-align: middle;
+    transition: background-color 0.3s ease;
+}
+
+.button-link:hover {
+    background-color: #ff3b3b;
+}
+
+li {
+    color: black;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+li strong {
+    color: #d50032;
 }
 
