@@ -8,6 +8,10 @@
     <link rel="stylesheet" th:href="@{/stylesheet/WorkSurvey.css}">
     <script th:src="@{JavaScript/WorkSurvey.js}" defer></script>
 </head>
+<!-- Success Message -->
+<div th:if="${successMessage}" class="alert alert-success">
+    <p th:text="${successMessage}"></p>
+</div>
 <body><div class="container">
     <h1>Work Preferences Questionnaire</h1>
     <form method="post" action="/work-survey">
@@ -141,15 +145,9 @@
     </form>
 </div>
 
-<!-- Success Message -->
-        <div th:if="${successMessage}" class="alert alert-success">
-            <p th:text="${successMessage}"></p>
-        </div>
+
 
     </div>
-</div>
-</body>
-
 </div>
 </div>
 <div th:replace="~{fragments/footer :: bootstrap-js}"></div>
