@@ -31,11 +31,6 @@ public class PagesController {
         return "Pages/signin-register";
     }
 
-    @GetMapping("/housing")
-    public String housingPage(Model model) {
-        return "Pages/housingPage";
-    }
-
     @GetMapping("/healthPage")
     public String healthPage(Model model) {
         return "Pages/healthPage";
