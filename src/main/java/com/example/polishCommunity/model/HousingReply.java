@@ -2,7 +2,10 @@ package com.example.polishCommunity.model;
 
 
 import jakarta.persistence.*;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Entity
 @Table(name = "housing_replies")
@@ -20,9 +23,11 @@ public class HousingReply {
     @Column(nullable = false)
     private String message;
 
+
     @ManyToOne
-    @JoinColumn(name = "question_id", nullable = false)
+    @JoinColumn(name = "question_id", nullable = false, foreignKey = @ForeignKey(name = "FK_HousingReply_Question"))
     private HousingQuestionnaire question;
+
 
     public HousingReply(String name, String message, HousingQuestionnaire question) {
         this.name = name;

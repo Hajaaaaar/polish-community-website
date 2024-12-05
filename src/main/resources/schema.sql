@@ -66,12 +66,23 @@ CREATE TABLE IF NOT EXISTS resources (
     phone TEXT NULL DEFAULT NULL
 ) ENGINE = InnoDB;
 
+DROP TABLE IF EXISTS housing_replies;
+DROP TABLE IF EXISTS housing_questionnaire;
 
-drop table if exists housing_questionnaire;
 CREATE TABLE IF NOT EXISTS housing_questionnaire (
      id BIGINT AUTO_INCREMENT PRIMARY KEY,
      name VARCHAR(100),
      email VARCHAR(100),
      message TEXT NOT NULL
-) ENGINE = InnoDB;
+);
+
+CREATE TABLE IF NOT EXISTS housing_replies (
+   id BIGINT AUTO_INCREMENT PRIMARY KEY,
+   name VARCHAR(100),
+   message TEXT NOT NULL,
+   question_id BIGINT,
+   FOREIGN KEY (question_id) REFERENCES housing_questionnaire(id) ON DELETE CASCADE
+);
+
+
 

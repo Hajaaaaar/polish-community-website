@@ -25,7 +25,7 @@ public class SecurityConfig {
                                 "resources/education", "/healthPage",
                                 "/health", "/workPage", "/housing",
                                 "/rights/{id}", "/housing-questionnaire",
-                                "/housing", "/housing/housing-questionnaire")
+                                "/housing", "/housing/housing-questionnaire", "/housing/submit-reply")
 
                         .permitAll()
                         // Allow static resources

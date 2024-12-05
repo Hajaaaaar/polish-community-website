@@ -32,7 +32,15 @@ insert into sub_rights(sub_title,description,title_id) values
 ('test','test',1);
 
 delete from housing_questionnaire;
+delete from housing_replies;
 
 insert into housing_questionnaire(name, email, message)
-VALUES ('Hajar', 'hajarnefaa@gmail.com', 'First test comment.'),
-       ('Sara', 'sara@gmail.com', 'Second test comment.');
+VALUES ('Hajar', 'hajarnefaa@gmail.com', 'Hello everyone I am looking for rent. Can you give me any suggestions where to look?'),
+       ('Sara', 'sara@gmail.com', 'Dobry wieczór, I want to buy a house what are the documents needed?');
+
+INSERT INTO housing_replies (name, message, question_id)
+VALUES
+    ('Sara Doe', 'Hello, you can check this website, you may fined some useful info:https://www.gov.wales/migrant-integration-framework-html#135676', 1),
+    ('Louise', 'I also have the same question,does anyone have any idea?', 2),
+    (NULL, 'Thank you!', 1);
+
