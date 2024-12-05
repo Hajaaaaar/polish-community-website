@@ -4,13 +4,13 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-
-public class SubRights {
-    private int subTitleId;
-    private String subTitle;
-    private String description;
+public class RightsFAQs {
+    private int queId;
+    private String que;
+    private String answer;
     private int titleId;
 }
