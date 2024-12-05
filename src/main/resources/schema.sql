@@ -5,27 +5,12 @@ USE polishsite;
 drop table if exists users;
 
 CREATE TABLE IF NOT EXISTS users (
-<<<<<<< HEAD
-<<<<<<< HEAD
-                                     id INT AUTO_INCREMENT PRIMARY KEY,
-                                     name VARCHAR(50) NOT NULL,
-                                     surname VARCHAR(50) NOT NULL,
-                                     email VARCHAR(100) NOT NULL UNIQUE,
-                                     password_hash VARCHAR(255) NOT NULL
-=======
-=======
->>>>>>> 811611bb5eab49c4fff1f316e75facf2ff31af33
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(50) NOT NULL,
     surname VARCHAR(50) NOT NULL,
     email VARCHAR(100) NOT NULL UNIQUE,
     password_hash VARCHAR(255) NOT NULL,
     role VARCHAR(255) NOT NULL DEFAULT 'User'
-<<<<<<< HEAD
->>>>>>> 742171a842ad3c5a1501831c77ec53bfce80ec13
-=======
-
->>>>>>> 811611bb5eab49c4fff1f316e75facf2ff31af33
 ) ENGINE = InnoDB;
 
 CREATE TABLE IF NOT EXISTS healthtable (
