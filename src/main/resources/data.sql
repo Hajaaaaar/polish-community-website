@@ -1,14 +1,10 @@
-# delete
-# from users;
-#
-# insert into users (id, name, surname, email, password_hash, role)
-# values (1, 'hajar', 'nefaa', 'hajarnefaa@gmail.com', '$2a$10$4OfOn5s5Dh8XlVrI1jN0f.BX0LDb8CYsdTXSdPW.25l6KZ3K/zw3m', 'User');
-# insert into users (id, name, surname, email, password_hash)
-# values (2, 'sara', 'Doe', 'sara@gmail.com', '$2a$10$4OfOn5s5Dh8XlVrI1jN0f.BX0LDb8CYsdTXSdPW.25l6KZ3K/zw3m');
-#
+delete from users;
 
-#
-#
+insert into users (id, name, surname, email, password_hash, role)
+values (1, 'hajar', 'nefaa', 'hajarnefaa@gmail.com', '$2a$10$4OfOn5s5Dh8XlVrI1jN0f.BX0LDb8CYsdTXSdPW.25l6KZ3K/zw3m', 'User');
+insert into users (id, name, surname, email, password_hash)
+values (2, 'sara', 'Doe', 'sara@gmail.com', '$2a$10$4OfOn5s5Dh8XlVrI1jN0f.BX0LDb8CYsdTXSdPW.25l6KZ3K/zw3m');
+
 INSERT INTO users (id, name, surname, email, password_hash, role)
 SELECT 1, 'hajar', 'nefaa', 'hajarnefaa@gmail.com', '$2a$10$4OfOn5s5Dh8XlVrI1jN0f.BX0LDb8CYsdTXSdPW.25l6KZ3K/zw3m', 'User'
 WHERE NOT EXISTS (SELECT 1 FROM users WHERE id = 1);
@@ -17,6 +13,26 @@ INSERT INTO users (id, name, surname, email, password_hash, role)
 SELECT 2, 'sara', 'Doe', 'sara@gmail.com', '$2a$10$4OfOn5s5Dh8XlVrI1jN0f.BX0LDb8CYsdTXSdPW.25l6KZ3K/zw3m', 'User'
 WHERE NOT EXISTS (SELECT 1 FROM users WHERE id = 2);
 
+DELETE FROM news;
+INSERT INTO polishsite.news (`title`, `content`, `date`, `link`) VALUES ('Test News 1', 'Blah blah blah', '2024-12-05', 'www.test.com');
+INSERT INTO polishsite.news (`title`, `content`, `date`, `link`) VALUES ('Test News 2', 'Tra la la la', '2024-12-02', 'www.testagain.com');
+
+DELETE FROM resources;
+INSERT INTO polishsite.resources (`name`, `description`, `access`, `link`, `address`, `phone`) VALUES ('Learn French', 'Pretend this is a resource without a website. The user has to go to their offices in real life to register.', 'Go to your local center and ask for more information.', NULL, '12 French Street CF00 0AA', '+44 777777777');
+INSERT INTO polishsite.resources (`name`, `description`, `access`, `link`, `address`, `phone`) VALUES ('Learn English', 'This is just a long test description. Pretend you''re reading about an offer to learn english through a specific resource, maybe a course or website.', 'Sign up for a free plan on the website:', 'www.english.com', NULL, '+44 123456789');
+
+DELETE FROM skills;
+INSERT INTO polishsite.skills (`name`, `description`, `link`, `duration`, `expiryDate`) VALUES ('Skill #1', 'This is the first description.', 'www.google.com', '26', '2024-12-02');
+INSERT INTO polishsite.skills (`name`, `description`, `link`, `duration`, `expiryDate`) VALUES ('Skill #2', 'This is the second description.', 'www.linkedin.com', '54', '2026-06-13');
+INSERT INTO polishsite.skills (`name`, `description`, `link`, `duration`, `expiryDate`) VALUES ('Skill #3', 'This is the third description.', 'www.reddit.com', '8', '2025-01-23');
+
+DELETE from organisations;
+INSERT INTO organisations (name, description, logo) VALUES ('Red Org 1', 'This is the red organisation', 'red.png');
+INSERT INTO organisations (name, description, logo) VALUES ('Blue Org 1', 'This is the blue organisation', 'blue.png');
+INSERT INTO organisations (name, description, logo) VALUES ('Red Org 2', 'This is the red organisation again', 'red.png');
+INSERT INTO organisations (name, description, logo) VALUES ('Blue Org 2', 'This is the blue organisation again', 'blue.png');
+INSERT INTO organisations (name, description, logo) VALUES ('Red Org 3', 'This is the red organisation again again', 'red.png');
+INSERT INTO organisations (name, description, logo) VALUES ('Blue Org 3', 'This is the blue organisation again again', 'blue.png');
 
 INSERT INTO work_information(name, description, link, job_type, expiry_date)
 VALUES
@@ -24,10 +40,10 @@ VALUES
     ('Data Analyst', 'Analyse and interpret complex datasets.', 'https://example.com/data-analyst', 'Part-Time', '2024-12-15');
 
 insert into rights(title, description) values
-('Domain 7: Rights and Responsibilities','In seeking to become a Nation of Sanctuary, as well as through implementing the Anti Racist Wales Action Plan, the Welsh Government is seeking to eliminate inequalities and support integration. For people to fully integrate with Welsh communities, they need to understand their rights and responsibilities. Host community members equally have responsibilities to follow the law, engage with democratic processes and participate in local communities. Individuals also need to be able to exercise their rights to ensure they have the safety net which is sometimes required. This is why advice services and awareness-raising activities can play a critical role in supporting integration. Awareness of rights and responsibilities will support new migrants to build social connections and awareness of Welsh systems more quickly. Rights and responsibilities establish a common framework for interactions between all individuals in a community. It is therefore important that new migrants are supported to understand these as soon as possible.\n\nAwareness of rights and responsibilities will support new migrants to build social connections and awareness of Welsh systems more quickly. Rights and responsibilities establish a common framework for interactions between all individuals in a community. It is therefore important that new migrants are supported to understand these as soon as possible.');
+    ('Domain 7: Rights and Responsibilities','In seeking to become a Nation of Sanctuary, as well as through implementing the Anti Racist Wales Action Plan, the Welsh Government is seeking to eliminate inequalities and support integration. For people to fully integrate with Welsh communities, they need to understand their rights and responsibilities. Host community members equally have responsibilities to follow the law, engage with democratic processes and participate in local communities. Individuals also need to be able to exercise their rights to ensure they have the safety net which is sometimes required. This is why advice services and awareness-raising activities can play a critical role in supporting integration. Awareness of rights and responsibilities will support new migrants to build social connections and awareness of Welsh systems more quickly. Rights and responsibilities establish a common framework for interactions between all individuals in a community. It is therefore important that new migrants are supported to understand these as soon as possible.\n\nAwareness of rights and responsibilities will support new migrants to build social connections and awareness of Welsh systems more quickly. Rights and responsibilities establish a common framework for interactions between all individuals in a community. It is therefore important that new migrants are supported to understand these as soon as possible.');
 
 insert into sub_rights(sub_title,description,title_id) values
-('Indicator 1: percent registering to vote','Does data exist for UK-born individuals in Wales? Yes: Electoral statistics for the UK.
+                                                           ('Indicator 1: percent registering to vote','Does data exist for UK-born individuals in Wales? Yes: Electoral statistics for the UK.
 Does data exist for migrants in Wales? Yes: Overseas, anonymous, opted-out, EU citizens and Parliamentary electors by local authority.',1),
                                                            ('Indicator 2: percentage utilising advice services','Does data exist for UK-born individuals in Wales? Yes: National Survey for Wales.
 Does data exist for migrants in Wales? No.
@@ -121,12 +137,6 @@ As a result, the number of registered foreign nationals increased dramatically, 
 This version is tailored to address the unique needs of the Polish immigrant community in Wales, including barriers to service access, political participation, and understanding legal rights. Let me know if you need any more specific details or adjustments!',1);
 
 
-
-
-
-
-
-
 delete from housing_questionnaire;
 delete from housing_replies;
 
@@ -139,5 +149,8 @@ VALUES
     ('Sara Doe', 'Hello, you can check this website, you may fined some useful info:https://www.gov.wales/migrant-integration-framework-html#135676', 1),
     ('Louise', 'I also have the same question,does anyone have any idea?', 2),
     (NULL, 'Thank you!', 1);
+
+
+
 
 

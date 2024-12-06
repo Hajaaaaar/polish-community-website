@@ -50,4 +50,17 @@ public class SurveyController {
     }
 }
 
-
+//
+//            // Create a new SurveyResponse object using the data from the form
+//            SurveyResponse surveyResponse = new SurveyResponse(name, email, question1, question2, question3, question4, question5, question6, question7, question8, question9, question10);
+//            surveyRepository.save(surveyResponse);
+//
+//            // Add success message to model to display it on the page
+//            model.addAttribute("successMessage", "Thank you for submitting the survey!");
+//        }   catch (Exception e) {
+//            model.addAttribute("errorMessage", "An error occurred while submitting your response. Please try again.");
+//        }
+//        // Return to the survey page with a success message
+//        return "redirect:/Work-Survey";
+//    }
+//                }
