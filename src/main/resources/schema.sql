@@ -13,12 +13,12 @@ CREATE TABLE IF NOT EXISTS users (
     role VARCHAR(255) NOT NULL DEFAULT 'User'
 ) ENGINE = InnoDB;
 
-CREATE TABLE IF NOT EXISTS healthtable (
-   id SERIAL PRIMARY KEY,
-   name VARCHAR(255) NOT NULL,
-   email VARCHAR(255) NOT NULL,
-   location VARCHAR(255) NOT NULL,
-   q1registered BOOLEAN NOT NULL,
+CREATE TABLE IF NOT EXISTS health_survey_responses (
+   id BIGINT AUTO_INCREMENT PRIMARY KEY,
+   name VARCHAR(255),
+   email VARCHAR(255),
+   location VARCHAR(255),
+   gp_registered VARCHAR(255),
    q2queries TEXT NOT NULL
 );
 

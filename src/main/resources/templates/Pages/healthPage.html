@@ -21,6 +21,11 @@
         window.onload = function () {
             filterMaps();
         }
+
+        function showThankYouMessage() {
+            alert("Thank you for submitting the health survey!");
+            return true; // Allow form submission to proceed
+        }
     </script>
 </head>
 <body>
@@ -95,44 +100,25 @@
     </ul>
 </div>
     <h2 class="survey-title">Your Health Queries</h2>
-<!--    <form th:action="@{/health/submit}" th:object="${healthInformation}" method="post">-->
-<!--        <label for="name">Name:</label>-->
-<!--        <input type="text" id="name" th:field="*{name}" required><br>-->
+<form class="healthQueryForm" action="/health-survey" method="post" onsubmit="return showThankYouMessage();">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required><br>
 
-<!--        <label for="email">Email address:</label>-->
-<!--        <input type="email" id="email" th:field="*{email}" required><br>-->
+    <label for="email">Email address:</label>
+    <input type="email" id="email" name="email" required><br>
 
-<!--        <label for="location">What area of South Wales do you live in?:</label>-->
-<!--        <input type="text" id="location" th:field="*{location}" required><br>-->
+    <label for="location">What area of South Wales do you live in?:</label>
+    <input type="text" id="location" name="location" required><br>
 
-<!--        <label for="q1registered">Are you registered to a local GP?</label>-->
-<!--        <input type="checkbox" id="q1registered" th:field="*{q1registered}"><br>-->
+    <label>Are you registered to a local GP?</label><br>
+    <input type="radio" id="gpYes" name="gpRegistered" value="yes" required> Yes<br>
+    <input type="radio" id="gpNo" name="gpRegistered" value="no" required> No<br>
 
-<!--        <label for="q2queries">Do you have any queries when it comes to healthcare and how to approach it?</label>-->
-<!--        <textarea id="q2queries" th:field="*{q2queries}" required></textarea><br>-->
+    <label for="q2queries">Do you have any queries when it comes to healthcare and how to approach it?</label>
+    <textarea id="q2queries" name="q2queries" required></textarea><br>
 
-<!--        <button type="submit">Submit answers</button>-->
-<!--    </form>-->
-    <form class="healthQueryForm" action="/submit" th:action="@{/submit}" th:object="${HealthInformationController}" method="post">
-        <label for="name">Name:</label>
-        <input type="text" id="name"  required><br>
-
-        <label for="email">Email address:</label>
-        <input type="email" id="email"  required><br>
-
-        <label for="location">What area of South Wales do you live in?:</label>
-        <input type="text" id="location"  required><br>
-
-        <label id="q1registered">Are you registered to a local GP?</label><br>
-        <input type="radio" name="gpRegistered" value="yes" aria-labelledby="q1registered"> Yes<br>
-        <input type="radio" name="gpRegistered" value="no" aria-labelledby="q1registered"> No<br>
-
-        <label for="q2queries">Do you have any queries when it comes to healthcare and how to approach it?</label>
-        <textarea id="q2queries" required></textarea><br>
-
-        <button class="healthSubmit" type="submit">Submit answers</button>
-    </form>
-
+    <button type="submit">Submit answers</button>
+</form>
 
     <div th:replace="~{fragments/footer :: bootstrap-js}"></div>
     <footer th:replace="~{fragments/footer}"></footer>
