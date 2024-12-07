@@ -1,9 +1,12 @@
 package com.example.polishCommunity.service;
 
+import com.example.newsPage.model.News;
 import com.example.polishCommunity.model.User;
 import com.example.polishCommunity.repository.UserRepository;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 public class UserService {
@@ -15,7 +18,7 @@ public class UserService {
         this.passwordEncoder = new BCryptPasswordEncoder();
     }
 
-    public void registerUser(String name, String surname, String email, String password, String role) {
+    public void registerUser(String name, String surname, String email, String password) {
         // Check if the email already exists in the database
         if (userRepository.findByEmail(email) != null) {
             throw new RuntimeException("Email already in use.");
@@ -30,7 +33,6 @@ public class UserService {
         user.setSurname(surname);
         user.setEmail(email);
         user.setPasswordHash(hashedPassword);
-        user.setRole(role);
 
         // Save the user to the database
         userRepository.save(user);

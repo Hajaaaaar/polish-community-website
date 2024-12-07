@@ -19,11 +19,9 @@ public class AuthController {
                                @RequestParam String surname,
                                @RequestParam String email,
                                @RequestParam String password,
-                               @RequestParam String role,
                                RedirectAttributes redirectAttributes) {  // Use RedirectAttributes to pass messages
-        System.out.println("Test!!!");
         try {
-            userService.registerUser(name, surname, email, password, role);
+            userService.registerUser(name, surname, email, password);
             redirectAttributes.addFlashAttribute("successMessage", "Account created successfully! Please log in.");
             return "redirect:/signin-register"; // Redirect to signin-register with successMessage
         } catch (RuntimeException e) {
@@ -43,7 +41,5 @@ public class AuthController {
             return "redirect:/signin-register"; // Redirect back to login page
         }
     }
-
-
 
 }

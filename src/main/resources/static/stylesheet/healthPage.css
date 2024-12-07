@@ -1,4 +1,4 @@
-html, body{
+ body{
     height: 100%;
     margin: 0;
     display: flex;
@@ -229,8 +229,8 @@ html, body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    margin: 90px 110px 0 110px;
+    height: auto;
+    margin: 90px 110px 50px 110px;
     text-align: center;
     padding: 20px;
     flex-grow: 1;
@@ -289,7 +289,17 @@ html, body{
 .crisis-list li a:hover {
     text-decoration: underline;
 }
-
+.survey-title{
+    font-family: "Times New Roman", sans-serif;
+    font-size: 2rem;
+    font-weight: 250;
+    letter-spacing: 1px;
+    padding: 10px;
+    color: #c9033f;
+    align-content: center;
+    align-items: center;
+    margin: auto ;
+}
 .healthQueryForm{
     display: flex;
     flex-direction: column;;

@@ -48,8 +48,14 @@
     </main>
 
     <div class="container form-container">
-        <h2>Housing Page Questionnaire</h2>
+        <h2>Housing Comments/Questions</h2>
         <p>Have a question or comment? Share it below!</p>
+        <div th:if="${successMessage}" class="alert alert-success" role="alert">
+            <p th:text="${successMessage}"></p>
+        </div>
+        <div th:if="${errorMessage}" class="alert alert-danger" role="alert">
+            <p th:text="${errorMessage}"></p>
+        </div>
         <form action="/housing/housing-questionnaire" method="post" id="housingForm">
             <div class="form-group">
                 <label for="name">Name (optional):</label>
@@ -70,19 +76,11 @@
                 <button type="submit" class="btn">Submit</button>
             </div>
         </form>
-
-
-        <div th:if="${successMessage}" class="alert alert-success" role="alert">
-            <p th:text="${successMessage}"></p>
-        </div>
-        <div th:if="${errorMessage}" class="alert alert-danger" role="alert">
-            <p th:text="${errorMessage}"></p>
-        </div>
     </div>
 
     <!-- Displaying Submitted Questions -->
     <div class="container">
-        <h2>Community Questions</h2>
+        <h2>Community Comments</h2>
         <ul>
             <div th:if="${commentSuccessMessage}" class="alert alert-success" role="alert">
                 <p th:text="${commentSuccessMessage}"></p>
