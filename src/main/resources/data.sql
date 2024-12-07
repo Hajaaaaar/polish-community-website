@@ -1,15 +1,15 @@
-# delete from users;
+delete from users;
 
-INSERT INTO users (id, name, surname, email, password_hash)
-SELECT 1, 'hajar', 'nefaa', 'hajarnefaa@gmail.com', '$2a$10$4OfOn5s5Dh8XlVrI1jN0f.BX0LDb8CYsdTXSdPW.25l6KZ3K/zw3m'
+INSERT INTO users (id, name, surname, email, password_hash, role)
+SELECT 1, 'hajar', 'nefaa', 'hajarnefaa@gmail.com', '$2a$10$4OfOn5s5Dh8XlVrI1jN0f.BX0LDb8CYsdTXSdPW.25l6KZ3K/zw3m', 'User'
 WHERE NOT EXISTS (SELECT 1 FROM users WHERE id = 1);
 
-INSERT INTO users (id, name, surname, email, password_hash)
-SELECT 2, 'sara', 'Doe', 'sara@gmail.com', '$2a$10$4OfOn5s5Dh8XlVrI1jN0f.BX0LDb8CYsdTXSdPW.25l6KZ3K/zw3m'
+INSERT INTO users (id, name, surname, email, password_hash, role)
+SELECT 2, 'sara', 'Doe', 'sara@gmail.com', '$2a$10$4OfOn5s5Dh8XlVrI1jN0f.BX0LDb8CYsdTXSdPW.25l6KZ3K/zw3m', 'User'
 WHERE NOT EXISTS (SELECT 1 FROM users WHERE id = 2);
 
 INSERT INTO users (id, name, surname, email, password_hash, role)
-values (3, 'Konstantinos', 'Hadjigregoriades', 'hadjigregoriadesc@gmail.com', '$2a$10$Nv539RSklkQW1Ncp4TdaOOE/GB0DdY4IZR6sk75oDPQwQZ784xyGq', 'User');
+values (3, 'Konstantinos', 'Hadjigregoriades', 'hadjigregoriadesc@gmail.com', '$2a$10$Nv539RSklkQW1Ncp4TdaOOE/GB0DdY4IZR6sk75oDPQwQZ784xyGq', 'Moderator');
 
 DELETE FROM news;
 INSERT INTO polishsite.news (`title`, `content`, `date`, `link`) VALUES ('Test News 1', 'Blah blah blah', '2024-12-05', 'www.test.com');
