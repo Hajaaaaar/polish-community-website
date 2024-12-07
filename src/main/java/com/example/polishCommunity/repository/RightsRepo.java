@@ -59,11 +59,10 @@ public class RightsRepo {
         return jdbcTemplate.query(sql, subRightsMapper, id);
     }
 
-    public List<SubRights> addSubRightsByRightsId(int id, String subTitle, String description) {
+    public void addSubRight(SubRights subRights) {
         String sql = "INSERT INTO sub_rights (sub_title, description, title_id) VALUES (?, ?, ?)";
-        jdbcTemplate.update(sql, subTitle, description, id);
-        String selectSql = "SELECT * FROM sub_rights WHERE title_id = ?";
-        return jdbcTemplate.query(selectSql, subRightsMapper, id);
+        jdbcTemplate.update(sql, subRights.getSubTitle(),
+                subRights.getDescription(),subRights.getTitleId());
     }
 
     public List<RightsFAQs> getRightsFAQsByRightsId(int id){

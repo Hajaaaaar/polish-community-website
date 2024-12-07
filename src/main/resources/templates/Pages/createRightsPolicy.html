@@ -20,6 +20,7 @@
 <!--            <label>Inquiry</label>-->
             <input th:field="*{subTitle}" type="text" placeholder="Enter Title" id="subject"/>
             <input th:field="*{description}" type="text" placeholder="Enter Information" id="query"/>
+            <input type="hidden" th:field="*{titleId}">
         </div>
         <button type="submit" >Create</button>
     </form>

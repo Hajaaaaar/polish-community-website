@@ -21,6 +21,7 @@ public class RightsController {
     public ModelAndView getRightsPage(@PathVariable int id){
         ModelAndView mav=new ModelAndView("Pages/Rights");
         Rights rights =rightsService.getRightsByTitleId(id);
+
         mav.addObject("rights",rights);
         return mav;
     }

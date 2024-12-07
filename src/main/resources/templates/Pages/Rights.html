@@ -20,7 +20,7 @@
     </div>
 
     <div class="button-container-div">
-        <a class="button-container" th:href="@{/addNewPolicy}">
+        <a class="button-container" th:href="@{/addNewPolicy/{title_id}(title_id=${rights.getTitleId()})}">
             <button id="learnMore">Add New Policy</button>
         </a>
     </div>
