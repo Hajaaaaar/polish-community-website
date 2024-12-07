@@ -22,7 +22,7 @@ public class SecurityConfig {
                                 "/login", "/home", "/news", "/events",
                                 "/EventsPage", "/contact", "/FAQpage",
                                 "resources/education", "/healthPage",
-                                "/health", "/workPage", "/housing",
+                                "/health", "/health-survey", "/health/submit", "/workPage", "/housing",
                                 "/rights/{id}", "/housing-questionnaire",
                                 "/housing", "/housing/housing-questionnaire",
                                 "/housing/submit-reply", "/Work-Survey", "/work-survey", "/organisations", "/profile", "/profileLogin")

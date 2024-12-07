@@ -18,7 +18,7 @@ public class UserService {
         this.passwordEncoder = new BCryptPasswordEncoder();
     }
 
-    public void registerUser(String name, String surname, String email, String password, String role) {
+    public void registerUser(String name, String surname, String email, String password) {
         // Check if the email already exists in the database
         if (userRepository.findByEmail(email) != null) {
             throw new RuntimeException("Email already in use.");
@@ -33,7 +33,6 @@ public class UserService {
         user.setSurname(surname);
         user.setEmail(email);
         user.setPasswordHash(hashedPassword);
-        user.setRole(role);
 
         // Save the user to the database
         userRepository.save(user);
@@ -57,7 +56,4 @@ public class UserService {
         return false; // Return false if user doesn't exist
     }
 
-    public User getCurrentUser(String email) {
-        return userRepository.findByEmail(email);
-    }
 }

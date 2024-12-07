@@ -2,23 +2,22 @@ CREATE DATABASE IF NOT EXISTS polishsite;
 
 USE polishsite;
 
-drop table if exists users;
+# drop table if exists users;
 
 CREATE TABLE IF NOT EXISTS users (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(50) NOT NULL,
-    surname VARCHAR(50) NOT NULL,
-    email VARCHAR(100) NOT NULL UNIQUE,
-    password_hash VARCHAR(255) NOT NULL,
-    role VARCHAR(255) NOT NULL DEFAULT 'User'
+     id INT AUTO_INCREMENT PRIMARY KEY,
+     name VARCHAR(50) NOT NULL,
+     surname VARCHAR(50) NOT NULL,
+     email VARCHAR(100) NOT NULL UNIQUE,
+     password_hash VARCHAR(255) NOT NULL
 ) ENGINE = InnoDB;
 
-CREATE TABLE IF NOT EXISTS healthtable (
-   id SERIAL PRIMARY KEY,
-   name VARCHAR(255) NOT NULL,
-   email VARCHAR(255) NOT NULL,
-   location VARCHAR(255) NOT NULL,
-   q1registered BOOLEAN NOT NULL,
+CREATE TABLE IF NOT EXISTS health_survey_responses (
+   id BIGINT AUTO_INCREMENT PRIMARY KEY,
+   name VARCHAR(255),
+   email VARCHAR(255),
+   location VARCHAR(255),
+   gp_registered VARCHAR(255),
    q2queries TEXT NOT NULL
 );
 
@@ -92,20 +91,22 @@ CREATE TABLE IF NOT EXISTS housing_replies (
    FOREIGN KEY (question_id) REFERENCES housing_questionnaire(id) ON DELETE CASCADE
 );
 
+
+DROP TABLE IF EXISTS survey_responses;
 CREATE TABLE IF NOT EXISTS survey_responses (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(255),
-    gender VARCHAR(50),
-    reason_for_seeking_work VARCHAR(255),
-    education_level VARCHAR(100),
-    comfort_with_language VARCHAR(100),
-    work_environment VARCHAR(100),
-    team_preference VARCHAR(100),
-    skills_experience VARCHAR(100),
-    work_schedule VARCHAR(100),
-    desired_industry VARCHAR(100),
-    job_stability VARCHAR(100),
-    job_impact_on_life VARCHAR(255)
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(255),
+  email VARCHAR(255),
+  question1 VARCHAR(255),
+  question2 VARCHAR(255),
+  question3 VARCHAR(255),
+  question4 VARCHAR(255),
+  question5 VARCHAR(255),
+  question6 VARCHAR(255),
+  question7 VARCHAR(255),
+  question8 VARCHAR(255),
+  question9 VARCHAR(255),
+  question10 VARCHAR(255)
 )ENGINE = InnoDB;
 
 

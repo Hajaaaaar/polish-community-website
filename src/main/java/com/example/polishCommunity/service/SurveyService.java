@@ -1,6 +1,5 @@
 package com.example.polishCommunity.service;
 
-
 import com.example.polishCommunity.model.SurveyResponse;
 import com.example.polishCommunity.repository.SurveyRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,8 +11,8 @@ public class SurveyService {
     @Autowired
     private SurveyRepository surveyRepository;
 
-    public void saveSurveyResponse(SurveyResponse response) {
-        surveyRepository.save(response);
+    public void saveSurveyResponse(SurveyResponse surveyResponse) {
+        surveyRepository.save(surveyResponse);
     }
 }
 

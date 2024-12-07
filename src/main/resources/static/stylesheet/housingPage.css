@@ -117,17 +117,17 @@ body {
     line-height: 1.5;
 }
 
-.container ul li a.btn-link {
-    color: #007bff;
-    font-size: 14px;
-    text-decoration: none;
-    transition: color 0.2s;
-}
+/*.container ul li a.btn-link {*/
+/*    color: #007bff;*/
+/*    font-size: 14px;*/
+/*    text-decoration: none;*/
+/*    transition: color 0.2s;*/
+/*}*/
 
-.container ul li a.btn-link:hover {
-    color: #0056b3;
-    text-decoration: none;
-}
+/*.container ul li a.btn-link:hover {*/
+/*    color: #0056b3;*/
+/*    text-decoration: none;*/
+/*}*/
 .reply-form {
     margin-top: 15px;
 }
