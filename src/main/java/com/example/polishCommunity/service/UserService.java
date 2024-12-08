@@ -33,6 +33,7 @@ public class UserService {
         user.setSurname(surname);
         user.setEmail(email);
         user.setPasswordHash(hashedPassword);
+        user.setRole("User");
 
         // Save the user to the database
         userRepository.save(user);
@@ -56,4 +57,7 @@ public class UserService {
         return false; // Return false if user doesn't exist
     }
 
+    public User getCurrentUser(String email) {
+        return userRepository.findByEmail(email);
+    }
 }
