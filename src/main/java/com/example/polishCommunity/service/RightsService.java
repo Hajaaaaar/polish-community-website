@@ -1,6 +1,7 @@
 package com.example.polishCommunity.service;
 
 import com.example.polishCommunity.model.Rights;
+import com.example.polishCommunity.model.SubRights;
 import com.example.polishCommunity.repository.RightsRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -10,8 +11,6 @@ import java.util.List;
 
 @Service
 public class RightsService {
-
-
     private RightsRepo rightsRepo;
     public RightsService(RightsRepo rightsRepo){
         this.rightsRepo=rightsRepo;
@@ -21,6 +20,13 @@ public class RightsService {
         rights.setSubTitle(rightsRepo.getSubRightsByRightsId(id));
         rights.setQue(rightsRepo.getRightsFAQsByRightsId(id));
         return rights;
+        }
+//         public void setRights(int id, String subTitle, String description){
+//            rightsRepo.addSubRightsByRightsId(id,subTitle, description);
+//         }
+
+        public void setRights(SubRights subRights){
+            rightsRepo.addSubRight(subRights);
         }
 
 

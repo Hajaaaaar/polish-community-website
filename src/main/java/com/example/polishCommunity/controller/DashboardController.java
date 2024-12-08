@@ -20,7 +20,7 @@ public class DashboardController {
             // Query total users
             int totalUsers = jdbcTemplate.queryForObject("SELECT COUNT(*) FROM users", Integer.class);
 
-            // Query active users 
+            // Query active users
             int activeUsers = jdbcTemplate.queryForObject("SELECT COUNT(*) FROM users WHERE is_active = true", Integer.class);
 
             // Query total news

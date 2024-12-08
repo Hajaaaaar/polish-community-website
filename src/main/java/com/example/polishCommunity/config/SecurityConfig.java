@@ -25,8 +25,9 @@ public class SecurityConfig {
                                 "/health", "/health-survey", "/health/submit", "/workPage", "/housing",
                                 "/rights/{id}", "/housing-questionnaire",
                                 "/housing", "/housing/housing-questionnaire",
-                                "/housing/submit-reply", "/Work-Survey", "/work-survey", "/organisations",
-                                "/profile", "/profileLogin", "/dashboard/metrics")
+                                "/housing/submit-reply", "/Work-survey", "/work-survey", "/organisations",
+                                "/profile", "/profileLogin", "/dashboard/metrics","/addNewPolicy")
+
                         .permitAll()
                         // Allow static resources
                         .requestMatchers("/static/**", "/stylesheet/**", "/JavaScript/**", "/images/**", "/templates/**", "templates/admin/**").permitAll()
@@ -43,3 +44,4 @@ public class SecurityConfig {
     public PasswordEncoder passwordEncoder() { return new BCryptPasswordEncoder();
     }
 }
+
