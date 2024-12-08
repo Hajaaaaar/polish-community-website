@@ -9,8 +9,10 @@ CREATE TABLE IF NOT EXISTS users (
      name VARCHAR(50) NOT NULL,
      surname VARCHAR(50) NOT NULL,
      email VARCHAR(100) NOT NULL UNIQUE,
-     password_hash VARCHAR(255) NOT NULL
+     password_hash VARCHAR(255) NOT NULL,
+     is_active BOOLEAN NOT NULL DEFAULT TRUE
 ) ENGINE = InnoDB;
+
 
 CREATE TABLE IF NOT EXISTS health_survey_responses (
    id BIGINT AUTO_INCREMENT PRIMARY KEY,
