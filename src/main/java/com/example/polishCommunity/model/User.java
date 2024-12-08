@@ -11,61 +11,34 @@ import lombok.*;
 @AllArgsConstructor
 @ToString
 public class User {
+    @Setter
+    @Getter
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Setter
+    @Getter
     @Column(nullable = false) // Ensure 'name' is not null in the database
     private String name;
 
+    @Setter
+    @Getter
     @Column(nullable = false) // Ensure 'surname' is not null in the database
     private String surname;
 
+    @Setter
+    @Getter
     @Column(unique = true, nullable = false) // Email must be unique and not null
     private String email;
 
+    @Setter
+    @Getter
     @Column(name = "password_hash", nullable = false) // Ensure password hash is not null
     private String passwordHash;
 
-    // Getters and Setters
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getSurname() {
-        return surname;
-    }
-
-    public void setSurname(String surname) {
-        this.surname = surname;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getPasswordHash() {
-        return passwordHash;
-    }
-
-    public void setPasswordHash(String passwordHash) {
-        this.passwordHash = passwordHash;
-    }
+    @Setter
+    @Getter
+    @Column(nullable = false)
+    private String role;
 }

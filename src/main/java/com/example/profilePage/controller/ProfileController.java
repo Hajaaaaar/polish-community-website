@@ -27,8 +27,7 @@ public class ProfileController {
                             @RequestParam String password,
                             Model model,
                             RedirectAttributes redirectAttributes) {
-        return "redirect:/home";
-        /* if (userService.authenticateUser(email, password)) {
+        if (userService.authenticateUser(email, password)) {
             User currentUser = userService.getCurrentUser(email);
             if (currentUser != null) {
                 System.out.println("Current user: " + currentUser.getName());
@@ -40,6 +39,6 @@ public class ProfileController {
         } else {
             redirectAttributes.addFlashAttribute("loginErrorMessage", "Invalid email or password. Please try again.");
             return "redirect:/profileLogin"; // Redirect back to login page
-        }*/
+        }
     }
 }

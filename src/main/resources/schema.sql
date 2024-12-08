@@ -5,12 +5,15 @@ USE polishsite;
 # drop table if exists users;
 
 CREATE TABLE IF NOT EXISTS users (
-     id INT AUTO_INCREMENT PRIMARY KEY,
-     name VARCHAR(50) NOT NULL,
-     surname VARCHAR(50) NOT NULL,
-     email VARCHAR(100) NOT NULL UNIQUE,
-     password_hash VARCHAR(255) NOT NULL
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(50) NOT NULL,
+    surname VARCHAR(50) NOT NULL,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    password_hash VARCHAR(255) NOT NULL,
+    role VARCHAR(255) NOT NULL,
+    is_active BOOLEAN NOT NULL DEFAULT TRUE
 ) ENGINE = InnoDB;
+
 
 CREATE TABLE IF NOT EXISTS health_survey_responses (
    id BIGINT AUTO_INCREMENT PRIMARY KEY,

@@ -28,7 +28,7 @@ public class SecurityConfig {
                                 "/housing/submit-reply", "/Work-Survey", "/work-survey", "/organisations", "/profile", "/profileLogin","/addNewPolicy", "/latestNews")
                         .permitAll()
                         // Allow static resources
-                        .requestMatchers("/static/**", "/stylesheet/**", "/JavaScript/**", "/images/**", "/templates/**").permitAll()
+                        .requestMatchers("/static/**", "/stylesheet/**", "/JavaScript/**", "/images/**", "/templates/**", "templates/admin/**").permitAll()
                         .anyRequest().authenticated() // All other requests require authentication
                 )
                 .formLogin(form -> form
