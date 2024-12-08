@@ -9,11 +9,11 @@
 </head>
 <body>
 <header th:replace="~{fragments/header}"></header>
-<h1>Importance Of Education In Integration</h1>
+<h1 class="title">Importance Of Education In Integration</h1>
 <p id="mainText">Education and training can provide individuals with the skills and knowledge they need to succeed in the labour market and participate fully in society. Access to quality and timely education and training opportunities (or opportunities to certify evidence of skills brought to the UK) can therefore be an important factor in promoting integration. Language proficiency, specifically, is vital in advancing social cohesion and a sense of belonging. The ability to speak, read, and write in English or Welsh is essential for accessing education, employment, and other services. It can also help migrants to communicate effectively with their communities and build social connections. Therefore, measuring the English language proficiency of migrants in Wales could provide insights into their integration and social inclusion.</p>
 <p id="readMore">If you want to learn more, <a href="https://www.gov.wales/migrant-integration-framework-html#:~:text=Domain%205%3A%20education%20and%20skills%20(including%20language%2C%20communication%20and%20digital)">click here!</a></p>
 <button id="toggleButton">View Learning Resources</button>
-<h1 id="currentSection">Skills and Qualifications</h1>
+<h1 class="title" id="currentSection">Skills and Qualifications</h1>
 <section class="skills-grid">
     <div class="skills-item" th:each="skills : ${skillsList}">
         <a th:href="${skills.link}">

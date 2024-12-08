@@ -90,10 +90,6 @@
 
         }
 
-        #moderatorLink, #adminLink {
-            display: none;
-        }
-
         /* Center Content on Small Screens */
         @media (max-width: 768px) {
             footer {
@@ -176,21 +172,6 @@
                     <a class="nav-link" th:href="@{/}">DONATE</a>
                 </li>
 
-                <!-- Profile -->
-                <li class="nav-item">
-                    <a class="nav-link" th:href="@{/profileLogin}">PROFILE</a>
-                </li>
-
-                <!-- Moderator Dashboard -->
-                <li class="nav-item" id="moderatorLink">
-                    <a class="nav-link" th:href="@{/}">MODERATOR DASHBOARD</a>
-                </li>
-
-                <!-- Admin Dashboard -->
-                <li class="nav-item" id="adminLink">
-                    <a class="nav-link" th:href="@{/}">ADMIN DASHBOARD</a>
-                </li>
-
                 <!-- Login -->
                 <li class="nav-item">
                     <a class="nav-link" th:href="@{/signin-register}">LOGIN/REGISTER</a>
@@ -200,9 +181,10 @@
             <div class="language-dropdowns d-flex ms-auto">
                 <div class="language-dropdown me-2">
                     <select id="roleSelect" onchange="handleRoleChange()">
-                        <option value="user">User</option>
-                        <option value="moderator">Moderator</option>
-                        <option value="admin">Admin</option>
+                        <option disabled selected hidden>Select Role</option>
+                        <option value="signin-register">User</option>
+                        <option value="profileLogin">Moderator</option>
+                        <option value="profileLogin">Admin</option>
                     </select>
                 </div>
                 <div class="language-dropdown">

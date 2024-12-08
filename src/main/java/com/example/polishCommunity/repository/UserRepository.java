@@ -14,8 +14,8 @@ public class UserRepository {
 
     // Register a new user
     public void save(User user) {
-        String sql = "INSERT INTO users (name, surname, email, password_hash) VALUES (?, ?, ?, ?)";
-        jdbcTemplate.update(sql, user.getName(), user.getSurname(), user.getEmail(), user.getPasswordHash());
+        String sql = "INSERT INTO users (name, surname, email, password_hash, role) VALUES (?, ?, ?, ?, ?)";
+        jdbcTemplate.update(sql, user.getName(), user.getSurname(), user.getEmail(), user.getPasswordHash(), user.getRole());
     }
 
     // Find a user by email
