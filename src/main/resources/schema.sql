@@ -130,3 +130,14 @@ CREATE TABLE IF NOT EXISTS organisations (
     description TEXT NOT NULL,
     logo TEXT NOT NULL
 ) ENGINE=InnoDB;
+
+DROP TABLE IF EXISTS eventss;
+CREATE TABLE IF NOT EXISTS eventss (
+   id INT AUTO_INCREMENT PRIMARY KEY,
+   title VARCHAR(255) NOT NULL,
+   date DATE NOT NULL,
+   location VARCHAR(255) NOT NULL,
+   category VARCHAR(255) NOT NULL,
+   description TEXT,
+   image_url VARCHAR(2083)
+)ENGINE=InnoDB;
