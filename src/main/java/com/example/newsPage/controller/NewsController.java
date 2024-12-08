@@ -24,4 +24,15 @@ public class NewsController {
         model.addAttribute("newsList", newsList);
         return "Pages/news-page";
     }
+
+    @GetMapping("/latestNews")
+    public String getLatestNewsPage(Model model) {
+        List<News> newsList = newsService.getTopNews();
+        if (newsList.isEmpty()) {
+            return "redirect:/news";  // Redirect to /news if the list is empty
+        }
+        newsList.sort((n1, n2) -> n2.getDate().compareTo(n1.getDate()));
+        model.addAttribute("newsList", newsList);
+        return "Pages/news-page";
+    }
 }
