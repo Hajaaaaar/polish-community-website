@@ -65,6 +65,12 @@ header .subheading {
     color: #555;
 }
 
+.news-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
 a {
     text-decoration: none !important;
 }

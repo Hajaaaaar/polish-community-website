@@ -48,7 +48,8 @@ public class NewsService {
                 String link = newsNode.path("url").asText();
                 String date = newsNode.path("published_at").asText().split("T")[0];;
                 LocalDate formattedDate = LocalDate.parse(date);
-                News news = new News(title, content, link, formattedDate);
+                String imgUrl = newsNode.path("image_url").asText();
+                News news = new News(title, content, link, formattedDate, imgUrl);
                 newsList.add(news);
             }
 

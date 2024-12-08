@@ -19,6 +19,7 @@ public class NewsController {
 
     @GetMapping("/news")
     public String getNewsPage(Model model) {
+        System.out.println("test");
         List<News> newsList = newsService.getAllNews();
         newsList.sort((n1, n2) -> n2.getDate().compareTo(n1.getDate()));
         model.addAttribute("newsList", newsList);
@@ -29,7 +30,7 @@ public class NewsController {
     public String getLatestNewsPage(Model model) {
         List<News> newsList = newsService.getTopNews();
         if (newsList.isEmpty()) {
-            return "redirect:/news";  // Redirect to /news if the list is empty
+            return "redirect:/news";
         }
         newsList.sort((n1, n2) -> n2.getDate().compareTo(n1.getDate()));
         model.addAttribute("newsList", newsList);
