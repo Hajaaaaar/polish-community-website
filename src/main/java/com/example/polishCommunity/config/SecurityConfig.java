@@ -27,7 +27,7 @@ public class SecurityConfig {
                                 "/housing", "/housing/housing-questionnaire",
                                 "/housing/submit-reply", "/Work-survey", "/work-survey", "/organisations",
                                 "/profile", "/profileLogin", "/dashboard/metrics","/addNewPolicy",
-                                "/dashboard/users", "/dashboard/users/delete", "/dashboard/users/toggle-status")
+                                "/dashboard/users", "/dashboard/users/delete", "/dashboard/users/toggle-status", "/latestNews")
 
                         .permitAll()
                         // Allow static resources
