@@ -141,4 +141,8 @@ CREATE TABLE IF NOT EXISTS eventss (
    description TEXT,
    image_url VARCHAR(2083)
 ) ENGINE=InnoDB;
+ALTER TABLE eventss MODIFY image_url VARCHAR(2083) DEFAULT 'default-image-url.jpg';
+
+
+
 

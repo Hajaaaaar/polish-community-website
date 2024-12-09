@@ -12,8 +12,8 @@ INSERT INTO users (id, name, surname, email, password_hash)
 values (3, 'Konstantinos', 'Hadjigregoriades', 'hadjigregoriadesc@gmail.com', '$2a$10$Nv539RSklkQW1Ncp4TdaOOE/GB0DdY4IZR6sk75oDPQwQZ784xyGq');
 
 DELETE FROM news;
-INSERT INTO polishsite.news (`title`, `content`, `date`, `link`) VALUES ('Test News 1', 'Blah blah blah', '2024-12-05', 'www.test.com');
-INSERT INTO polishsite.news (`title`, `content`, `date`, `link`) VALUES ('Test News 2', 'Tra la la la', '2024-12-02', 'www.testagain.com');
+INSERT INTO polishsite.news (`title`, `content`, `date`, `link`, `imgUrl`) VALUES ('Test News 1', 'Blah blah blah', '2024-12-05', 'www.test.com', 'red.png');
+INSERT INTO polishsite.news (`title`, `content`, `date`, `link`, `imgUrl`) VALUES ('Test News 2', 'Tra la la la', '2024-12-02', 'www.testagain.com', 'blue.png');
 
 DELETE FROM resources;
 INSERT INTO polishsite.resources (`name`, `description`, `access`, `link`, `address`, `phone`) VALUES ('Learn French', 'Pretend this is a resource without a website. The user has to go to their offices in real life to register.', 'Go to your local center and ask for more information.', NULL, '12 French Street CF00 0AA', '+44 777777777');
