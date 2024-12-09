@@ -22,7 +22,7 @@ header .subheading {
 
 .news-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
     padding: 20px;
     margin-top: 20px;
@@ -63,6 +63,12 @@ header .subheading {
     padding: 0 15px 15px;
     font-size: 1rem;
     color: #555;
+}
+
+.news-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
 }
 
 a {

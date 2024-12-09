@@ -21,7 +21,8 @@ public class NewsRepository {
                     rs.getString("title"),
                     rs.getString("content"),
                     rs.getString("link"),
-                    rs.getDate("date").toLocalDate()
+                    rs.getDate("date").toLocalDate(),
+                    "/images/" + rs.getString("imgUrl")
             );
         }
     };
@@ -31,7 +32,7 @@ public class NewsRepository {
     }
 
     public List<News> findAll() {
-        String sql = "SELECT title, content, link, date FROM News";
+        String sql = "SELECT title, content, link, date, imgUrl FROM News";
         return jdbcTemplate.query(sql, newsRowMapper);
     }
 }

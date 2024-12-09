@@ -1,3 +1,8 @@
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
  body{
     height: 100%;
     margin: 0;
@@ -8,7 +13,7 @@
 .top_sec{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     height: 100vh;
     text-align: center;
@@ -17,12 +22,10 @@
 }
 .title {
     font-family: "Times New Roman", sans-serif;
-    font-size: 3rem;
-    font-weight: 250;
-    letter-spacing: 1px;
-    padding: 10px;
-    color: #c9033f;
-    margin: 0 0 20px 0;
+    font-size: 2.3rem;
+    font-weight: bolder;
+    color: #d50032;
+    margin: 10px 0;
 }
 
 .intro_para {
@@ -33,10 +36,8 @@
 }
 
 .intro_para p {
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-family: "Times New Roman", sans-serif;
-    font-weight: bold;
-    color: #333;
     margin: 0 0 20px 0;
     line-height: 1.9;
     width: 85%;
@@ -45,22 +46,23 @@
 
 .web_link{
     font-family: "Times New Roman", sans-serif;
-    padding: 12px 30px;
-    font-size: 16px;
     font-weight: 600;
-    background-color: #fcd4d4;
+    background-color: #d3003f;
     border: none;
-    border-radius: 50px;
+    border-radius: 5px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     cursor: pointer;
-    transition: all 0.5s ease;
-    color: red;
+    transition: background-color 0.3s ease;
+    color: white;
     text-decoration: none;
     margin-bottom: 20px;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
 }
 
 .web_link:hover{
-    background-color: #fc9494;
+    background-color: #a9002c;
     transform: translateY(-3px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
@@ -70,8 +72,12 @@
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+.map_filter, .map_container {
+    margin: 0;
+    padding: 0;
+}
+
 .map_filter{
-    margin-top: 30px;
     font-family: "Times New Roman", sans-serif;
     font-weight: bold;
     color: #c9033f;
@@ -84,12 +90,15 @@
     font-family: "Times New Roman", sans-serif;
     border: none;
     border-radius: 50px;
-    background-color: #fcd4d4;
-    color: red;
     font-weight: bolder;
     text-align: center;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     cursor: pointer;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+    background-color: #d3003f;
+    color: white;
 }
 
 .map_container {
@@ -100,6 +109,7 @@
     gap: 10px;
     padding: 10px 0;
     margin-bottom: 50px;
+    margin-top: -200px;
 }
 
 .hospital_map, .clinics_map, .emergency_map {
@@ -128,10 +138,10 @@
 .mental-title {
     font-family: "Times New Roman", sans-serif;
     font-size: 2rem;
-    font-weight: 250;
+    font-weight: bold;
     letter-spacing: 1px;
     padding: 10px;
-    color: #c9033f;
+    color: #d50032;
     margin: 0 0 20px 0;
 }
 
@@ -143,12 +153,9 @@
 }
 
 .mentalHealth-intro p {
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-family: "Times New Roman", sans-serif;
-    font-weight: bold;
-    color: #333;
     margin: 0 0 20px 0;
-    line-height: 1.9;
     width: 85%;
 }
 
@@ -162,10 +169,10 @@
     text-align: center;
     padding: 20px;
     flex-grow: 1;
-    background-color: #fcd4d4;
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-color: #c9033f;
-    border-radius: 20px;
+    border-radius: 8px;
 }
 
 .mentalHealth-buttonText{
@@ -179,21 +186,21 @@
 
 .mentalHealth-link{
     font-family: "Times New Roman", sans-serif;
-    padding: 12px 30px;
-    font-size: 16px;
     font-weight: 600;
-    background-color: #fceeee;
     border: none;
-    border-radius: 50px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     cursor: pointer;
-    transition: all 0.5s ease;
-    color: red;
     text-decoration: none;
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+    background-color: #d3003f;
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
 .mentalHealth-link:hover{
-    background-color: #fc9494;
+    background-color: #a9002c;
     transform: translateY(-3px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
@@ -234,10 +241,10 @@
     text-align: center;
     padding: 20px;
     flex-grow: 1;
-    background-color: #fcd4d4;
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-color: #c9033f;
-    border-radius: 20px;
+    border-radius: 8px;
 }
 
 .crisis-title{
@@ -247,14 +254,14 @@
     text-decoration: underline;
     letter-spacing: 1px;
     padding: 10px;
-    color: #c9033f;
+    color: #d50032;
     margin: 0 0 20px 0;
 }
 
 .crisis-para{
     font-family: "Times New Roman", sans-serif;
     font-weight: 90;
-    color: #000000;
+    font-size: 1.1rem;
     margin: 0 0 20px 0;
     line-height: 1.9;
     width: 85%;
@@ -292,10 +299,10 @@
 .survey-title{
     font-family: "Times New Roman", sans-serif;
     font-size: 2rem;
-    font-weight: 250;
+    font-weight: bold;
     letter-spacing: 1px;
     padding: 10px;
-    color: #c9033f;
+    color: #d50032;
     align-content: center;
     align-items: center;
     margin: auto ;
@@ -307,12 +314,11 @@
     justify-content: center;
     width: 40%;
     margin: 0 auto 30px auto;
-
     padding: 5px;
-    background-color: #f9f9f9;
+    background-color: #fff;
     border: 2px solid #c9033f;
-    border-radius: 10px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     font-family: "Times New Roman", sans-serif;
 }
 
@@ -338,7 +344,7 @@
 }
 
 input[type="radio"] {
-    margin-right: 8px; 
+    margin-right: 8px;
     vertical-align: middle;
 }
 
@@ -365,15 +371,16 @@ input[type="radio"] + span, input[type="radio"] + br {
 }
 
 .healthQueryForm .healthSubmit {
-    background-color: #c9033f;
     color: white;
-    font-size: 1rem;
     font-weight: bold;
-    padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+    background-color: #d3003f;
 }
 
 .healthQueryForm .healthSubmit:hover {

@@ -19,15 +19,16 @@ public class SecurityConfig {
                 .authorizeHttpRequests(authorize -> authorize
                         // Allow public access to these URLs
                         .requestMatchers("/", "/signin-register", "/register",
-                                "/login", "/home", "/news", "/contact", "/FAQpage",
+                                "/login", "/home", "/news", "/events",
+                                "/EventsPage", "/contact", "/FAQpage",
                                 "resources/education", "/healthPage",
                                 "/health", "/health-survey", "/health/submit", "/workPage", "/housing",
                                 "/rights/{id}", "/housing-questionnaire",
                                 "/housing", "/housing/housing-questionnaire",
-                                "/housing/submit-reply", "/Work-Survey", "/work-survey", "/organisations", "/profile", "/profileLogin","/addNewPolicy", "/EventsPage")
+                                "/housing/submit-reply", "/Work-Survey", "/work-survey", "/organisations", "/profile", "/profileLogin","/addNewPolicy", "/latestNews", "/EventsPage")
                         .permitAll()
                         // Allow static resources
-                        .requestMatchers("/static/**", "/stylesheet/**", "/JavaScript/**", "/images/**", "/templates/**").permitAll()
+                        .requestMatchers("/static/**", "/stylesheet/**", "/JavaScript/**", "/images/**", "/templates/**", "templates/admin/**").permitAll()
                         .anyRequest().authenticated() // All other requests require authentication
                 )
                 .formLogin(form -> form

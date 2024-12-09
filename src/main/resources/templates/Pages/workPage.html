@@ -9,11 +9,13 @@
 <body>
 
 <header th:replace="~{fragments/header}"></header>
-<h1>Importance Of Work In Integration</h1>
+<h1 class="title">Importance Of Work In Integration</h1>
+<div class="work-importance-container">
 <p id="mainText">  Being in employment (particularly in job roles which match migrants' skills and qualifications) can be a critical factor in promoting integration and independence. Employment provides social status, social connections and a sense of purpose. Supporting entrepreneurship and self-employment opportunities can also provide additional avenues for economic integration </p>
 <a href="https://www.gov.wales/migrant-integration-framework-html#135674">
     <button id="learnMore">Learn More</button>
 </a>
+</div>
 <div class="work-item" th:each="workInformation : ${workInformationList}">
     <a th:href="${workInformation.link}">
         <h2 th:text="${workInformation.name}"></h2>
@@ -26,7 +28,7 @@
         </p>
     </a>
 </div>
-<h1>Welcome to the Work Questionnaire</h1>
+<h1 class="title">Welcome to the Work Questionnaire</h1>
 <p id="mainText1">
     This questionnaire is created to understand your work preferences and experiences.
     It will help guide you towards the best sector for your skills and interests.
@@ -34,7 +36,7 @@
     The questions are simple and focused on helping you understand how to find job opportunities in your area.
 </p>
 <div class="container">
-    <h2>Instructions for the Questionnaire</h2>
+    <h2 class="title2">Instructions for the Questionnaire</h2>
     <ol>
         <li><strong>Take Your Time:</strong> Read each question carefully and take your time to answer. There is no need to rush.</li>
         <li><strong>Be Honest:</strong> Answer truthfully based on your personal experiences and preferences. Your honest answers will help us provide better guidance.</li>

@@ -13,6 +13,7 @@
     <div class="news-item" th:each="news : ${newsList}">
         <a th:href="${news.link}">
             <h2 th:text="${news.title}"></h2>
+            <img th:src="${news.imgUrl}" th:alt="${news.imgUrl}">
             <p th:text="${news.content}"></p>
             <p th:text="${news.date}"></p>
         </a>
