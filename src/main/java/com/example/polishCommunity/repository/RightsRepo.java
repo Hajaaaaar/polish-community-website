@@ -3,10 +3,12 @@ package com.example.polishCommunity.repository;
 import com.example.polishCommunity.model.Rights;
 import com.example.polishCommunity.model.RightsFAQs;
 import com.example.polishCommunity.model.SubRights;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Repository
@@ -55,8 +57,24 @@ public class RightsRepo {
     }
 
     public List<SubRights> getSubRightsByRightsId(int id){
-        String sql = "select * from sub_rights where title_id =?";
-        return jdbcTemplate.query(sql, subRightsMapper, id);
+        List<SubRights> subRights= null;
+        try {
+            if(id <=0) {
+
+                throw new NullPointerException("ID cannot be zero");
+            }
+
+            String sql = "select * from sub_rights where title_id =?";
+            subRights = jdbcTemplate.query(sql, subRightsMapper, id);
+        }
+
+        catch (NullPointerException exception){
+            System.out.println(exception.getMessage());
+        }
+        catch(EmptyResultDataAccessException exception){
+            System.out.println("Did not find any records with given ID");
+        }
+        return subRights;
     }
 
     public void addSubRight(SubRights subRights) {
