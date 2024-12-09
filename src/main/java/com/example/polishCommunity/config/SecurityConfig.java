@@ -26,11 +26,12 @@ public class SecurityConfig {
                                 "/rights/{id}", "/housing-questionnaire",
                                 "/housing", "/housing/housing-questionnaire",
                                 "/housing/submit-reply", "/Work-survey", "/work-survey", "/organisations",
-                                "/profile", "/profileLogin", "/dashboard/metrics","/addNewPolicy")
+                                "/profile", "/profileLogin", "/dashboard/metrics","/addNewPolicy",
+                                "/dashboard/users", "/dashboard/users/delete", "/dashboard/users/toggle-status", "/latestNews")
 
                         .permitAll()
                         // Allow static resources
-                        .requestMatchers("/static/**", "/stylesheet/**", "/JavaScript/**", "/images/**", "/templates/**", "templates/admin/**").permitAll()
+                        .requestMatchers("/static/**", "/stylesheet/**", "/JavaScript/**", "/images/**", "/templates/**").permitAll()
                         .anyRequest().authenticated() // All other requests require authentication
                 )
                 .formLogin(form -> form
