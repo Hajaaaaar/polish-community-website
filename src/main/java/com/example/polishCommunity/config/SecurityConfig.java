@@ -25,9 +25,11 @@ public class SecurityConfig {
                                 "/health", "/health-survey", "/health/submit", "/workPage", "/housing",
                                 "/rights/{id}", "/housing-questionnaire",
                                 "/housing", "/housing/housing-questionnaire",
-                                "/housing/submit-reply", "/Work-survey", "/work-survey", "/organisations",
+
+                               "/EventsPage", "/housing/submit-reply", "/Work-survey", "/work-survey", "/organisations",
                                 "/profile", "/profileLogin", "/dashboard/metrics","/addNewPolicy",
                                 "/dashboard/users", "/dashboard/users/delete", "/dashboard/users/toggle-status", "/latestNews")
+
 
                         .permitAll()
                         // Allow static resources
