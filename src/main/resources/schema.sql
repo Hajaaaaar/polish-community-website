@@ -2,7 +2,7 @@ CREATE DATABASE IF NOT EXISTS polishsite;
 
 USE polishsite;
 
-# drop table if exists users;
+drop table if exists users;
 
 CREATE TABLE IF NOT EXISTS users (
     id INT AUTO_INCREMENT PRIMARY KEY,
