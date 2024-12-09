@@ -140,4 +140,5 @@ CREATE TABLE IF NOT EXISTS eventss (
    category VARCHAR(255) NOT NULL,
    description TEXT,
    image_url VARCHAR(2083)
-)ENGINE=InnoDB;
+) ENGINE=InnoDB;
+

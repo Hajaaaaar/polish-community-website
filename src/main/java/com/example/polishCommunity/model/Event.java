@@ -1,20 +1,23 @@
 package com.example.polishCommunity.model;
 
-
-
 public class Event {
-
+    private int id;
     private String title;
-
-    private String date; // Use `String` for simplicity, or convert to `LocalDate`
+    private String date;
     private String location;
     private String category;
     private String description;
     private String imageUrl;
-    private int id;
 
+    // Getters and Setters
+    public int getId() {
+        return id;
+    }
 
-    // Getters and setters for all fields
+    public void setId(int id) {
+        this.id = id;
+    }
+
     public String getTitle() {
         return title;
     }
@@ -61,12 +64,5 @@ public class Event {
 
     public void setImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
-    }
-    public int getId() {
-        return id;
-    }
-
-    public void setId( int id) {
-        this.id = id;
     }
 }

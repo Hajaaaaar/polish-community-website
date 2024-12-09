@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,18 +16,16 @@
     <div class="text-search container">
         <!-- Background Image -->
         <div class="background-image"></div>
-        <h1>Upcoming Events</h1>
-        <ul>
-            <th:block th:each="event : ${events}">
-                <li>
-                    <h3 th:text="${event.title}"></h3>
-                    <p th:text="${event.date}"></p>
-                    <p th:text="${event.location}"></p>
-                    <p th:text="${event.category}"></p>
-                    <p th:text="${event.description}"></p>
-                    <img th:src="${event.imageUrl}" alt="Event Image">
-                </li>
-            </th:block>
+        <th:block th:each="event : ${events}">
+            <li>
+                <h3 th:text="${event.title}">Event Title</h3>
+                <p>Date: <span th:text="${event.date}">2024-12-01</span></p>
+                <p>Location: <span th:text="${event.location}">Sample Location</span></p>
+                <p>Category: <span th:text="${event.category}">Sample Category</span></p>
+                <p>Description: <span th:text="${event.description}">Sample Description</span></p>
+                <img th:src="${event.imageUrl}" alt="Event Image" style="max-width: 300px;">
+            </li>
+        </th:block>
         </ul>
 
         <!-- Section to add a new event -->
