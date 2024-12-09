@@ -26,7 +26,7 @@ public class SecurityConfig {
                                 "/rights/{id}", "/housing-questionnaire",
                                 "/housing", "/housing/housing-questionnaire",
 
-                               "/EventsPage", "/housing/submit-reply", "/Work-survey", "/work-survey", "/organisations",
+                               "/EventsPage", "/housing/submit-reply", "/Work-Survey", "/work-survey", "/organisations",
                                 "/profile", "/profileLogin", "/dashboard/metrics","/addNewPolicy",
                                 "/dashboard/users", "/dashboard/users/delete", "/dashboard/users/toggle-status", "/latestNews")
 
