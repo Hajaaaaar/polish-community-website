@@ -17,7 +17,7 @@ public class AddEventController {
     // Show the add event form
     @GetMapping("/dashboard/AddEvents")
     public String showAddEventsPage() {
-        return "Pages/AddEventsPage"; // Refers to AddEventsPage.html
+        return "admin/AddEventsPage"; // Refers to AddEventsPage.html
     }
 
     // Handle add event form submission
