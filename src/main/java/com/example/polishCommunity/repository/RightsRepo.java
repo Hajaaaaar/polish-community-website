@@ -10,6 +10,7 @@ import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.SubmissionPublisher;
 
 @Repository
 public class RightsRepo {
@@ -57,14 +58,15 @@ public class RightsRepo {
     }
 
     public List<SubRights> getSubRightsByRightsId(int id){
-        List<SubRights> subRights= null;
+
+        List<SubRights> subRights = null;
         try {
             if(id <=0) {
 
                 throw new NullPointerException("ID cannot be zero");
             }
 
-            String sql = "select * from sub_rights where title_id =?";
+            String sql = "select * from sub_rights where title_id =? order by sub_title_id desc";
             subRights = jdbcTemplate.query(sql, subRightsMapper, id);
         }
 
@@ -77,14 +79,36 @@ public class RightsRepo {
         return subRights;
     }
 
+    public SubRights getSubRightsBySubRightsId(int id){
+        String sql = "select * from sub_rights where sub_title_id =?";
+        SubRights subRights = jdbcTemplate.queryForObject(sql, subRightsMapper, id);
+        return subRights;
+    }
+
     public void addSubRight(SubRights subRights) {
         String sql = "INSERT INTO sub_rights (sub_title, description, title_id) VALUES (?, ?, ?)";
         jdbcTemplate.update(sql, subRights.getSubTitle(),
                 subRights.getDescription(),subRights.getTitleId());
     }
 
+    public void editSubRight(SubRights subRights) {
+        String sql = "UPDATE sub_rights SET sub_title=?, description=? WHERE sub_title_id=?";
+         try{
+             jdbcTemplate.update(sql, subRights.getSubTitle(),
+                     subRights.getDescription(),subRights.getSubTitleId());
+         }
+         catch (Exception e){
+            System.out.println();
+         }
+     }
+
     public List<RightsFAQs> getRightsFAQsByRightsId(int id){
         String sql = "select * from rights_FAQs where title_id =?";
         return jdbcTemplate.query(sql, rightsFAQsMapper, id);
-        }
+    }
+
+    public void deleteSubRights(int id){
+        String sql ="delete from sub_rights where sub_title_id=?";
+        jdbcTemplate.update(sql,id);
+    }
 }

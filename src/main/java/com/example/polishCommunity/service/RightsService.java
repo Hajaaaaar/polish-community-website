@@ -42,6 +42,17 @@ public class RightsService {
         public void setRights(SubRights subRights){
             rightsRepo.addSubRight(subRights);
         }
+        public void deleteSubRights(int id){
+            rightsRepo.deleteSubRights(id);
+        }
+
+        public SubRights getSubRightsBySubRightsId(int id){
+            return rightsRepo.getSubRightsBySubRightsId(id);
+        }
+
+    public void editSubRight(SubRights subRights) {
+        rightsRepo.editSubRight(subRights);
+    }
 
 
 }

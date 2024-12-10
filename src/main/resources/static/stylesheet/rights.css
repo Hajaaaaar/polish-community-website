@@ -115,7 +115,9 @@ h2 {
     text-decoration: none;
     text-align:center;
 }
-.button-container-div {
+.button-container {
+    color: black;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+
 }
