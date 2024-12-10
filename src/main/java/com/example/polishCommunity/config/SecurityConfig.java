@@ -19,13 +19,11 @@ public class SecurityConfig {
                 .authorizeHttpRequests(authorize -> authorize
                         // Allow public access to these URLs
                         .requestMatchers("/", "/signin-register", "/register",
-                                "/login", "/home", "/news", "/events",
-                                "/EventsPage", "/contact", "/FAQpage",
+                                "/login", "/home", "/news", "/contact", "/FAQpage",
                                 "resources/education", "/healthPage",
                                 "/health", "/health-survey", "/health/submit", "/workPage", "/housing",
                                 "/rights/{id}", "/housing-questionnaire",
-                                "/housing", "/housing/housing-questionnaire",
-
+                                "/housing", "/housing/housing-questionnaire", "/dashboard/AddEvents", "/dashboard/AddEvent",
                                "/EventsPage", "/housing/submit-reply", "/Work-Survey", "/work-survey", "/organisations",
                                 "/profile", "/profileLogin", "/dashboard/metrics","/addNewPolicy",
                                 "/dashboard/users", "/dashboard/users/delete", "/dashboard/users/toggle-status", "/latestNews","/addNewPolicy/{title_id}")

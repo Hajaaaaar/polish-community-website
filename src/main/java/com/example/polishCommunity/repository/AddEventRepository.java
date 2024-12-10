@@ -7,16 +7,17 @@ import org.springframework.stereotype.Repository;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.List;
 
 @Repository
-public class EventRepository {
+public class AddEventRepository {
+
     private final JdbcTemplate jdbcTemplate;
 
-    public EventRepository(JdbcTemplate jdbcTemplate) {
+    public AddEventRepository(JdbcTemplate jdbcTemplate) {
         this.jdbcTemplate = jdbcTemplate;
     }
 
+    // RowMapper for converting ResultSet to Event object (if you plan to retrieve data in this repo)
     private final RowMapper<Event> rowMapper = (ResultSet rs, int rowNum) -> {
         Event event = new Event();
         event.setId(rs.getInt("id"));
@@ -29,10 +30,15 @@ public class EventRepository {
         return event;
     };
 
-    public List<Event> getAllEvents() {
-        String sql = "SELECT * FROM eventss";
-        return jdbcTemplate.query(sql, rowMapper);
+    // Insert event into the database
+    public void addEvent(Event event) {
+        String sql = "INSERT INTO eventss (title, date, location, category, description, image_url) VALUES (?, ?, ?, ?, ?, ?)";
+        jdbcTemplate.update(sql,
+                event.getTitle(),
+                event.getDate(),
+                event.getLocation(),
+                event.getCategory(),
+                event.getDescription(),
+                event.getImageUrl() != null ? event.getImageUrl() : "default-image-url.jpg");
     }
-
 }
-
