@@ -13,7 +13,7 @@ public class SafetyController {
     public SafetyController(SafetyService safetyService){
         this.safetyService = safetyService;
     }
-    @GetMapping("/safety-info")
+    @GetMapping("/safety")
     public String getSafetyPage(Model model){
         List<Safety> safetyList = safetyService.getAllSafetyItems();
         model.addAttribute("safetyList", safetyList);

@@ -40,11 +40,5 @@ public class PagesController {
     public String work_survey(Model model) {
         return "Pages/Work-SurveyPage";
     }
-
-    @GetMapping("/safety")
-    public String safety(Model model) {
-        return "Pages/safety";
-    }
 }
-
 
