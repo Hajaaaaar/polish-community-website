@@ -124,6 +124,7 @@ CREATE TABLE IF NOT EXISTS housing_questionnaire (
  message TEXT NOT NULL
 ) ENGINE = InnoDB;
 
+
 create table if not exists rights_FAQs(
   que_id INT AUTO_INCREMENT PRIMARY KEY,
   que VARCHAR(255) NOT NULL,
