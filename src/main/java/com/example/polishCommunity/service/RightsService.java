@@ -16,9 +16,23 @@ public class RightsService {
         this.rightsRepo=rightsRepo;
  }
         public Rights getRightsByTitleId(int id){
-        Rights rights = rightsRepo.getRightsById(id);
-        rights.setSubTitle(rightsRepo.getSubRightsByRightsId(id));
-        rights.setQue(rightsRepo.getRightsFAQsByRightsId(id));
+            Rights rights=null;
+        try {
+            rights = rightsRepo.getRightsById(id);
+            if (rightsRepo.getSubRightsByRightsId(id) != null) {
+                rights.setSubTitle(rightsRepo.getSubRightsByRightsId(id));
+            } else {
+                throw new NullPointerException("List of Sub Rights cannot be empty");
+            }
+            rights.setQue(rightsRepo.getRightsFAQsByRightsId(id));
+
+            }
+        catch (NullPointerException exception){
+            System.out.println(exception.getMessage());
+            }
+        catch (Exception exception){
+            System.out.println("Unexpected occurred");
+            }
         return rights;
         }
 //         public void setRights(int id, String subTitle, String description){
@@ -28,6 +42,17 @@ public class RightsService {
         public void setRights(SubRights subRights){
             rightsRepo.addSubRight(subRights);
         }
+        public void deleteSubRights(int id){
+            rightsRepo.deleteSubRights(id);
+        }
+
+        public SubRights getSubRightsBySubRightsId(int id){
+            return rightsRepo.getSubRightsBySubRightsId(id);
+        }
+
+    public void editSubRight(SubRights subRights) {
+        rightsRepo.editSubRight(subRights);
+    }
 
 
 }
