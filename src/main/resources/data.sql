@@ -154,7 +154,7 @@ VALUES
 
 INSERT INTO eventss (title, date, location, category, description, image_url)
 VALUES
-    ('Music Festival', '2024-12-01', 'Cardiff', 'Music Festival', 'A music festival in Cardiff featuring various artists.', 'https://cdn.cnn.com/cnnnext/dam/assets/181018143148-krakow-2-super-tease.jpg'),
+    ('Music Festival', '2024-12-01', 'Cardiff', 'Music Festival', 'A music festival in Cardiff featuring various artists, come along!.', 'https://cdn.cnn.com/cnnnext/dam/assets/181018143148-krakow-2-super-tease.jpg'),
     ('Art Exhibition', '2024-12-05', 'Swansea', 'Art or Cultural', 'An art exhibition showcasing modern and classic art in Swansea.', 'https://api.culture.pl/sites/default/files/images/imported/HISTORIA/EN/Polish_independence/zaslubiny_polski_z_morzem.jpg'),
     ('Food Festival', '2024-12-10', 'Newport', 'Food or Drink Event', 'A food festival in Newport offering a wide range of cuisines and drinks.', 'https://1.bp.blogspot.com/-SMfBCbqIRVw/WQeJ84XsJ6I/AAAAAAACJ-U/vrT-1o3hwMcTzQIzUuVkwbZqtV6Req00gCLcB/s1600/ca423901817b8b8187c9e9316481b30e.jpg');
 

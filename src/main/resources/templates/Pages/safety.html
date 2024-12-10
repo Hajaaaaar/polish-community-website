@@ -8,7 +8,17 @@
 <body>
 <header th:replace="~{fragments/header}"></header>
 
-
+<div>
+    <h1>Safety Information</h1>
+    <ul>
+        <li th:each="safety : ${safetyList}">
+            <h3 th:text="${safety.name}"></h3>
+            <p th:text="${safety.description}"></p>
+            <a th:href="${safety.link}" target="_blank">More Info</a>
+            <p>Contact: <span th:text="${safety.phone}"></span></p>
+        </li>
+    </ul>
+</div>
 
 
 

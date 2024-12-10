@@ -24,7 +24,7 @@ public class SecurityConfig {
                                 "resources/education", "/healthPage",
                                 "/health", "/health-survey", "/health/submit", "/workPage", "/housing",
                                 "/rights/{id}", "/housing-questionnaire",
-                                "/housing", "/housing/housing-questionnaire", "/safety",
+                                "/housing", "/housing/housing-questionnaire", "/safety-info",
 
                                "/EventsPage", "/housing/submit-reply", "/Work-Survey", "/work-survey", "/organisations",
                                 "/profile", "/profileLogin", "/dashboard/metrics","/addNewPolicy",
