@@ -10,25 +10,26 @@ import java.sql.SQLException;
 
 @Repository
 public class SafetyRepository {
+
     private final JdbcTemplate jdbcTemplate;
-    private final RowMapper<Safety> safetyRowMapper = new RowMapper<>() {
-        @Override
-        public Safety mapRow(ResultSet rs, int rowNum) throws SQLException {
-            return new Safety(
-                    rs.getString("name"),
-                    rs.getString("description"),
-                    rs.getString("link"),
-                    rs.getString("phone")
-            );
-        }
-    };
 
     public SafetyRepository(JdbcTemplate jdbcTemplate) {
         this.jdbcTemplate = jdbcTemplate;
     }
 
-    public List<Safety> findAll() {
-        String sql = "SELECT name, description, link, phone FROM Safety";
-        return jdbcTemplate.query(sql, safetyRowMapper);
+    private final RowMapper<Safety> rowMapper = (ResultSet rs, int rowNum) -> {
+        Safety safety = new Safety();
+        safety.setId(rs.getInt("id"));
+        safety.setName(rs.getString("name"));
+        safety.setDescription(rs.getString("description"));
+        safety.setLocation(rs.getString("location"));
+        safety.setLink(rs.getString("link"));
+        safety.setPhone(rs.getString("phone"));
+        return safety;
+    };
+
+    public List<Safety> getAllSafetyItems() {
+        String sql = "SELECT * FROM safety";
+        return jdbcTemplate.query(sql, rowMapper);
     }
 }

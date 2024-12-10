@@ -12,6 +12,6 @@ public class SafetyService {
         this.safetyRepository = safetyRepository;
     }
     public List<Safety> getAllSafetyItems(){
-        return safetyRepository.findAll();
+        return safetyRepository.getAllSafetyItems();
     }
 }

@@ -22,6 +22,20 @@
     <a href="https://www.gov.wales/migrant-integration-framework-html#135684" target="_blank">
         <button class="web_link">Click here for more info from the GOV website</button>
     </a>
+
+    <section>
+        <h1>Safety and Stability Information</h1>
+        <ul>
+            <li th:each="safety : ${safetyItems}">
+                <h3 th:text="${safety.name}"></h3>
+                <p th:text="${safety.description}"></p>
+                <p>Location: <span th:text="${safety.location}"></span></p>
+                <a th:href="${safety.link}" th:text="'Learn more: ' + ${safety.link}" target="_blank"></a>
+                <p>Contact: <span th:text="${safety.phone}"></span></p>
+            </li>
+        </ul>
+    </section>
+    
 </section>
 <div th:replace="~{fragments/footer :: bootstrap-js}"></div>
 <footer th:replace="~{fragments/footer}"></footer>
