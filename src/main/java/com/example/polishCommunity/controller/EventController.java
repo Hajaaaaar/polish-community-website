@@ -25,5 +25,15 @@ public class EventController {
         return "Pages/EventsPage"; // Refers to EventsPage.html
     }
 
+    // Show events table in the dashboard
+    @GetMapping("/dashboard/EventsTable")
+    public String showAddEventsPage(Model model) {
+        List<Event> events = eventRepository.getAllEvents(); // Fetch events from the database
+        model.addAttribute("events", events); // Add events list to model
+        return "admin/AddEventsPage"; // Refers to the AddEvents page (HTML)
+    }
+
 }
+
+
 

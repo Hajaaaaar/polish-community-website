@@ -33,6 +33,16 @@ public class EventRepository {
         String sql = "SELECT * FROM eventss";
         return jdbcTemplate.query(sql, rowMapper);
     }
+    public List<Event> getEventsByCategory(String category) {
+        String sql = "SELECT * FROM eventss WHERE category = ?";
+        return jdbcTemplate.query(sql, rowMapper, category);
+    }
+
+    public List<Event> getEventsSortedByDate() {
+        String sql = "SELECT * FROM eventss ORDER BY date ASC";
+        return jdbcTemplate.query(sql, rowMapper);
+    }
+
 
 }
 
