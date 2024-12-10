@@ -153,3 +153,20 @@ ALTER TABLE eventss MODIFY image_url VARCHAR(2083) DEFAULT 'default-image-url.jp
 
 
 
+
+
+
+
+
+
+
+
+CREATE TABLE IF NOT EXISTS safety (
+ name TEXT NOT NULL,
+ description TEXT NOT NULL,
+ location TEXT NOT NULL,
+ link TEXT NULL DEFAULT NULL,
+ phone TEXT NULL DEFAULT NULL
+) ENGINE = InnoDB;
+
+
