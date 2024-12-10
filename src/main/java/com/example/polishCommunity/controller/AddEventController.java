@@ -2,31 +2,22 @@ package com.example.polishCommunity.controller;
 
 import com.example.polishCommunity.model.Event;
 import com.example.polishCommunity.repository.AddEventRepository;
-import com.example.polishCommunity.repository.EventRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-
-import java.util.List;
 
 @Controller
 public class AddEventController {
 
     @Autowired
-    private EventRepository eventRepository;
-
-    @Autowired
     private AddEventRepository addEventRepository;
 
-    // Show the add event form and display the list of events
+    // Show the add event form
     @GetMapping("/dashboard/AddEvents")
-    public String showAddEventsPage(Model model) {
-        List<Event> events = eventRepository.getAllEvents();
-        model.addAttribute("events", events);
-        return "admin/AddEventsPage"; // Refers to AddEventsPage.html
+    public String showAddEventsPage() {
+        return "admin/AddEventsPage";
     }
 
     // Handle add event form submission
@@ -52,6 +43,6 @@ public class AddEventController {
         addEventRepository.addEvent(event);
 
         // Redirect to the events page to show the updated list of events
-        return "redirect:/dashboard/EventsTable"; // Redirect to the EventsTable page
+        return "redirect:/EventsPage"; // Redirect to the EventsPage
     }
 }
