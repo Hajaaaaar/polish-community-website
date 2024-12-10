@@ -55,7 +55,7 @@ public class RightsRepo {
     }
 
     public List<SubRights> getSubRightsByRightsId(int id){
-        String sql = "select * from sub_rights where title_id =?";
+        String sql = "select * from sub_rights where title_id =? order by sub_title_id desc";
         return jdbcTemplate.query(sql, subRightsMapper, id);
     }
 
