@@ -97,6 +97,8 @@ CREATE TABLE IF NOT EXISTS housing_replies (
    question_id BIGINT,
    FOREIGN KEY (question_id) REFERENCES housing_questionnaire(id) ON DELETE CASCADE
 );
+ALTER TABLE housing_questionnaire ADD COLUMN status ENUM('pending', 'approved', 'rejected') DEFAULT 'pending';
+ALTER TABLE housing_replies ADD COLUMN status ENUM('pending', 'approved', 'rejected') DEFAULT 'pending';
 
 
 DROP TABLE IF EXISTS survey_responses;
@@ -151,6 +153,13 @@ CREATE TABLE IF NOT EXISTS eventss (
 ) ENGINE=InnoDB;
 ALTER TABLE eventss MODIFY image_url VARCHAR(2083) DEFAULT 'default-image-url.jpg';
 
-
+CREATE TABLE IF NOT EXISTS safety (
+id INT AUTO_INCREMENT PRIMARY KEY,
+name VARCHAR(255) NOT NULL,
+description TEXT NOT NULL,
+location TEXT NOT NULL,
+link TEXT NOT NULL,
+phone TEXT NOT NULL
+) ENGINE = InnoDB;
 
 

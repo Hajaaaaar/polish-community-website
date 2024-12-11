@@ -158,3 +158,9 @@ VALUES
     ('Art Exhibition', '2024-12-05', 'Swansea', 'Art or Cultural', 'An art exhibition showcasing modern and classic art in Swansea.', 'https://api.culture.pl/sites/default/files/images/imported/HISTORIA/EN/Polish_independence/zaslubiny_polski_z_morzem.jpg'),
     ('Food Festival', '2024-12-10', 'Newport', 'Food or Drink Event', 'A food festival in Newport offering a wide range of cuisines and drinks.', 'https://1.bp.blogspot.com/-SMfBCbqIRVw/WQeJ84XsJ6I/AAAAAAACJ-U/vrT-1o3hwMcTzQIzUuVkwbZqtV6Req00gCLcB/s1600/ca423901817b8b8187c9e9316481b30e.jpg');
 
+
+
+DELETE FROM safety;
+INSERT INTO polishsite.safety (`name`, `description`, `location`, `link`, `phone`) VALUES ('South-Wales Police', 'The police force responsible for providing public safety and law enforcement across South Wales', 'All of South Wales', 'https://www.south-wales.police.uk/', '999');
+INSERT INTO polishsite.safety (`name`, `description`, `location`, `link`, `phone`) VALUES ('Victim Support South Wales', 'A charity for victims of crime. Staff and trained volunteers provide support and help to people who have suffered crimes.', 'Cardiff and Vale', 'https://www.cavamh.org.uk/directories/victim-support-south-wales/', '02920 222000');
+INSERT INTO polishsite.safety (`name`, `description`, `location`, `link`, `phone`) VALUES ('Swansea Neighbourhood Watch', 'Neighbourhood Watch involves people getting together with their neighbours to work in partnership with police  to prevent crime.', 'Swansea', 'https://swansea.gov.uk/neighborhoodwatch?lang=en', '0116 402 6111');

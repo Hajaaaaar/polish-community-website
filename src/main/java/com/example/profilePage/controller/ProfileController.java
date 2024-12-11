@@ -29,12 +29,12 @@ public class ProfileController {
                             RedirectAttributes redirectAttributes) {
         if (userService.authenticateUser(email, password)) {
             User currentUser = userService.getCurrentUser(email);
-            if (currentUser != null) {
+            if (currentUser != null && (currentUser.getRole().equals("Admin") || currentUser.getRole().equals("Moderator"))) {
                 System.out.println("Current user: " + currentUser.getName());
-                model.addAttribute("currentUser", currentUser);
-                return "Pages/profilePage";
+                return "redirect:/dashboard/metrics";
             } else {
-                return "redirect:/home";
+                redirectAttributes.addFlashAttribute("loginErrorMessage", "Only moderators and admins can access the dashboard.");
+                return "redirect:/profileLogin";
             }
         } else {
             redirectAttributes.addFlashAttribute("loginErrorMessage", "Invalid email or password. Please try again.");

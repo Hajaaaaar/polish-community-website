@@ -14,7 +14,31 @@
 <section class="container">
     <h1>Contact Details</h1>
 
-    <form action="#" onsubmit="submitFunction()" class="form" id="form">
+<!--    <form action="#" onsubmit="submitFunction()" class="form" id="form">-->
+<!--        <div class="input-box">-->
+<!--            <label>Full Name</label>-->
+<!--            <input type="text" placeholder="Enter full name" required id="fullName" />-->
+<!--        </div>-->
+
+<!--        <div class="input-box">-->
+<!--            <label>Email Address</label>-->
+<!--            <input type="text" placeholder="Enter email address" required id="emailAddress"/>-->
+<!--        </div>-->
+
+<!--        <div class="input-box">-->
+<!--            <label>Phone Number</label>-->
+<!--            <input type="tel" placeholder="Enter phone number" required id="phoneNumber"/>-->
+<!--        </div>-->
+
+<!--        <div class="input-box address">-->
+<!--            <label>Inquiry</label>-->
+<!--            <input type="text" placeholder="Enter subject" required id="subject"/>-->
+<!--            <input type="text" placeholder="Enter your query" required id="query"/>-->
+<!--        </div>-->
+<!--        &lt;!&ndash;        <button type="submit" onclick="submitFunction(event)">Submit</button>&ndash;&gt;-->
+<!--        <button type="submit" >Submit</button>-->
+<!--    </form>-->
+    <form action="#" onsubmit="submitFunction(event)" class="form" id="form">
         <div class="input-box">
             <label>Full Name</label>
             <input type="text" placeholder="Enter full name" required id="fullName" />
@@ -35,9 +59,10 @@
             <input type="text" placeholder="Enter subject" required id="subject"/>
             <input type="text" placeholder="Enter your query" required id="query"/>
         </div>
-        <!--        <button type="submit" onclick="submitFunction(event)">Submit</button>-->
-        <button type="submit" >Submit</button>
+
+        <button type="submit">Submit</button>
     </form>
+
 </section>
 </body>
 <link rel="stylesheet" th:href="@{/stylesheet/FAQpage.css}">
