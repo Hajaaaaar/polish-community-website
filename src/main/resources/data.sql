@@ -1,4 +1,4 @@
-delete from users;
+DELETE from users;
 
 INSERT INTO users (id, name, surname, email, password_hash, role, is_active)
 SELECT 1, 'hajar', 'nefaa', 'hajarnefaa@gmail.com', '$2a$10$4OfOn5s5Dh8XlVrI1jN0f.BX0LDb8CYsdTXSdPW.25l6KZ3K/zw3m', 'User', TRUE
@@ -16,8 +16,8 @@ SELECT 4, 'ian', 'Cooper', 'ian@gmail.com', '$2a$10$4OfOn5s5Dh8XlVrI1jN0f.BX0LDb
 WHERE NOT EXISTS (SELECT 1 FROM users WHERE id = 4);
 
 DELETE FROM news;
-INSERT INTO polishsite.news (`title`, `content`, `date`, `link`, `imgUrl`) VALUES ('Test News 1', 'Blah blah blah', '2024-12-05', 'www.test.com', "red.png");
-INSERT INTO polishsite.news (`title`, `content`, `date`, `link`, `imgUrl`) VALUES ('Test News 2', 'Tra la la la', '2024-12-02', 'www.testagain.com', "blue.png");
+INSERT INTO polishsite.news (`title`, `content`, `date`, `link`, `imgUrl`) VALUES ('Test News 1', 'Blah blah blah', '2024-12-05', 'www.test.com', 'red.png');
+INSERT INTO polishsite.news (`title`, `content`, `date`, `link`, `imgUrl`) VALUES ('Test News 2', 'Tra la la la', '2024-12-02', 'www.testagain.com', 'blue.png');
 
 DELETE FROM resources;
 INSERT INTO polishsite.resources (`name`, `description`, `access`, `link`, `address`, `phone`) VALUES ('Learn French', 'Pretend this is a resource without a website. The user has to go to their offices in real life to register.', 'Go to your local center and ask for more information.', NULL, '12 French Street CF00 0AA', '+44 777777777');
@@ -158,3 +158,9 @@ VALUES
     ('Art Exhibition', '2024-12-05', 'Swansea', 'Art or Cultural', 'An art exhibition showcasing modern and classic art in Swansea.', 'https://api.culture.pl/sites/default/files/images/imported/HISTORIA/EN/Polish_independence/zaslubiny_polski_z_morzem.jpg'),
     ('Food Festival', '2024-12-10', 'Newport', 'Food or Drink Event', 'A food festival in Newport offering a wide range of cuisines and drinks.', 'https://1.bp.blogspot.com/-SMfBCbqIRVw/WQeJ84XsJ6I/AAAAAAACJ-U/vrT-1o3hwMcTzQIzUuVkwbZqtV6Req00gCLcB/s1600/ca423901817b8b8187c9e9316481b30e.jpg');
 
+
+
+DELETE FROM safety;
+INSERT INTO polishsite.safety (`name`, `description`, `location`, `link`, `phone`) VALUES ('South-Wales Police', 'The police force responsible for providing public safety and law enforcement across South Wales', 'All of South Wales', 'https://www.south-wales.police.uk/', '999');
+INSERT INTO polishsite.safety (`name`, `description`, `location`, `link`, `phone`) VALUES ('Victim Support South Wales', 'A charity for victims of crime. Staff and trained volunteers provide support and help to people who have suffered crimes.', 'Cardiff and Vale', 'https://www.cavamh.org.uk/directories/victim-support-south-wales/', '02920 222000');
+INSERT INTO polishsite.safety (`name`, `description`, `location`, `link`, `phone`) VALUES ('Swansea Neighbourhood Watch', 'Neighbourhood Watch involves people getting together with their neighbours to work in partnership with police  to prevent crime.', 'Swansea', 'https://swansea.gov.uk/neighborhoodwatch?lang=en', '0116 402 6111');

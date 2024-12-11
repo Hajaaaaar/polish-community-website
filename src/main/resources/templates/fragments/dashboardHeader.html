@@ -6,24 +6,22 @@
           integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
           crossorigin="anonymous">
     <style>
-        /* Dashboard Layout */
-        .dashboard-container {
-            display: flex;
-            height: 100vh;
-            font-family: fantasy;
-        }
-
         /* Sidebar */
         .sidebar {
+            font-family: fantasy;
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
             width: 200px;
             background-color: #f0f8ff;
             border-right: 1px solid #ccc;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            display: flex;
-            flex-direction: column;
             padding: 15px;
+            overflow-y: auto;
         }
 
+        /* Sidebar Links */
         .sidebar-menu ul {
             list-style: none;
             padding: 0;
@@ -55,13 +53,60 @@
             color: #fff;
         }
 
-        /* Main Content */
-        .dashboard-content {
-            flex-grow: 1;
-            padding: 20px;
-            background-color: #f9f9f9;
+        /* Dropdown Styling */
+        li.dropdown {
+            position: relative;
+        }
+
+        /* Dropdown button */
+        a.sidebar-link.dropbtn {
+            display: block;
+            color: #333;
+            font-size: 16px;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        a.sidebar-link.dropbtn:hover {
+            background-color: #007bff;
+            color: white;
+        }
+
+        /* Dropdown content (hidden by default) */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f0f8ff;
+            width: 100%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            z-index: 1;
+        }
+
+        /* Show dropdown content when hovering over the dropdown */
+        li.dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Dropdown item styling */
+        .dropdown-content a {
+            display: block;
+            padding: 10px 15px;
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        /* Hover effect on dropdown items */
+        .dropdown-content a:hover {
+            background-color: #007bff;
+            color: white;
         }
     </style>
+
 </head>
 <body>
 <div class="dashboard-container" th:fragment="sidebar">
@@ -79,10 +124,12 @@
                         <i class="bi bi-people-fill"></i> User Management
                     </a>
                 </li>
-                <li>
-                    <a th:href="@{/dashboard/events}" class="sidebar-link">
-                        <i class="bi bi-calendar-event-fill"></i> Events
-                    </a>
+                <li class="dropdown">
+                    <a href="#" class="sidebar-link dropbtn">Events</a>
+                    <div class="dropdown-content">
+                        <a href="/dashboard/AddEvents" class="sidebar-link">Add Events</a>
+                        <a href="/dashboard/EventsTable" class="sidebar-link">Event Database</a>
+                    </div>
                 </li>
                 <li>
                     <a th:href="@{/dashboard/news}" class="sidebar-link">
@@ -120,7 +167,7 @@
                     </a>
                 </li>
                 <li>
-                    <a th:href="@{/dashboard/safety}" class="sidebar-link">
+                    <a th:href="@{/dashboard/AddSafetyInfo}" class="sidebar-link">
                         <i class="bi bi-building"></i> Safety and Stability
                     </a>
                 </li>
