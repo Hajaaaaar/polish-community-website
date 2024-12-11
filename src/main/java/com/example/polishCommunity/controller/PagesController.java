@@ -40,19 +40,4 @@ public class PagesController {
     public String work_survey(Model model) {
         return "Pages/Work-SurveyPage";
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
 }
-
