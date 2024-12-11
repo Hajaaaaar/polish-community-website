@@ -151,6 +151,13 @@ CREATE TABLE IF NOT EXISTS eventss (
 ) ENGINE=InnoDB;
 ALTER TABLE eventss MODIFY image_url VARCHAR(2083) DEFAULT 'default-image-url.jpg';
 
-
+CREATE TABLE IF NOT EXISTS safety (
+id INT AUTO_INCREMENT PRIMARY KEY,
+name VARCHAR(255) NOT NULL,
+description TEXT NOT NULL,
+location TEXT NOT NULL,
+link TEXT NOT NULL,
+phone TEXT NOT NULL
+) ENGINE = InnoDB;
 
 
