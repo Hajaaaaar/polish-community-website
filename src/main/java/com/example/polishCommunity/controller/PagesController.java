@@ -40,4 +40,10 @@ public class PagesController {
     public String work_survey(Model model) {
         return "Pages/Work-SurveyPage";
     }
+
+    @GetMapping("/socialConnections")
+    public String socialConnections(Model model) {
+        return "Pages/socialConnections";
+    }
 }
+

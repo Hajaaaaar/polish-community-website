@@ -27,7 +27,7 @@ public class SecurityConfig {
                                "/EventsPage", "/housing/submit-reply", "/Work-Survey", "/work-survey", "/organisations", "/safety", "/Pages/safety", "/safetyPage",
                                 "/profile", "/profileLogin", "/dashboard/metrics","/addNewPolicy",
                                 "/dashboard/users", "/dashboard/users/delete", "/dashboard/users/toggle-status", "/latestNews","/addNewPolicy/{title_id}",
-                                "/dashboard/EventsTable")
+                                "/dashboard/EventsTable", "/socialConnections")
 
 
                         .permitAll()
