@@ -16,6 +16,7 @@
     <div class="text-search container">
         <!-- Background Image -->
         <div class="background-image"></div>
+        <ul>
         <th:block th:each="event : ${events}">
             <li>
                 <h3 th:text="${event.title}">Event Title</h3>

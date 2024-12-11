@@ -37,12 +37,16 @@ public class PagesController {
     }
 
     @GetMapping("/Work-Survey")
-    public String work_survey(Model model) {
-        return "Pages/Work-SurveyPage";
-    }
+    public String work_survey(Model model) { return "Pages/Work-SurveyPage";}
 
     @GetMapping("/safetyPage")
     public String safetyPage(Model model) {
         return "Pages/safetyPage";
     }
+
+    @GetMapping("/socialConnections")
+    public String socialConnections(Model model) {
+        return "Pages/socialConnections";
+    }
 }
+
