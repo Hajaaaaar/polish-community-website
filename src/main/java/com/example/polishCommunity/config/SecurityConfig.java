@@ -23,13 +23,12 @@ public class SecurityConfig {
                                 "/EventsPage", "/contact", "/FAQpage",
                                 "resources/education", "/healthPage",
                                 "/health", "/health-survey", "/health/submit", "/workPage", "/housing",
-                                "/rights/{id}", "/housing-questionnaire", "/housing", "/housing/housing-questionnaire", "/dashboard/AddEvents", "/dashboard/AddEvent",
+                                "/rights/{id}", "/housing-questionnaire",
                                 "/housing", "/housing/housing-questionnaire", "/safetyPage",
-                               "/EventsPage", "/housing/submit-reply", "/Work-Survey", "/work-survey", "/organisations", "/safety", "/Pages/safety", "/safetyPage",
+
+                               "/EventsPage", "/housing/submit-reply", "/Work-Survey", "/work-survey", "/organisations",
                                 "/profile", "/profileLogin", "/dashboard/metrics","/addNewPolicy",
-                                "/dashboard/users", "/dashboard/users/delete", "/dashboard/users/toggle-status", "/latestNews","/addNewPolicy/{title_id}", "/metrics",
-                                "/dashboard/users", "/dashboard/users/delete", "/dashboard/users/toggle-status", "/latestNews","/addNewPolicy/{title_id}",
-                                "/dashboard/EventsTable", "/socialConnections", "/dashboard/AddSafetyInfo")
+                                "/dashboard/users", "/dashboard/users/delete", "/dashboard/users/toggle-status", "/latestNews","/addNewPolicy/{title_id}")
 
 
                         .permitAll()
