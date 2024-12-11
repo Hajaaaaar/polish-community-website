@@ -43,5 +43,10 @@ public class PagesController {
     public String safetyPage(Model model) {
         return "Pages/safetyPage";
     }
+
+    @GetMapping("/socialConnections")
+    public String socialConnections(Model model) {
+        return "Pages/socialConnections";
+    }
 }
 
