@@ -19,17 +19,19 @@ public class SecurityConfig {
                 .authorizeHttpRequests(authorize -> authorize
                         // Allow public access to these URLs
                         .requestMatchers("/", "/signin-register", "/register",
-                                "/login", "/home", "/news", "/contact", "/FAQpage",
+                                "/login", "/home", "/news", "/events",
+                                "/EventsPage", "/contact", "/FAQpage",
                                 "resources/education", "/healthPage",
                                 "/rights/{id}", "/housing-questionnaire", "/dashboard/AddEvents",
-                                "/dashboard/AddEvent", "/housing", "/housing/housing-questionnaire", "/safetyPage",
-                                "/housing/submit-reply", "/Work-Survey", "/work-survey", "/organisations",
-                                "/profile", "/profileLogin", "/dashboard/metrics","/addNewPolicy",
-                                "/dashboard/users", "/dashboard/users/delete", "/dashboard/users/toggle-status", "/latestNews","/addNewPolicy/{title_id}",
+                                "/dashboard/AddEvent", "/housing", "/housing/housing-questionnaire",
+                                "/safetyPage", "/housing/submit-reply", "/Work-Survey", "/work-survey",
+                                "/organisations", "/profile", "/profileLogin", "/dashboard/metrics",
+                                "/addNewPolicy", "/dashboard/users", "/dashboard/users/delete",
+                                "/dashboard/users/toggle-status", "/latestNews","/addNewPolicy/{title_id}",
                                 "/dashboard/EventsTable", "/dashboard/pending-comments",
-                                "/dashboard/approve-comment", "/dashboard/approve-reply", "/dashboard/reject-reply", "/dashboard/reject-comment",
-                                "/health", "/health-survey", "/health/submit", "/workPage",
-                                "/EventsPage" , "/safety", "/Pages/safety", "/socialConnections")
+                                "/dashboard/approve-comment", "/dashboard/approve-reply", "/dashboard/reject-reply",
+                                "/dashboard/reject-comment", "/health", "/health-survey", "/health/submit",
+                                "/workPage", "/safety", "/Pages/safety", "/socialConnections")
                         .permitAll()
                         // Allow static resources
                         .requestMatchers("/static/**", "/stylesheet/**", "/JavaScript/**", "/images/**", "/templates/**").permitAll()
