@@ -23,6 +23,20 @@
         <button class="web_link">Click here for more info from the GOV website</button>
     </a>
 </section>
+    <section class="safety-listSection">
+        <h1 class="safety-listTitle">Organisations that can help you</h1>
+        <ul class="SafetyList">
+            <li th:each="safety : ${safetyItems}">
+                <h3 th:text="${safety.name}"></h3>
+                <p th:text="${safety.description}"> </p>
+                <p>Location: <span th:text="${safety.location}"></span></p>
+                <a th:href="${safety.link}" th:text="'Go to their website: ' + ${safety.link}" target="_blank"></a>
+                <p>Contact: <span th:text="${safety.phone}"></span></p>
+            </li>
+        </ul>
+    </section>
+
+
 <div th:replace="~{fragments/footer :: bootstrap-js}"></div>
 <footer th:replace="~{fragments/footer}"></footer>
 </body>

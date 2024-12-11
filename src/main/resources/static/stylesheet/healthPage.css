@@ -399,4 +399,80 @@ input[type="radio"] + span, input[type="radio"] + br {
     }
 }
 
+.safety-listSection{
+    margin: -200px auto auto auto;
+    width: 85%;
+    text-align: center;
+}
+
+.safety-listTitle{
+    font-family: "Times New Roman", sans-serif;
+    font-size: 2rem;
+    font-weight: bolder;
+    color: #d50032;
+    margin-bottom: 15px;
+}
+
+.SafetyList{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.SafetyList li{
+    background-color: #fff;
+    border: 2px solid #c9033f;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.SafetyList li:hover{
+    background-color: #fae6e6;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.SafetyList li h3{
+    font-family: "Times New Roman", sans-serif;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #d3003f;
+    margin-bottom: 10px;
+}
+
+.SafetyList li p{
+    font-family: "Times New Roman", sans-serif;
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.5;
+    margin: 10px 0;
+}
+
+.SafetyList li a {
+    font-family: "Times New Roman", sans-serif;
+    font-weight: bold;
+    font-size: 1rem;
+    color: #c9033f;
+    text-decoration: none;
+    margin-top: 10px;
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+.SafetyList li a:hover{
+    color: #a9002c;
+    text-decoration: underline;
+}
+
+.SafetyList li span {
+    display: block;
+    font-family: "Times New Roman", sans-serif;
+    font-size: 1rem;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #333;
+}
 
