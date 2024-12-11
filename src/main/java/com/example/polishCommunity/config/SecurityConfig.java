@@ -21,13 +21,14 @@ public class SecurityConfig {
                         .requestMatchers("/", "/signin-register", "/register",
                                 "/login", "/home", "/news", "/contact", "/FAQpage",
                                 "resources/education", "/healthPage",
-                                "/health", "/health-survey", "/health/submit", "/workPage", "/housing",
-                                "/rights/{id}", "/housing-questionnaire", "/housing", "/housing/housing-questionnaire", "/dashboard/AddEvents", "/dashboard/AddEvent",
-                                "/housing", "/housing/housing-questionnaire", "/safetyPage",
+                                "/health", "/health-survey", "/health/submit", "/workPage",
+                                "/rights/{id}", "/housing-questionnaire", "/dashboard/AddEvents",
+                                "/dashboard/AddEvent", "/housing", "/housing/housing-questionnaire", "/safetyPage",
                                "/EventsPage", "/housing/submit-reply", "/Work-Survey", "/work-survey", "/organisations",
                                 "/profile", "/profileLogin", "/dashboard/metrics","/addNewPolicy",
                                 "/dashboard/users", "/dashboard/users/delete", "/dashboard/users/toggle-status", "/latestNews","/addNewPolicy/{title_id}",
-                                "/dashboard/EventsTable")
+                                "/dashboard/EventsTable", "/dashboard/pending-comments",
+                                "/dashboard/approve-comment", "/dashboard/approve-reply", "/dashboard/reject-reply", "/dashboard/reject-comment")
 
 
                         .permitAll()

@@ -97,12 +97,12 @@
                 <ul>
                     <li th:each="reply : ${question.replies}">
                         <p>
-                            <strong th:text="${#strings.isEmpty(reply.name) ? 'Anonymous' : reply.name}">
-                            </strong>:
+                            <strong th:text="${#strings.isEmpty(reply.name) ? 'Anonymous' : reply.name}"></strong>:
                             <span th:text="${reply.message}"></span>
                         </p>
                     </li>
                 </ul>
+
                 <!-- Reply Form -->
                 <form action="/housing/submit-reply" method="post" class="reply-form">
                     <input type="hidden" name="questionId" th:value="${question.id}">
@@ -124,6 +124,7 @@
             </li>
         </ul>
     </div>
+
 
     <footer th:replace="~{fragments/footer}"></footer>
 </body>
