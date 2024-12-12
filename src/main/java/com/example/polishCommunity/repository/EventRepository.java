@@ -30,7 +30,7 @@ public class EventRepository {
     };
 
     public List<Event> getAllEvents() {
-        String sql = "SELECT * FROM eventss";
+        String sql = "SELECT * FROM eventss order by id desc";
         return jdbcTemplate.query(sql, rowMapper);
     }
     public List<Event> getEventsByCategory(String category) {
