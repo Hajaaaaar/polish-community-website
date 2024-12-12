@@ -30,7 +30,7 @@ public class SecurityConfig {
                                 "/dashboard/users", "/dashboard/users/delete", "/dashboard/users/toggle-status", "/latestNews",
                                 "/addNewPolicy/{title_id}","/editNewPolicy/{sub_title_id}","/editNewPolicy",
                                 "/deletePolicy/{id}","/rightsView/{id}","/dashboard/EventsTable", "/socialConnections")
-
+                        
                         .permitAll()
                         // Allow static resources
                         .requestMatchers("/static/**", "/stylesheet/**", "/JavaScript/**", "/images/**", "/templates/**").permitAll()
