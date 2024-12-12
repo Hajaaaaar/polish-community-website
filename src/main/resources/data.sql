@@ -14,6 +14,12 @@ values (3, 'Konstantinos', 'Hadjigregoriades', 'hadjigregoriadesc@gmail.com', '$
 INSERT INTO users (id, name, surname, email, password_hash, role, is_active)
 SELECT 4, 'ian', 'Cooper', 'ian@gmail.com', '$2a$10$4OfOn5s5Dh8XlVrI1jN0f.BX0LDb8CYsdTXSdPW.25l6KZ3K/zw3m', 'Admin', TRUE
 WHERE NOT EXISTS (SELECT 1 FROM users WHERE id = 4);
+#password for the Admin: @Hajar18
+
+INSERT INTO users (id, name, surname, email, password_hash, role, is_active)
+SELECT 5, 'zuzka', 'ludek', 'zuzka.hilton@gmail.com', '$2a$10$fN3Ln9Eq6LhO80k9AqptquSooOsROPHKFOs2cTL6jQ.q8HyJXb9Lq', 'Admin', TRUE
+WHERE NOT EXISTS (SELECT 1 FROM users WHERE id = 5);
+#admin password: @Zuzkaludek123
 
 DELETE FROM news;
 INSERT INTO polishsite.news (`title`, `content`, `date`, `link`, `imgUrl`) VALUES ('Test News 1', 'Blah blah blah', '2024-12-05', 'www.test.com', 'red.png');
@@ -156,7 +162,10 @@ INSERT INTO eventss (title, date, location, category, description, image_url)
 VALUES
     ('Music Festival', '2024-12-01', 'Cardiff', 'Music Festival', 'A music festival in Cardiff featuring various artists, come along!.', 'https://cdn.cnn.com/cnnnext/dam/assets/181018143148-krakow-2-super-tease.jpg'),
     ('Art Exhibition', '2024-12-05', 'Swansea', 'Art or Cultural', 'An art exhibition showcasing modern and classic art in Swansea.', 'https://api.culture.pl/sites/default/files/images/imported/HISTORIA/EN/Polish_independence/zaslubiny_polski_z_morzem.jpg'),
-    ('Food Festival', '2024-12-10', 'Newport', 'Food or Drink Event', 'A food festival in Newport offering a wide range of cuisines and drinks.', 'https://1.bp.blogspot.com/-SMfBCbqIRVw/WQeJ84XsJ6I/AAAAAAACJ-U/vrT-1o3hwMcTzQIzUuVkwbZqtV6Req00gCLcB/s1600/ca423901817b8b8187c9e9316481b30e.jpg');
+    ('Food Festival', '2024-12-10', 'Newport', 'Food or Drink Event', 'A food festival in Newport offering a wide range of cuisines and drinks.', 'https://1.bp.blogspot.com/-SMfBCbqIRVw/WQeJ84XsJ6I/AAAAAAACJ-U/vrT-1o3hwMcTzQIzUuVkwbZqtV6Req00gCLcB/s1600/ca423901817b8b8187c9e9316481b30e.jpg'),
+    ('Countryside and Craft', '2025-07-19', 'Merthyr', 'Countryside and Craft', 'A music festival in Cardiff featuring various artists, come along!.', 'https://i.pinimg.com/originals/c6/2a/04/c62a04aa1be3e976994c41b9156acec4.jpg'),
+    ('Polish Independence Day', '2024-11-11', 'Caerphilly', 'Polish Independence Day', 'An art exhibition showcasing modern and classic art in Swansea.', 'https://th.bing.com/th/id/R.aacb19bdb4c2d60e19f3ced81d72fdf9?rik=cjOaPk8ek9d3IQ&riu=http%3a%2f%2fi.dailymail.co.uk%2fi%2fpix%2f2013%2f10%2f15%2farticle-2461911-18C20F1300000578-419_964x640.jpg&ehk=CKGaeqsbBLui7jZGegM%2flOCGQGJ8al3rXVbXLdhtvxo%3d&risl=&pid=ImgRaw&r=0'),
+    ('Polish Heritage Day', '2025-04-03', 'Glamorgan', 'Polish Heritage Day', 'A food festival in Newport offering a wide range of cuisines and drinks.', 'https://s3-eu-west-1.amazonaws.com/spacehive/b052b5f6-1724-427a-b7b1-06c4db53c5eb_xlarge_dsc-2388.jpg');
 
 
 
