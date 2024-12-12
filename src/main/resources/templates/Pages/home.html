@@ -12,57 +12,75 @@
     <header th:replace="~{fragments/header}"></header>
 
     <div class="main-container">
-        <!-- Background Image -->
-        <div class="background-image"></div>
 
-        <!-- Welcome Section -->
-        <div class="container home-section">
-            <h1 class="welcome-message">Welcome to the Polish Community Platform</h1>
-            <p class="platform-overview">
-                This platform connects Polish community members in South Wales, providing them with valuable resources, the latest news, events, and social connection opportunities.
-            </p>
+        <!-- Slideshow container -->
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+                <img src="/images/ludek4.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="/images/ludek2.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="/images/ludek5.jpg" style="width:100%">
+            </div>
         </div>
+        <br>
+        <div style="text-align:center">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+
+
 
         <!-- Latest Events Section -->
         <div class="container home-section">
             <h2 class="section-heading">Latest Events</h2>
             <div class="item-row">
-                <div class="item-column">
-                    <div class="item-placeholder">Event Placeholder 1</div>
-                </div>
-                <div class="item-column">
-                    <div class="item-placeholder">Event Placeholder 2</div>
-                </div>
-                <div class="item-column">
-                    <div class="item-placeholder">Event Placeholder 3</div>
+                <div class="item-column" th:each="event : ${latestEvents}">
+                    <div class="event-card">
+                        <img th:src="${event.image_url}" alt="Event Image" class="event-image">
+                        <h3 th:text="${event.title}"></h3>
+                        <p th:text="'Date: ' + ${event.date}"></p>
+                        <p th:text="'Location: ' + ${event.location}"></p>
+                        <p th:text="'Category: ' + ${event.category}"></p>
+                    </div>
                 </div>
             </div>
+
         </div>
 
-        <!-- Latest News Section -->
-        <div class="container home-section">
-            <h2 class="section-heading">Latest News</h2>
-            <div class="item-row">
-                <div class="item-column">
-                    <div class="item-placeholder">News Placeholder 1</div>
-                </div>
-                <div class="item-column">
-                    <div class="item-placeholder">News Placeholder 2</div>
-                </div>
-                <div class="item-column">
-                    <div class="item-placeholder">News Placeholder 3</div>
-                </div>
-            </div>
-        </div>
     </div>
-
-
-
-
 
     <div th:replace="~{fragments/footer :: bootstrap-js}"></div>
     <footer th:replace="~{fragments/footer}"></footer>
 
+
+    <script>
+            let slideIndex = 0;
+            showSlides();
+
+            function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}
+            for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+            setTimeout(showSlides, 6000); // Change image every 6 seconds
+        }
+    </script>
 
 </body>
 </html>
