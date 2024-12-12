@@ -34,6 +34,7 @@ public class DashboardController {
 
             // Query total organisations
             int totalOrganisations = jdbcTemplate.queryForObject("SELECT COUNT(*) FROM organisations", Integer.class);
+            int totalEvents = jdbcTemplate.queryForObject("SELECT COUNT(*) FROM eventss", Integer.class);
 
 
             // Query total comments
@@ -47,6 +48,7 @@ public class DashboardController {
             model.addAttribute("totalNews", totalNews);
             model.addAttribute("totalOrganisations", totalOrganisations);
             model.addAttribute("totalComments", totalComments);
+            model.addAttribute("totalEvents", totalEvents);
 
             return "admin/metrics";
         } catch (Exception e) {
