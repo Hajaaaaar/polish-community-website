@@ -14,17 +14,24 @@
     <header th:replace="~{fragments/header}"></header>
     <h1 th:text = "${rights.getTitle()}"></h1>
     <p id="titleDescription" th:text = "${rights.getDescription()}"></p>
-    <div th:each="subright:${rights.getSubTitle()}">
-        <h2 th:text="${subright.getSubTitle()}"></h2>
-        <p id="subtitleDescription" class="bullet" th:utext="${subright.getDescription()}"></p>
-    </div>
-
-    <div class="button-container-div">
-        <a class="button-container" th:href="@{/addNewPolicy/{title_id}(title_id=${rights.getTitleId()})}">
+    <div class="button-container">
+        <a th:href="@{/addNewPolicy/{title_id}(title_id=${rights.getTitleId()})}">
             <button id="learnMore">Add New Policy</button>
         </a>
     </div>
-
+    <br><br>
+    <div th:each="subright:${rights.getSubTitle()}">
+        <div class="button-container">
+            <a th:href="@{/editNewPolicy/{sub_title_id}(sub_title_id=${subright.getSubTitleId()})}">
+                <button>Edit</button>
+            </a>
+            <a th:href="@{/deletePolicy/{id}(id=${subright.getSubTitleId()})}">
+                <button>Delete</button>
+            </a>
+        </div>
+        <h2 th:text="${subright.getSubTitle()}"></h2>
+        <p id="subtitleDescription" class="bullet" th:utext="${subright.getDescription()}"></p>
+    </div>
 
     <section id="faq_section" class="faq_section">
         <div class="title-area">

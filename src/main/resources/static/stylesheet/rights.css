@@ -114,8 +114,52 @@ h2 {
     border-radius: 0px;
     text-decoration: none;
     text-align:center;
+    font-family: "Times New Roman", sans-serif;
 }
-.button-container-div {
+.button-container {
+    color: black;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    font-family: "Times New Roman", sans-serif;
+
+}
+.faq_section .answer{
+    font-family: "Times New Roman", sans-serif;
+    max-height: 0;
+    border-radius: 8px;
+    background-color: #fdfdfe;
+    color:black;
+    overflow: hidden;
+    font-size: 15px;
+    font-weight: 400;
+    transition: max-height 0.25s cubic-bezier(0.5, 0, 0.1, 1);
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /*font-family: "Poppins", sans-serif;*/
+    transform: translateX(100%);
+    animation: slideInRight 1s forwards;
+    white-space: pre-line;
+    margin: 0;
+    padding: 0;
+}
+
+.faq_section .question{
+    font-family: "Times New Roman", sans-serif;
+    border-radius: 8px;
+    padding: 10px;
+    width: 100%;
+    color: red;
+    background-color: #fcd4d4;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 450;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /*font-family: "Poppins", sans-serif;*/
+    transform: translateX(100%);
+    animation: slideInRight 1s forwards;
+    margin: 0;
+    padding: 0;
 }

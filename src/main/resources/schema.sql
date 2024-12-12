@@ -97,6 +97,8 @@ CREATE TABLE IF NOT EXISTS housing_replies (
    question_id BIGINT,
    FOREIGN KEY (question_id) REFERENCES housing_questionnaire(id) ON DELETE CASCADE
 );
+ALTER TABLE housing_questionnaire ADD COLUMN status ENUM('pending', 'approved', 'rejected') DEFAULT 'pending';
+ALTER TABLE housing_replies ADD COLUMN status ENUM('pending', 'approved', 'rejected') DEFAULT 'pending';
 
 
 DROP TABLE IF EXISTS survey_responses;
