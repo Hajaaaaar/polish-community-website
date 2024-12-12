@@ -400,7 +400,7 @@ input[type="radio"] + span, input[type="radio"] + br {
 }
 
 .safety-listSection{
-    margin: -200px auto auto auto;
+    margin: -600px auto auto auto;
     width: 85%;
     text-align: center;
 }
