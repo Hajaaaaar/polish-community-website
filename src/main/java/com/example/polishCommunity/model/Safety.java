@@ -7,7 +7,6 @@ public class Safety {
     private String location;
     private String link;
     private String phone;
-
     public int getId() {
         return id;
     }
