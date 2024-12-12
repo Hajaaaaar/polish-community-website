@@ -15,10 +15,11 @@ body, html {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    height: 100vh;
+    height: auto;
     text-align: center;
     padding: 20px;
     flex-grow: 1;
+    margin-bottom: 250px;
 }
 .title {
     font-family: "Times New Roman", sans-serif;
@@ -400,7 +401,7 @@ input[type="radio"] + span, input[type="radio"] + br {
 }
 
 .safety-listSection{
-    margin: -200px auto auto auto;
+    margin: auto;
     width: 85%;
     text-align: center;
 }

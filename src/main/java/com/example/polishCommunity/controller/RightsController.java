@@ -17,7 +17,7 @@ public class RightsController {
  }
     @GetMapping("/rights/{id}")
     public ModelAndView getRightsPage(@PathVariable int id){
-        ModelAndView mav=new ModelAndView("Pages/Rights");
+        ModelAndView mav=new ModelAndView("/admin/Rights");
         Rights rights =rightsService.getRightsByTitleId(id);
 
         mav.addObject("rights",rights);

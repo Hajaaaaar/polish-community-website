@@ -29,8 +29,10 @@ public class SecurityConfig {
                                 "/profile", "/profileLogin", "/dashboard/metrics","/addNewPolicy",
                                 "/dashboard/users", "/dashboard/users/delete", "/dashboard/users/toggle-status", "/latestNews",
                                 "/addNewPolicy/{title_id}","/editNewPolicy/{sub_title_id}","/editNewPolicy",
-                                "/deletePolicy/{id}","/rightsView/{id}","/dashboard/EventsTable", "/socialConnections")
-                        
+                                "/deletePolicy/{id}","/rightsView/{id}","/dashboard/EventsTable", "/socialConnections", "/dashboard/AddSafetyInfo",
+                                 "/dashboard/approve-comment", "/dashboard/approve-reply", "/dashboard/pending-comments",
+                                  "/dashboard/reject-comment", "/dashboard/reject-reply")
+
                         .permitAll()
                         // Allow static resources
                         .requestMatchers("/static/**", "/stylesheet/**", "/JavaScript/**", "/images/**", "/templates/**").permitAll()
