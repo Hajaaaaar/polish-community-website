@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Safety Information</title>
     <link th:replace="~{fragments/dashboardHeader::bootstrap-css}" />
-    <link rel="stylesheet" th:href="@{/stylesheet/AddSafety.css}">
+    <link rel="stylesheet" th:href="@{/stylesheet/AddEvent.css}">
 </head>
 <body>
 <aside th:replace="~{fragments/dashboardHeader::sidebar}"></aside>
-<div class="SafetyDashboard">
+<div class="dashboard-content">
     <h1 class="title">Add Safety and Stability Information and Help</h1>
 
     <form action="#" th:action="@{/dashboard/AddSafetyInfo}" method="post">
@@ -41,9 +41,8 @@
         <button type="submit">Add Safety Information</button>
     </form>
 
-    <button>
     <a href="/safetyPage">Return to safety page</a>
-    </button>
+
 </div>
 
 </body>
