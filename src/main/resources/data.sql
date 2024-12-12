@@ -35,12 +35,12 @@ INSERT INTO polishsite.skills (`name`, `description`, `link`, `duration`, `expir
 INSERT INTO polishsite.skills (`name`, `description`, `link`, `duration`, `expiryDate`) VALUES ('Skill #3', 'This is the third description.', 'www.reddit.com', '8', '2025-01-23');
 
 DELETE from organisations;
-INSERT INTO organisations (name, description, logo) VALUES ('Red Org 1', 'This is the red organisation', 'red.png');
-INSERT INTO organisations (name, description, logo) VALUES ('Blue Org 1', 'This is the blue organisation', 'blue.png');
-INSERT INTO organisations (name, description, logo) VALUES ('Red Org 2', 'This is the red organisation again', 'red.png');
-INSERT INTO organisations (name, description, logo) VALUES ('Blue Org 2', 'This is the blue organisation again', 'blue.png');
-INSERT INTO organisations (name, description, logo) VALUES ('Red Org 3', 'This is the red organisation again again', 'red.png');
-INSERT INTO organisations (name, description, logo) VALUES ('Blue Org 3', 'This is the blue organisation again again', 'blue.png');
+INSERT INTO organisations (name, description, logo) VALUES ('Cardiff Univeristy', 'An esteemed university in south wales', 'CUlogo.png');
+INSERT INTO organisations (name, description, logo) VALUES ('Polish Association of South Wales', 'An organisation which promotes polish heritage', 'logo.jpg');
+INSERT INTO organisations (name, description, logo) VALUES ('The Federation of Poles in Great Britain', 'An organization representing the interests of the Polish community across the UK', 'red.png');
+INSERT INTO organisations (name, description, logo) VALUES ('South Wales Polish Scouts Association', 'A youth organization fostering Polish culture, values, and traditions among young people.', 'blue.png');
+INSERT INTO organisations (name, description, logo) VALUES ('Cymrun Cofio', 'A group that preserves the stories of Polish veterans and their contributions to Wales', 'ORGlogo.png');
+INSERT INTO organisations (name, description, logo) VALUES ('Cardiff City Council - Polish Support Services', 'A local government initiative providing practical support and guidance to the Polish community in Cardiff.', 'Council.jpg');
 
 INSERT INTO work_information(name, description, link, job_type, expiry_date)
 VALUES
