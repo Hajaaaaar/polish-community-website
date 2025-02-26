@@ -1,3 +1,4 @@
+use polishsite;
 DELETE from users;
 
 INSERT INTO users (id, name, surname, email, password_hash, role, is_active)
