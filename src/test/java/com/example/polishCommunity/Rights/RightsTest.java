@@ -5,15 +5,15 @@
 //import com.example.polishCommunity.model.SubRights;
 //import com.example.polishCommunity.repository.RightsRepo;
 //
-
-
+//
+//
 //import org.junit.jupiter.api.BeforeEach;
 //import org.junit.jupiter.api.Test;
 //import org.mockito.Mock;
 //import org.mockito.MockitoAnnotations;
 //import org.springframework.jdbc.core.JdbcTemplate;
-
-
+//
+//
 //import org.springframework.jdbc.core.RowMapper;
 //
 //import java.util.Arrays;

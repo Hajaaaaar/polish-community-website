@@ -39,6 +39,9 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-security'
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 
+	testImplementation 'org.seleniumhq.selenium:selenium-java:4.19.1'
+
+	testImplementation 'io.github.bonigarcia:webdrivermanager:5.7.0'
 
 }
 

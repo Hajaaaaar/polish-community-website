@@ -41,4 +41,7 @@ public class User {
     @Getter
     @Column(nullable = false)
     private String role;
+
+    public User(String john, String doe, String mail, String hashedPassword, String user) {
+    }
 }

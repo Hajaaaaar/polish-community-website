@@ -9,6 +9,13 @@ public class Event {
     private String description;
     private String imageUrl;
 
+    public Event(String polishFestival, String date, String cardiff, String culturalEvent) {
+    }
+
+    public Event() {
+
+    }
+
     // Getters and Setters
     public int getId() {
         return id;

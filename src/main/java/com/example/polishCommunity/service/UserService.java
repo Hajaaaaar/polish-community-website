@@ -1,12 +1,9 @@
 package com.example.polishCommunity.service;
 
-import com.example.newsPage.model.News;
 import com.example.polishCommunity.model.User;
 import com.example.polishCommunity.repository.UserRepository;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
-
-import java.util.List;
 
 @Service
 public class UserService {
@@ -28,7 +25,7 @@ public class UserService {
         String hashedPassword = passwordEncoder.encode(password);
 
         // Create a new User object
-        User user = new User();
+        User user = new User("John", "Doe", "john@example.com", "hashed_password", "User");
         user.setName(name);
         user.setSurname(surname);
         user.setEmail(email);
