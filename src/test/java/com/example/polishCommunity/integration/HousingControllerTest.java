@@ -1,6 +1,6 @@
 package com.example.polishCommunity.integration;
 
-import com.example.polishCommunity.controller.HousingController;
+
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
