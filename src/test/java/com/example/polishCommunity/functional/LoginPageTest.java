@@ -22,8 +22,8 @@
 //    void setup() {
 //        WebDriverManager.chromedriver().setup();
 //        ChromeOptions options = new ChromeOptions();
-////        options.addArguments("--start-maximized");
-//        options.addArguments("--headless");
+//     //   options.addArguments("--start-maximized");
+////        options.addArguments("--headless");
 //        webDriver = new ChromeDriver(options);
 //        wait = new WebDriverWait(webDriver, Duration.ofSeconds(10));
 //    }
