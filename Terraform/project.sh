@@ -9,9 +9,9 @@ echo in directory $PWD
 
 
 
-echo "installing MariaDB..."
-# sudo yum install mysql -y
-sudo dnf install mariadb-server -y
+echo "Installing MariaDB..."
+sudo apt-get update -y
+sudo apt-get install mariadb-server -y
 sudo systemctl start mariadb
 sudo systemctl status mariadb
 sudo systemctl enable mariadb
@@ -35,8 +35,10 @@ Y
 echo "running mysql_secure_installation..."
 sudo mysql_secure_installation < mysql_secure_installation.txt
 
-sudo dnf install git -y
-sudo dnf update openssh-server openssh-client -y
+
+sudo apt-get install git -y
+sudo apt-get update openssh-server openssh-client -y
+
 
 echo "needs to be in root account"
 cd root
@@ -90,29 +92,32 @@ touch .ssh/known_hosts
 ssh-keyscan git.cardiff.ac.uk >> .ssh/known_hosts
 chmod 644 .ssh/known_hosts
 
-ssh-agent bash -c 'ssh-add gitlab_project_keypair.key; git clone git@git.cardiff.ac.uk:c24085394/polish-community-website-group-14.git'
+# ssh-agent bash -c 'ssh-add gitlab_project_keypair.key; git clone git@git.cardiff.ac.uk:c24085394/polish-community-website-group-14.git'
+
+eval "$(ssh-agent -s)"
+ssh-add gitlab_project_keypair.key
+
+git clone git@git.cardiff.ac.uk:c24085394/polish-community-website-group-14.git
+
 
 cd polish-community-website-group-14
 mysql -uroot -pcomsc < src/main/resources/schema.sql
 mysql -uroot -pcomsc < src/main/resources/data.sql
 
-
-sudo yum install java-17-openjdk -y
-
-sudo yum install wget -y
+echo "Installing Java and Gradle..."
+sudo apt-get install openjdk-17-jdk wget unzip -y
 wget https://services.gradle.org/distributions/gradle-8.5-bin.zip
-sudo yum install unzip -y
 sudo mkdir /opt/gradle
 sudo unzip -d /opt/gradle gradle-8.5-bin.zip
 
-
-
 export PATH=$PATH:/opt/gradle/gradle-8.5/bin
 
+echo "Disabling firewall (if installed)..."
+sudo systemctl stop ufw || echo "UFW not installed"
 
-
-sudo systemctl stop firewalld.service
-
-
+echo "Building and running project..."
 gradle build
 gradle bootrun
+
+
+

@@ -38,7 +38,7 @@ required_version = ">= 0.14.0"
     name            = var.name1
     image_name      = var.image
     flavor_name     = var.flavor
-    security_groups = [openstack_compute_secgroup_v2.security_group.name]
+    security_groups = [openstack_compute_secgroup_v2.security_group.id]
     key_pair        = var.keypair
     user_data       = file(var.server1_script)
     network {
