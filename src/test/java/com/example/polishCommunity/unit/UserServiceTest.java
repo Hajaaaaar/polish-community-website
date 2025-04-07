@@ -12,7 +12,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
 public class UserServiceTest {
-
+    //mocking the UserRepository to isolate the logic and avoid using the real database
     @Mock
     private UserRepository userRepository;
 
