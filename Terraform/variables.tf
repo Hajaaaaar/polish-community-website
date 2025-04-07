@@ -1,4 +1,4 @@
-variable "flavor" { default = "m1.small" }
+variable "flavor" { default = "m1.large" }
 variable "image" { default = "Debian 12 20241202" }
 variable "name1" { default = "DebianMatrix" }
 
